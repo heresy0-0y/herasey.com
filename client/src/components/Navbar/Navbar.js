@@ -51,33 +51,19 @@ function Navbar() {
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to="/" onClick={closeMobileMenu}>
-                  Supplements
+                  experience
                 </NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/vitamins" onClick={closeMobileMenu}>
-                Vitamins
+                  projects
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/brands" onClick={closeMobileMenu}>
-                  Brands
+                <NavLinks to="/contact" onClick={closeMobileMenu}>
+                 get in touch 
                 </NavLinks>
               </NavItem>
-              {/* for after users /auth built on backend */}
-              {/* <NavItemBtn>
-                {button ? (
-                  <NavBtnLink to="/sign-up">
-                    <Button primary>SIGN UP</Button>
-                  </NavBtnLink>
-                ) : (
-                  <NavBtnLink to="/sign-up">
-                    <Button onClick={closeMobileMenu} fontBig primary>
-                      SIGN UP
-                    </Button>
-                  </NavBtnLink>
-                )}
-              </NavItemBtn> */}
             </NavMenu>
           </NavbarContainer>
         </Nav>
