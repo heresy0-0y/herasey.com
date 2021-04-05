@@ -40,14 +40,19 @@ import {
 import { Container } from "../../globalStyles";
 
 export const IconsContainer = styled(Container)`
-  border-bottom: 5px solid papayawhip;
+  box-sizing: border-box;
+  border-bottom: groove .4em;
+  border-image: repeating-linear-gradient(.8deg, #538082, #1f338c, #538082 20px) 6;
   display: flex;
+  background-color: rgba(0,0,0,0);
   justify-content: space-between;
-
+  box-shadow:0 2em 2.6em -2.6em #538082;
   & > * {
       font-size: 5em;
       padding: .4em;
+      }
   }
+  
 
   ${Container}
 `;

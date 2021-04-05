@@ -2,8 +2,15 @@ import styled from "styled-components";
 import { Container } from "../../globalStyles";
 
 export const Wrap = styled.div`
-  color: papayawhip;
-  background-color: #00642d;
+  color: #bbdbb4;
+  background-image: radial-gradient(
+    ellipse at top left,
+    #3b352b,
+    #1f338c,
+    #1f338c,
+    #538082,
+    #1f338c
+    );
   display: flex;
   height: 100vh;
   justify-content: center;
