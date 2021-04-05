@@ -13,6 +13,8 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
+  border-bottom-color: #538082;
+  border-bottom: 1px groove;
 `;
 
 export const NavbarContainer = styled(Container)`
@@ -83,7 +85,10 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
 
   &:hover {
+    transition: all 0.4s ease;
     border-bottom: 2px solid #7a5b60;
+    text-shadow: 1.5px 0px 1.2px #538082, 1px -1px .1px #538082;
+    box-shadow: 0 0 2.5px 2.6px .1px #538082;
   }
 
   @media screen and (max-width: 769px) {
@@ -112,9 +117,14 @@ export const NavLinks = styled(Link)`
   font-size: 1.7rem;
   align-items: center;
   text-decoration: none;
+  
   padding: 0.5rem 1rem;
   height: 100%;
+  &:hover {
+    transform: scale(1.15);
+    transition: all 1s ease-in-out;
 
+  }
   &:focus {
     border-bottom: 1px solid;
     z-index: 1;
@@ -122,6 +132,7 @@ export const NavLinks = styled(Link)`
   transition: all 0.3s ease;
   outline: none;
   }
+
 
   @media screen and (max-width: 769px) {
     text-align: center;
@@ -147,5 +158,6 @@ export const NavBtnLink = styled(Link)`
   height: 100%;
   width: 100%;
   border: none;
+
   outline: none;
 `;
