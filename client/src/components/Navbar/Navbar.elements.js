@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import { TiHomeOutline} from "react-icons/ti";
+import { TiHomeOutline } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
-  background: #005827;
+  background-image: radial-gradient(164rem at left bottom, #3b352b, #1f338c);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -24,13 +24,21 @@ export const NavbarContainer = styled(Container)`
 `;
 
 export const NavLogo = styled(Link)`
-  color: seagreen;
+  color: #bbdbb4;
   cursor: pointer;
   font-family: Montserrat;
   text-decoration: none;
   font-size: 2rem;
   display: flex;
   align-items: center;
+
+  &:focus {
+    border-bottom: 1px solid;
+    z-index: 1;
+    background-color: #7a5b60;
+  transition: all 0.3s ease;
+  outline: none;
+  }
 `;
 
 export const NavIcon = styled(TiHomeOutline)`
@@ -67,7 +75,6 @@ export const NavMenu = styled.ul`
     left: ${({ click }) => (click ? 0 : "-100%")};
     opacity: 1;
     transition: all 0.5s ease;
-    background: #005827;
   }
 `;
 
@@ -76,7 +83,7 @@ export const NavItem = styled.li`
   border-bottom: 2px solid transparent;
 
   &:hover {
-    border-bottom: 2px solid #ffe8c4;
+    border-bottom: 2px solid #7a5b60;
   }
 
   @media screen and (max-width: 769px) {
@@ -99,13 +106,22 @@ export const NavItemBtn = styled.li`
 `;
 
 export const NavLinks = styled(Link)`
-  color: #ffefd5;
+  color: #bbdbb4;
   display: flex;
-  font-family: 'Chango', cursive;
+  font-family: font-family: 'Montserrat Alternates', sans-serif; 
+  font-size: 1.7rem;
   align-items: center;
   text-decoration: none;
   padding: 0.5rem 1rem;
   height: 100%;
+
+  &:focus {
+    border-bottom: 1px solid;
+    z-index: 1;
+    background-color: #7a5b60;
+  transition: all 0.3s ease;
+  outline: none;
+  }
 
   @media screen and (max-width: 769px) {
     text-align: center;
@@ -114,9 +130,11 @@ export const NavLinks = styled(Link)`
     display: table;
 
     &:hover {
-      color: #CBFEBD;
+      color: #7a5b60;
       transition: all 0.3s ease;
     }
+
+    
   }
 `;
 

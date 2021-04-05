@@ -6,8 +6,9 @@ const GlobalStyle = createGlobalStyle`
   margin: 0;
   padding: 0;
   font-family: 'Droid Sans Mono';
-  background-color: '#00642d';
-  color: '#ffefd5';
+
+
+  color: '#BBDBB4';
 }`;
 
 export const Container = styled.div`
@@ -17,7 +18,7 @@ export const Container = styled.div`
   margin-right: 0;
   /* padding: 0 50px 0 50px; */
 
-  @media screen and (max-width: 780px) {
+  @media screen and (min-width: 780px) {
   }
 `;
 
