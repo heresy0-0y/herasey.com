@@ -46,6 +46,7 @@ export const IconsContainer = styled(Container)`
   display: flex;
   background-color: rgba(0,0,0,0);
   justify-content: space-between;
+  flex-direction: wrap; 
   box-shadow:0 2em 2.6em -2.6em hsla(189, 21%, 58%, 1);
   & > * {
       font-size: 5em;
