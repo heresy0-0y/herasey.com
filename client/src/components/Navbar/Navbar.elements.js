@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
-  background-image: radial-gradient(14rem at left bottom, hsla(168, 47%, 59%, .7), hsla(249, 65%, 35%, .7), hsla(248, 52%, 39%, .7));
+  background-image: radial-gradient(95rem at left bottom, hsla(249, 65%, 35%, .7), hsla(248, 52%, 39%, .7));
   height: 80px;
   display: flex;
   justify-content: center;
@@ -37,7 +37,7 @@ export const NavLogo = styled(Link)`
   &:focus {
     border-bottom: 1px solid;
     z-index: 1;
-    background-color: #7a5b60;
+    background-color: hsla(168, 47%, 59%, 1);
   transition: all 0.3s ease;
   outline: none;
   }
