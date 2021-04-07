@@ -4,12 +4,10 @@ import { Container } from "../../globalStyles";
 export const Wrap = styled.div`
   color: #bbdbb4;
   background-image: radial-gradient(
-    ellipse at top left,
-    #3b352b,
-    #1f338c,
-    #1f338c,
-    #538082,
-    #1f338c
+    100rem at top left,
+    hsla(249, 65%, 35%, 1),
+    hsla(248, 52%, 39%, 1),
+    hsla(189, 21%, 58%, 1)
     );
   display: flex;
   height: 100vh;
