@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
-  background-image: radial-gradient(164rem at left bottom, #3b352b, #1f338c);
+  background-image: radial-gradient(164rem at left bottom, hsla(249, 65%, 35%, 1), hsla(248, 52%, 39%, 1));
   height: 80px;
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
-  border-bottom-color: #538082;
+  border-bottom-color: hsla(168, 47%, 59%, 1);
   border-bottom: 1px groove;
 `;
 
