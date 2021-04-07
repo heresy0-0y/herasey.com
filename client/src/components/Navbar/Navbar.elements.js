@@ -121,8 +121,8 @@ export const NavLinks = styled(Link)`
   padding: 0.5rem 1rem;
   height: 100%;
   &:hover {
-    transform: scale(1.15);
     transition: all 1s ease-in-out;
+
 
   }
   &:focus {
@@ -131,6 +131,10 @@ export const NavLinks = styled(Link)`
     background-color: #7a5b60;
   transition: all 0.3s ease;
   outline: none;
+  }
+
+  &:active {
+    hsla(189, 21%, 58%, 1);
   }
 
 
