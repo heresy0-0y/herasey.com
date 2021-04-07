@@ -1,0 +1,12 @@
+{
+    "data" : {
+        "heraseeme" : {
+            "id": "O_014",
+            "name": "heraseeme",
+            "colors": {
+                "body": "hsla(249, 65%, 35%, 1)",
+                "text": "hsla(109, 35%, 78%, 1)",
+            }
+        }
+    }
+}

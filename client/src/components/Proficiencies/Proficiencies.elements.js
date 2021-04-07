@@ -42,11 +42,11 @@ import { Container } from "../../globalStyles";
 export const IconsContainer = styled(Container)`
   box-sizing: border-box;
   border-bottom: groove .4em;
-  border-image: repeating-linear-gradient(.8deg, #538082, #1f338c, #538082 20px) 6;
+  border-image: repeating-linear-gradient(.8deg,  hsla(189, 21%, 58%, 1), hsla(248, 52%, 39%, 1), hsla(189, 21%, 58%, 1) 20px) 6;
   display: flex;
   background-color: rgba(0,0,0,0);
   justify-content: space-between;
-  box-shadow:0 2em 2.6em -2.6em #538082;
+  box-shadow:0 2em 2.6em -2.6em hsla(189, 21%, 58%, 1);
   & > * {
       font-size: 5em;
       padding: .4em;
