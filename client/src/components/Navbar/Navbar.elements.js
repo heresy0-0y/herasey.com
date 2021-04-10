@@ -91,12 +91,11 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
   height: 80px;
   border-bottom: 2px solid transparent;
-  margin-left: auto;
-  margin-right: 1em;
+
   &:hover {
     transition: all 0.4s ease;
     border-bottom: 2px solid hsla(28, 78%, 77%, 1);
-    text-shadow: 1.5px 0px 1.2px hsla(28, 78%, 77%, 1), 1px -1px 0.1px hsla(28, 78%, 77%, 1);
+    text-shadow: 1px 1px 1px hsla(28, 78%, 77%, 1);
     box-shadow: 0 0 2.5px 2.6px 0.1px hsla(28, 78%, 77%, 1);
   }
 
@@ -127,11 +126,10 @@ export const NavLinks = styled(Link)`
   align-items: center;
   text-decoration: none;
   justify-content: space-around;
-  
+  margin-right: 1rem;
   height: 100%;
   &:hover {
-    transition: all 1s ease-in-out;
-
+    transition: all .1s ease;
 
   }
   &:focus {
