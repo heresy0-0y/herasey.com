@@ -4,7 +4,12 @@ import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
 export const Nav = styled.nav`
-  background-image: radial-gradient(95rem at right top, hsla(249, 65%, 35%, 1), hsla(248, 52%, 39%, 1));
+  background-image: radial-gradient(
+    95rem at right top,
+    hsla(249, 65%, 35%, 1),
+    hsla(168, 47%, 59%, 1),
+    hsla(248, 52%, 39%, 1)
+  );
   height: 80px;
   display: flex;
   justify-content: center;
@@ -35,11 +40,11 @@ export const NavLogo = styled(Link)`
   align-items: center;
 
   &:focus {
-    border-bottom: 1px solid;
+    border: 1px solid hsla(28, 78%, 77%, 1);
     z-index: 1;
-    background-color: hsla(168, 47%, 59%, 1);
-  transition: all 0.3s ease;
-  outline: none;
+    background-color: hsla(248, 52%, 39%, .8);
+    transition: all 0.3s ease;
+    outline: none;
   }
 `;
 
@@ -65,7 +70,10 @@ export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   list-style: none;
-  text-align: center;
+  flex-direction:row;
+  margin-left: auto;
+  justify-content: space-around;
+
 
   @media screen and (max-width: 769px) {
     display: flex;
@@ -83,12 +91,13 @@ export const NavMenu = styled.ul`
 export const NavItem = styled.li`
   height: 80px;
   border-bottom: 2px solid transparent;
-
+  margin-left: auto;
+  margin-right: 1em;
   &:hover {
     transition: all 0.4s ease;
-    border-bottom: 2px solid #7a5b60;
-    text-shadow: 1.5px 0px 1.2px #538082, 1px -1px .1px #538082;
-    box-shadow: 0 0 2.5px 2.6px .1px #538082;
+    border-bottom: 2px solid hsla(28, 78%, 77%, 1);
+    text-shadow: 1.5px 0px 1.2px hsla(28, 78%, 77%, 1), 1px -1px 0.1px hsla(28, 78%, 77%, 1);
+    box-shadow: 0 0 2.5px 2.6px 0.1px hsla(28, 78%, 77%, 1);
   }
 
   @media screen and (max-width: 769px) {
@@ -117,8 +126,8 @@ export const NavLinks = styled(Link)`
   font-size: 1.7rem;
   align-items: center;
   text-decoration: none;
+  justify-content: space-around;
   
-  padding: 0.5rem 1rem;
   height: 100%;
   &:hover {
     transition: all 1s ease-in-out;
@@ -126,9 +135,9 @@ export const NavLinks = styled(Link)`
 
   }
   &:focus {
-    border-bottom: 1px solid;
+    border: 1px solid hsla(28, 78%, 77%, 1);
     z-index: 1;
-    background-color: #7a5b60;
+    background-color: hsla(248, 52%, 39%, .8);
   transition: all 0.3s ease;
   outline: none;
   }
@@ -145,7 +154,7 @@ export const NavLinks = styled(Link)`
     display: table;
 
     &:hover {
-      color: #7a5b60;
+      color: hsla(28, 78%, 77%, 1);
       transition: all 0.3s ease;
     }
 
