@@ -7,7 +7,6 @@ export const Nav = styled.nav`
   background-image: radial-gradient(
     95rem at right top,
     hsla(249, 65%, 35%, 1),
-    hsla(168, 47%, 59%, 1),
     hsla(248, 52%, 39%, 1)
   );
   height: 80px;
