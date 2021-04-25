@@ -5,8 +5,8 @@ export default function ContactContainer(props) {
     const sendMessage = (e) => {
         e.preventDefault();
         const userId = `${process.envs.userId}`
-        const serviceId = `${process.env.serviceId}`
-        const templateId = `${process.env.templateId}`
+        const serviceId = `${process.envs.serviceId}`
+        const templateId = `${process.envs.templateId}`
 
         emailjs.sendForm(serviceId, templateId, e.target, userId)
             .then((result) => {
