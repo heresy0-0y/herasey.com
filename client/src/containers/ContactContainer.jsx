@@ -1,13 +1,12 @@
 import emailjs from 'emailjs-com'
-import {emailJsIds} from './services'
 import {ContactForm} from '../components'
 
 export default function ContactContainer(props) {
     const sendMessage = (e) => {
         e.preventDefault();
-        const userId=emailJsIds.userId
-        const serviceId = emailJsIds.serviceId
-        const templateId = emailJsIds.templateId
+        const userId = `${process.env.userId}`
+        const serviceId = `${process.env.serviceId}`
+        const templateId = `${process.env.templateId}`
 
         emailjs.sendForm(serviceId, templateId, e.target, userId)
             .then((result) => {
