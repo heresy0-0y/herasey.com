@@ -4,7 +4,7 @@ import {ContactForm} from '../components'
 export default function ContactContainer(props) {
     const sendMessage = (e) => {
         e.preventDefault();
-        const userId = `${process.env.userId}`
+        const userId = `${process.envs.userId}`
         const serviceId = `${process.env.serviceId}`
         const templateId = `${process.env.templateId}`
 
@@ -12,7 +12,7 @@ export default function ContactContainer(props) {
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
-                console.log(error, userId)
+                console.log(error, userId, process.env)
             })
     }
     return (
