@@ -2,7 +2,7 @@ import emailjs from 'emailjs-com'
 import {ContactForm} from '../components'
 
 export default function ContactContainer(props) {
-    const {SERVICE_ID, TEMPLATE_ID, USER_ID} = process.envs
+    const {SERVICE_ID, TEMPLATE_ID, USER_ID} = process.env
     const sendMessage = (e) => {
         e.preventDefault();
 
