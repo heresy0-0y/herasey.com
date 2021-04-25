@@ -10,7 +10,7 @@ export default function ContactContainer(props) {
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
-                console.log(error)
+                console.log(error, `${USER_ID}`);
             })
     }
     return (
