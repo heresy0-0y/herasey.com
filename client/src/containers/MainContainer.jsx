@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
-import { Switch, Route, useHistory, Redirect } from "react-router-dom";
-import Experience from '../screens/Experience'
+import { Switch, Route } from "react-router-dom";
 import {Proficiencies} from '../components'
+import ContactContainer from './ContactContainer'
 
 export default function MainContainer(props) {
 
@@ -9,6 +8,7 @@ export default function MainContainer(props) {
     <Switch>
       <Route path="/">
         <Proficiencies/>
+        <ContactContainer/>
       </Route>
     </Switch>
   );
