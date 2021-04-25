@@ -6,7 +6,7 @@ export default function ContactContainer(props) {
     const sendMessage = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+        emailjs.sendForm(`${SERVICE_ID}`, `${TEMPLATE_ID}`, e.target, `${USER_ID}`)
             .then((result) => {
                 console.log(result.text);
             }, (error) => {
