@@ -1,19 +1,24 @@
 import emailjs from 'emailjs-com'
-import {ContactForm} from '../components'
+import {ContactForm, Wrapper} from '../components'
 
 export default function ContactContainer(props) {
-    const {SERVICE_ID, TEMPLATE_ID, USER_ID} = process.envs
-    const sendMessage = (e) => {
-        e.preventDefault();
+	const userId = "user_noSGymCb0Ve25uMCUhnJZ"
+	const templateId = "myDefault"
+	const serviceId = "service_xso3s3r"
 
-        emailjs.sendForm(`${SERVICE_ID}`, `${TEMPLATE_ID}`, e.target, `${USER_ID}`)
-            .then((result) => {
-                console.log(result.text);
+	const sendMessage = (e) => {
+      e.preventDefault();
+
+      emailjs.sendForm(serviceId, templateId, e.target, userId)
+      .then((result) => {
+      	console.log(result.text);
             }, (error) => {
-                console.log(error, `${USER_ID}`);
+                console.log(error);
             })
     }
     return (
-        <ContactForm sendMessage={sendMessage} onSubmit={sendMessage}/>
+				<Wrapper>
+					<ContactForm sendMessage={sendMessage} onSubmit={sendMessage}/>
+				</Wrapper>
     );
 }
