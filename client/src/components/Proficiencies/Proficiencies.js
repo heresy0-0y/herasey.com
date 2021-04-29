@@ -6,8 +6,8 @@ function Proficiencies() {
    
     return (
         <>
-        <IconContext.Provider value={{ color: "#bbdbb4" }}>
         <IconsContainer>
+        <IconContext.Provider value={{ color: "#bbdbb4" }}>
             <GitIcon/>
             <ReactIcon/>
             <NodeJsIcon/>
@@ -19,8 +19,8 @@ function Proficiencies() {
             <RubyIcon/>
             <NetlifyIcon/>
             <NodemonIcon/>
-        </IconsContainer>
         </IconContext.Provider>
+        </IconsContainer>
         </>
     )
 }
