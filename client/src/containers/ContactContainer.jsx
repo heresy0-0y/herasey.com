@@ -17,8 +17,8 @@ export default function ContactContainer(props) {
             })
     }
     return (
-				<Wrapper>
+				<>
 					<ContactForm sendMessage={sendMessage} onSubmit={sendMessage}/>
-				</Wrapper>
+				</>
     );
 }

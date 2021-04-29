@@ -7,16 +7,14 @@ const GlobalStyle = createGlobalStyle`
   padding: 0;
   font-family: 'Droid Sans Mono';
 
-
   color: '#BBDBB4';
 }`;
 
 export const Container = styled.div`
+  display: flex; 
   width: 100%;
-  /* max-width: 1200px; */
   margin-left: 0;
   margin-right: 0;
-  /* padding: 0 50px 0 50px; */
 
   @media screen and (min-width: 780px) {
   }

@@ -40,17 +40,23 @@ import {
 import { Container } from "../../globalStyles";
 
 export const IconsContainer = styled(Container)`
+  display: inline-grid;
   box-sizing: border-box;
+  margin: 1rem;
+  width: 100vw;
   border-bottom: groove .4em;
   border-image: repeating-linear-gradient(.8deg,  hsla(189, 21%, 58%, 1), hsla(248, 52%, 39%, 1), hsla(189, 21%, 58%, 1) 20px) 6;
-  display: flex;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   background-color: rgba(0,0,0,0);
-  justify-content: space-between;
-  flex-direction: wrap; 
+  justify-items: center;
+  align-content: center;
+  row-gap: 1em;
+  align-items:stretch;
+  column-gap: 0px;
   box-shadow:0 2em 2.6em -2.6em hsla(189, 21%, 58%, 1);
   & > * {
       font-size: 5em;
-      padding: .4em;
       }
   }
   
@@ -58,50 +64,35 @@ export const IconsContainer = styled(Container)`
   ${Container}
 `;
 
-export const StyledComponentsIcon = styled(SiStyledComponents)`
-`;
+export const StyledComponentsIcon = styled(SiStyledComponents)``;
 
-export const CssIcon = styled(SiCss3)`
-`;
+export const CssIcon = styled(SiCss3)``;
 
-export const DigitalOceanIcon = styled(SiDigitalocean)`
-`;
+export const DigitalOceanIcon = styled(SiDigitalocean)``;
 
-export const GithubIcon = styled(SiGithub)`
-`;
+export const GithubIcon = styled(SiGithub)``;
 
-export const GitIcon = styled(SiGit)`
-`;
+export const GitIcon = styled(SiGit)``;
 
-export const JsIcon = styled(SiJavascript)`
-`;
+export const JsIcon = styled(SiJavascript)``;
 
-export const JsonWebTokensIcon = styled(SiJsonwebtokens)`
-`
+export const JsonWebTokensIcon = styled(SiJsonwebtokens)``;
 
-export const ReactIcon = styled(SiReact)`
-`
+export const ReactIcon = styled(SiReact)``;
 
-export const ReactRouterIcon = styled(SiReactrouter)`
-`
+export const ReactRouterIcon = styled(SiReactrouter)``;
 
-export const RssIcon = styled(SiRss)`
-`
+export const RssIcon = styled(SiRss)``;
 
-export const RubyIcon = styled(SiRuby)`
-`
+export const RubyIcon = styled(SiRuby)``;
 
-export const RailsIcon = styled(SiRails)`
-`
+export const RailsIcon = styled(SiRails)``;
 
-export const HerokuIcon = styled(SiHeroku)`
-`
+export const HerokuIcon = styled(SiHeroku)``;
 
-export const NodeJsIcon = styled(SiNodeDotJs)`
-`
-export const NodemonIcon = styled(SiNodemon)`
-`
+export const NodeJsIcon = styled(SiNodeDotJs)``;
+export const NodemonIcon = styled(SiNodemon)``;
 
-export const NetlifyIcon = styled(SiNetlify)``
+export const NetlifyIcon = styled(SiNetlify)``;
 
-export const NeovimIcon = styled(SiNeovim)``
+export const NeovimIcon = styled(SiNeovim)``;
