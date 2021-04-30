@@ -8,9 +8,9 @@ const ContactForm = (props) => {
     <FormContainer>
       <Form className="contact-form" onSubmit={sendMessage}>
           <Label>name</Label>
-          <TextInput type="text" name="from_name"/>
+          <TextInput type="text" name="from_name" required/>
           <Label>email</Label>
-          <TextInput type="text" name="reply_to"/>
+          <TextInput type="text" name="reply_to" required/>
           <Label>message</Label>
           <MessageArea name="message"/>
           <SendInput type="submit" value="Send"/>
