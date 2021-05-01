@@ -47,7 +47,7 @@ export const IconsContainer = styled(Container)`
   border-bottom: groove .4em;
   border-image: repeating-linear-gradient(.8deg,  hsla(189, 21%, 58%, 1), hsla(248, 52%, 39%, 1), hsla(189, 21%, 58%, 1) 20px) 6;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: auto;
+  grid-template-columns: 1fr 1fr 1fr;
   background-color: rgba(0,0,0,0);
   justify-items: center;
   row-gap: 1.5rem;

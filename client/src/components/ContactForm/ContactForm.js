@@ -13,7 +13,7 @@ const ContactForm = (props) => {
           <TextInput type="text" name="reply_to" required/>
           <Label>message</Label>
           <MessageArea name="message"/>
-          <SendInput type="submit" value="Send"/>
+          <SendInput type="submit" value="send"/>
       </Form>
       </FormContainer>
     </>

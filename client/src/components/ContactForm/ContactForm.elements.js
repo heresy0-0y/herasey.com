@@ -12,11 +12,17 @@ export const Form = styled.form`
   width: 70%;
   flex-direction: column;
   & > * { 
-  font-size: 1.2rem;
-  font-weight: bold;
-  outline: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    outline: none;
     margin: .6rem;
-box-shadow:1em 2em 2.6em -2.6em hsla(189, 21%, 58%, 1);
+    box-shadow:1em 2em 2.6em -2.6em hsla(189, 21%, 58%, 1);
+    background-color: rgba(255, 255, 255, 0);
+
+    &:focus { 
+      border: 2px solid hsla(28, 78%, 77%, 1);
+      transition: all 0.3s ease;
+    }
   };
 `;
 

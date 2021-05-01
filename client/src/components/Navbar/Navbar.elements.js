@@ -39,7 +39,7 @@ export const NavLogo = styled(Link)`
   align-items: center;
 
   &:focus {
-    border: 1px solid hsla(28, 78%, 77%, 1);
+    border: 2px solid hsla(28, 78%, 77%, 1);
     z-index: 1;
     background-color: hsla(248, 52%, 39%, .8);
     transition: all 0.3s ease;
