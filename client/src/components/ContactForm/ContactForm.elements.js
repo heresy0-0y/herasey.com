@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Container, Button } from "../../globalStyles";
+import { Container} from "../../globalStyles";
 
 export const Form = styled.form`
   color: #bbdbb4;
@@ -11,6 +11,7 @@ export const Form = styled.form`
   font-family: 'Montserrat', sans-serif;
   width: 70%;
   flex-direction: column;
+  z-index: 1;
   & > * { 
     font-size: 1.2rem;
     font-weight: bold;
@@ -26,14 +27,45 @@ export const Form = styled.form`
   };
 `;
 
+export const Modal = styled(Container)`
+  position: absolute;
+  margin: 8rem;
+  margin-top: 4rem;
+  left: auto;
+  right: auto;
+  transition: all 0.3s ease;
+  height: ${ props => props.messageSent ? "50%" : "0px" };
+  opacity: ${ props => props.messageSent ? "90%" : "0%" };
+  z-index: 2;
+  text-align: center;
+  justify-content: center;
+  border-radius: 2rem;
+  background-color: ${ props => props.messageSent ? "rgba(60, 66, 152, 1.00)" : "rgba(0,0,0,0)" };
+  width: 84%;
+
+  ${Container};
+`;
+
+export const ModalText = styled.p`
+  margin-bottom: auto;
+  margin-top: 3em;
+  line-height: 5rem;
+  font-size: 3rem;
+`;
+
 export const FormContainer = styled(Container)`
   justify-content: center;
-  margin: .5rem;
-  padding: .5rem;
   margin-left: auto;
   margin-right: auto;
-  height: 50%;
+  height: 100%;
   width: 84%;
+  position: relative;
+  height: 50%;
+  margin: 4rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  z-index: 0;
   ${Container};
 `;
 
