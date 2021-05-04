@@ -19,7 +19,7 @@ export const Form = styled.form`
     margin: .6rem;
     box-shadow:1em 2em 2.6em -2.6em hsla(189, 21%, 58%, 1);
     background-color: rgba(255, 255, 255, 0);
-
+   ;
     &:focus { 
       border: 2px solid hsla(28, 78%, 77%, 1);
       transition: all 0.3s ease;
@@ -35,14 +35,14 @@ export const Modal = styled(Container)`
   right: auto;
   transition: all 0.3s ease;
   height: ${ props => props.messageSent ? "50%" : "0px" };
-  opacity: ${ props => props.messageSent ? "90%" : "0%" };
+  opacity: ${ props => props.messageSent ? "97%" : "0%" };
   z-index: 2;
   text-align: center;
   justify-content: center;
   border-radius: 2rem;
   background-color: ${ props => props.messageSent ? "rgba(60, 66, 152, 1.00)" : "rgba(0,0,0,0)" };
   width: 84%;
-
+  z-index: ${ props => props.messageSent ? "2" : "-1"};
   ${Container};
 `;
 
@@ -51,6 +51,7 @@ export const ModalText = styled.p`
   margin-top: 3em;
   line-height: 5rem;
   font-size: 3rem;
+
 `;
 
 export const FormContainer = styled(Container)`
@@ -71,9 +72,18 @@ export const FormContainer = styled(Container)`
 
 
 export const TextInput = styled.input`
-    color: #bbdbb4;
-    height: 10%;
-    background-color: hsla(248, 52%, 39%, 1);
+  color: #bbdbb4;
+  height: 10%;
+  background-color: hsla(248, 52%, 39%, 1);
+  
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:active {
+  -webkit-text-fill-color: #bbdbb4;
+  -webkit-transition-delay: 9999s;
+  transition-delay: 9999s;
+};
 `;
 
 export const MessageArea = styled.textarea`
