@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-  SiStyledComponents,
+  SiStyledcomponents,
   SiCss3,
   SiDigitalocean,
   SiGithub,
@@ -11,10 +11,10 @@ import {
   SiReactrouter,
   SiRss,
   SiRuby,
-  SiRails,
+  SiRubyonrails,
   SiNetlify,
   SiNodemon,
-  SiNodeDotJs,
+  SiNodedotjs,
   SiNeovim,
   SiPostgresql,
   SiMongodb,
@@ -75,7 +75,7 @@ export const AboutMe = styled.div`
   text-align: center;
 `;
 
-export const StyledComponentsIcon = styled(SiStyledComponents)``;
+export const StyledComponentsIcon = styled(SiStyledcomponents)``;
 
 export const CssIcon = styled(SiCss3)``;
 
@@ -97,11 +97,11 @@ export const RssIcon = styled(SiRss)``;
 
 export const RubyIcon = styled(SiRuby)``;
 
-export const RailsIcon = styled(SiRails)``;
+export const RailsIcon = styled(SiRubyonrails)``;
 
 export const HerokuIcon = styled(SiHeroku)``;
 
-export const NodeJsIcon = styled(SiNodeDotJs)``;
+export const NodeJsIcon = styled(SiNodedotjs)``;
 export const NodemonIcon = styled(SiNodemon)``;
 
 export const NetlifyIcon = styled(SiNetlify)``;
