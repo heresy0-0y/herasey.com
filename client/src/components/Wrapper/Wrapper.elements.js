@@ -1,16 +1,17 @@
 import styled from "styled-components";
 import { Container } from "../../globalStyles";
 
-export const Wrap = styled.div`
+export const Wrap = styled(Container)`
   color: #bbdbb4;
   display: flex;
-  height: 100%;
   justify-content: center;
+  overflow: hidden;
+  height: 100%;
   font-family: 'Montserrat', sans-serif;
+  ${Container}
 `;
 
 export const WrapContainer = styled(Container)`
-  display: flex;
   background-image: linear-gradient(
     hsla(249, 65%, 35%, 1),
     hsla(248, 52%, 39%, 1),
@@ -22,6 +23,5 @@ export const WrapContainer = styled(Container)`
   right: auto;
   flex-direction: column;
   max-width: 100vw;
-  height: 100vh;
   ${Container};
 `;

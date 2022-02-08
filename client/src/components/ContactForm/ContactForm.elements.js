@@ -11,7 +11,6 @@ export const Form = styled.form`
   font-family: 'Montserrat', sans-serif;
   width: 70%;
   flex-direction: column;
-  z-index: 1;
   & > * { 
     font-size: 1.2rem;
     font-weight: bold;
@@ -28,9 +27,6 @@ export const Form = styled.form`
 `;
 
 export const Modal = styled(Container)`
-  position: absolute;
-  margin: 8rem;
-  margin-top: 4rem;
   left: auto;
   right: auto;
   transition: all 0.3s ease;
@@ -56,17 +52,11 @@ export const ModalText = styled.p`
 
 export const FormContainer = styled(Container)`
   justify-content: center;
+  margin: 1rem;
   margin-left: auto;
-  margin-right: auto;
-  height: 100%;
-  width: 84%;
-  position: relative;
-  height: 50%;
-  margin: 4rem;
-  margin-left: auto;
+  height: 40vh;
   margin-right: auto;
   width: 100%;
-  z-index: 0;
   ${Container};
 `;
 

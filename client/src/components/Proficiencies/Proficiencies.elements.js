@@ -64,15 +64,17 @@ export const IconsContainer = styled(Container)`
   ${Container}
 `;
 
-export const AboutMe = styled.div`
+export const AboutMe = styled(Container)`
   color: #bbdbb4;
   font-family: Montserrat;
   font-size: 1.7rem;
   margin: 1.2rem;
   width: 60%;
   margin-left: auto;
+  display: flex;
   margin-right: auto;
   text-align: center;
+  ${Container}
 `;
 
 export const StyledComponentsIcon = styled(SiStyledcomponents)``;
