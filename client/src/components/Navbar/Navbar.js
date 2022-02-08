@@ -41,8 +41,8 @@ function Navbar() {
       <IconContext.Provider value={{ color: "#bbdbb4" }}>
         <Nav>
           <NavbarContainer>
+           
             <NavLogo to="/" onClick={closeMobileMenu}>
-              <NavIcon />
               hera sey
             </NavLogo>
             <MobileIcon onClick={handleClick}>
@@ -64,6 +64,11 @@ function Navbar() {
                  get in touch 
                 </NavLinks>
               </NavItem>
+              <NavItem>
+            <NavLinks to={{ pathname: "https://github.com/heresy0-0y"}} target="_blank">
+              <NavIcon />
+            </NavLinks>
+            </NavItem>
             </NavMenu>
           </NavbarContainer>
         </Nav>
