@@ -1,6 +1,7 @@
 import { Switch, Route } from "react-router-dom";
 import {Proficiencies} from '../components'
 import ContactContainer from './ContactContainer'
+import {Displaytainers} from '../components'
 
 export default function MainContainer(props) {
 
@@ -8,6 +9,7 @@ export default function MainContainer(props) {
     <Switch>
       <Route path="/">
         <Proficiencies/>
+        <Displaytainers/>
         <ContactContainer/>
       </Route>
     </Switch>
