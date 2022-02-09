@@ -42,7 +42,7 @@ export const Modal = styled(Container)`
   ${Container};
 `;
 
-export const ModalText = styled.p`
+export const ModalText = styled.div`
   margin-bottom: auto;
   margin-top: 3em;
   line-height: 5rem;
@@ -54,7 +54,6 @@ export const FormContainer = styled(Container)`
   justify-content: center;
   margin: 1rem;
   margin-left: auto;
-  height: 40vh;
   margin-right: auto;
   width: 100%;
   ${Container};
