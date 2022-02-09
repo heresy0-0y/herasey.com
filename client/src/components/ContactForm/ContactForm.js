@@ -5,9 +5,9 @@ const ContactForm = (props) => {
   const {sendMessage, messageSent} = props
   return (
     <>
-      <Modal messageSent={messageSent}>
-       <ModalText> thanks for reaching out ! <br/> i'll get back to you as soon as i can</ModalText>
-      </Modal>
+      {/* <Modal messageSent={messageSent}> */}
+       {/* <ModalText> thanks for reaching out ! <br/> i'll get back to you as soon as i can</ModalText> */}
+      {/* </Modal> */}
         <FormContainer>
           <Form className="contact-form" onSubmit={sendMessage}>
             <Label>name</Label>

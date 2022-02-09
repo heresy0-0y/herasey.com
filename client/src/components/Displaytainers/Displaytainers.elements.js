@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Carousel, Image} from 'grommet';
+import {Carousel} from 'grommet';
 import { Container} from "../../globalStyles";
 
 export const Sitesplay = styled(Carousel)`
