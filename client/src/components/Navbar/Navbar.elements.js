@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { Container } from "../../globalStyles";
 
@@ -39,7 +39,19 @@ export const NavLogo = styled(Link)`
 
 `;
 
-export const NavIcon = styled(FiGithub)`
+export const LinkedInIcon = styled(FiLinkedin)`
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  font-size: 2rem;
+  list-style: none;
+  &:hover {
+    transition: all .1s ease-in;
+    text-shadow: 1px 1px hsla(28, 78%, 75%, .5);
+    box-shadow: 0 0 2.5px 2.6px 0.1px hsla(28, 78%, 77%, .5);
+  }
+
+`
+
+export const GithubIcon = styled(FiGithub)`
   margin: 0.5rem 0 0.5rem 0.5rem;
   font-size: 2rem;
   list-style: none;

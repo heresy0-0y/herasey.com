@@ -6,13 +6,12 @@ import {
   Nav,
   NavbarContainer,
   NavLogo,
-  NavIcon,
   MobileIcon,
   NavMenu,
   NavItem,
-  NavItemBtn,
   NavLinks,
-  NavBtnLink,
+  GithubIcon,
+  LinkedInIcon
 } from "./Navbar.elements";
 
 function Navbar() {
@@ -41,7 +40,7 @@ function Navbar() {
       <IconContext.Provider value={{ color: "#bbdbb4" }}>
         <Nav>
           <NavbarContainer>
-           
+
             <NavLogo to="/" onClick={closeMobileMenu}>
               hera sey
             </NavLogo>
@@ -50,25 +49,15 @@ function Navbar() {
             </MobileIcon>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to="/#experience" onClick={closeMobileMenu}>
-                  experience
+                <NavLinks to={{ pathname: "https://linkedin.com/in/herasey" }} onClick={closeMobileMenu} target="_blank">
+                  <LinkedInIcon />
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/#projects" onClick={closeMobileMenu}>
-                  projects
+                <NavLinks to={{ pathname: "https://github.com/heresy0-0y" }} target="_blank">
+                  <GithubIcon />
                 </NavLinks>
               </NavItem>
-              <NavItem>
-                <NavLinks to="/#contact" onClick={closeMobileMenu}>
-                 get in touch 
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-            <NavLinks to={{ pathname: "https://github.com/heresy0-0y"}} target="_blank">
-              <NavIcon />
-            </NavLinks>
-            </NavItem>
             </NavMenu>
           </NavbarContainer>
         </Nav>
