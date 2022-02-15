@@ -68,6 +68,7 @@ export const AboutMe = styled(Container)`
   color: #bbdbb4;
   font-family: Montserrat;
   font-size: 1.7rem;
+  white-space: pre-wrap;
   margin: 1.2rem;
   width: 60%;
   margin-left: auto;

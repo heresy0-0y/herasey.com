@@ -7,7 +7,8 @@ function Proficiencies() {
     return (
         <>
         <AboutMe>
-            hiya ! welcome to this virtual window to my work and play as a developer and citizen of the web;
+            hiya ! welcome to this virtual window to my work and play as a developer and citizen of the web;<br/>
+            *currently under construction, thank you for your patience !*
         </AboutMe>
         <IconsContainer>
         <IconContext.Provider value={{ color: "#bbdbb4" }}>

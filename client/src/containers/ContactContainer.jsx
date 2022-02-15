@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { ContactForm } from "../components";
