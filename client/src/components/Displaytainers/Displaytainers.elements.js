@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import {Carousel} from 'grommet';
+import {Carousel, Layer, Button} from 'grommet';
 import { Container} from "../../globalStyles";
 
 export const Sitesplay = styled(Carousel)`
+
 `;
 
 export const Sitesplaytainer = styled(Container)`
@@ -13,3 +14,10 @@ export const Sitesplaytainer = styled(Container)`
    margin-right: auto;
     ${Container}
 `;
+
+export const Overlay = styled(Layer)`
+`
+
+export const OverlayButton = styled(Button)`
+
+`
