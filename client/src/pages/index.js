@@ -7,6 +7,7 @@ import {
   ListItem,
 } from '@chakra-ui/react'
 import { CheckCircleIcon, LinkIcon } from '@chakra-ui/icons'
+import {Nav} from '../components/Nav'
 import { Hero } from '../components/Hero'
 import { Container } from '../components/Container'
 import { Main } from '../components/Main'
@@ -43,6 +44,7 @@ const Index = () => (
       </List>
     </Main>
 
+    <Nav />
     <DarkModeSwitch />
     <Footer>
       <Text>Next ❤️ Chakra</Text>
