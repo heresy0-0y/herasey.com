@@ -27,7 +27,7 @@ export const Nav = (props) => {
 
     return (
         <>
-        <IconButton ref={btnRef} onClick={onOpen} aria-label='open navigation menu' icon={<Icon as={BsCaretLeft}/>} top="1rem" right="1rem" position="fixed"></IconButton>
+        <IconButton ref={btnRef} onClick={onOpen} aria-label='open navigation menu' icon={<Icon as={BsCaretLeft}/>} top="1rem" right="1rem" position="fixed" variant="outline"></IconButton>
         <Container>  
             <Drawer
                 isOpen={isOpen}
@@ -39,7 +39,7 @@ export const Nav = (props) => {
                 <DrawerOverlay />
                 <DrawerContent>
                     <Container h="full">
-                    <DrawerCloseButton />
+                    <DrawerCloseButton variant="outline" />
                     <DrawerHeader>navigation menu</DrawerHeader>
                     <DrawerBody>
                        <Stack 
@@ -47,16 +47,16 @@ export const Nav = (props) => {
                        spacing="2rem"
                             >
                         <Link url='https://linkedin.com/in/herasey'>
-                            <IconButton aria-label="my linkedin profile"  w="2xs" icon={<Icon as={FiLinkedin}/>} />
+                            <IconButton aria-label="my linkedin profile"  w="2xs" variant="outline" icon={<Icon as={FiLinkedin}/>} />
                         </ Link>
                         <Link url='https://github.com/heresy0-0y'>
-                            <IconButton aria-label="my github profile" w="2xs" icon={<Icon as={FiGithub} />} />
+                            <IconButton aria-label="my github profile" w="2xs" variant="outline" icon={<Icon as={FiGithub} />} />
                         </Link>
                         <Link url='/'>
-                        <IconButton aria-label="my resume, pdf" w="2xs" icon={<Icon as={IoIosPaper} />} />                         
+                        <IconButton aria-label="my resume, pdf" w="2xs" variant="outline" icon={<Icon as={IoIosPaper} />} />                         
                         </Link>
                         <Link url='/#contact' external={false}>
-                        <IconButton aria-label="contact me" w="2xs" icon={<Icon as={MdOutlineMailOutline} />} />
+                        <IconButton aria-label="contact me" w="2xs" variant="outline" icon={<Icon as={MdOutlineMailOutline} />} />
                         </Link>
                         <DarkModeSwitch/>
                         </Stack>
