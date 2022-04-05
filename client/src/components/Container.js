@@ -3,15 +3,15 @@ import { Flex, useColorMode } from '@chakra-ui/react'
 export const Container = (props) => {
   const { colorMode } = useColorMode()
 
-  const bgColor = { light: 'gray.50', dark: 'gray.900' }
+  const bgColor = { light: 'linear(to-tr, blue.100, green.100)', dark: 'linear(to-tr, teal.800, green.800)' }
 
-  const color = { light: 'black', dark: 'white' }
+  const color = { light: 'green.800', dark: 'green.200' }
   return (
     <Flex
       direction="column"
       alignItems="center"
       justifyContent="flex-start"
-      bg={bgColor[colorMode]}
+      bgGradient={bgColor[colorMode]}
       color={color[colorMode]}
       {...props}
     />
