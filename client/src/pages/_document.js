@@ -11,7 +11,7 @@ export default class Document extends NextDocument {
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="mask-icon" href="/safari-pinned-tab.svg"  />
-
+  <meta name="theme-color" content="#ffffff" />
         </ Head >
         <body>
           {/* Make Color mode to persists when you refresh the page. */}

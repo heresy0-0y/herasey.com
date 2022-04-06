@@ -50,6 +50,10 @@ class Document extends next_document__WEBPACK_IMPORTED_MODULE_1__["default"] {
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("link", {
                             rel: "mask-icon",
                             href: "/safari-pinned-tab.svg"
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                            name: "theme-color",
+                            content: "#ffffff"
                         })
                     ]
                 }),
