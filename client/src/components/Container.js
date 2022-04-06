@@ -13,6 +13,7 @@ export const Container = (props) => {
       justifyContent="flex-start"
       bgGradient={bgColor[colorMode]}
       color={color[colorMode]}
+      font='fonts.mono'
       {...props}
     />
   )

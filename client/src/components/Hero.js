@@ -13,7 +13,7 @@ export const Hero = ({ title, title2 }) => (
     </Text>
     
     
-      <Heading    fontSize="10vw" bgClip="text"  bgGradient="linear(to-l, blue.800, teal.700)"
+      <Heading    fontSize="10vw" bgClip="text"  bgGradient="linear(to-l, yellow.200, teal.500)"
 >
         software engineer
       </Heading>

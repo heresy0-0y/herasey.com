@@ -1,250 +1,79 @@
-"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
 (() => {
 var exports = {};
-exports.id = 888;
-exports.ids = [888];
+exports.id = "pages/_app";
+exports.ids = ["pages/_app"];
 exports.modules = {
 
-/***/ 606:
+/***/ "./src/pages/_app.js":
+/*!***************************!*\
+  !*** ./src/pages/_app.js ***!
+  \***************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-// ESM COMPAT FLAG
-__webpack_require__.r(__webpack_exports__);
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _fontsource_source_code_pro__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fontsource/source-code-pro */ \"./node_modules/@fontsource/source-code-pro/index.css\");\n/* harmony import */ var _fontsource_source_code_pro__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_fontsource_source_code_pro__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @chakra-ui/react */ \"@chakra-ui/react\");\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _theme__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../theme */ \"./src/theme.js\");\n\n\n\n\nfunction MyApp({ Component , pageProps  }) {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.ChakraProvider, {\n        resetCSS: true,\n        theme: _theme__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n        children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_2__.ColorModeProvider, {\n            options: {\n                useSystemColorMode: true\n            },\n            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(Component, {\n                ...pageProps\n            }, void 0, false, {\n                fileName: \"/Users/hera/programming/sites-personal/herasey.com/client/src/pages/_app.js\",\n                lineNumber: 14,\n                columnNumber: 9\n            }, this)\n        }, void 0, false, {\n            fileName: \"/Users/hera/programming/sites-personal/herasey.com/client/src/pages/_app.js\",\n            lineNumber: 9,\n            columnNumber: 7\n        }, this)\n    }, void 0, false, {\n        fileName: \"/Users/hera/programming/sites-personal/herasey.com/client/src/pages/_app.js\",\n        lineNumber: 8,\n        columnNumber: 5\n    }, this);\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MyApp);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvcGFnZXMvX2FwcC5qcy5qcyIsIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7OztBQUFBO0FBQW9DO0FBQ2dDO0FBRXhDO0FBRTVCLFNBQVNHLEtBQUssQ0FBQyxFQUFFQyxTQUFTLEdBQUVDLFNBQVMsR0FBRSxFQUFFO0lBQ3ZDLHFCQUNFLDhEQUFDTCw0REFBYztRQUFDTSxRQUFRO1FBQUNKLEtBQUssRUFBRUEsOENBQUs7a0JBQ25DLDRFQUFDRCwrREFBaUI7WUFDaEJNLE9BQU8sRUFBRTtnQkFDUEMsa0JBQWtCLEVBQUUsSUFBSTthQUN6QjtzQkFFRCw0RUFBQ0osU0FBUztnQkFBRSxHQUFHQyxTQUFTOzs7OztvQkFBSTs7Ozs7Z0JBQ1Y7Ozs7O1lBQ0wsQ0FDbEI7Q0FDRjtBQUVELGlFQUFlRixLQUFLIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vc3JjL3BhZ2VzL19hcHAuanM/OGZkYSJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgJ0Bmb250c291cmNlL3NvdXJjZS1jb2RlLXBybydcbmltcG9ydCB7IENoYWtyYVByb3ZpZGVyLCBDb2xvck1vZGVQcm92aWRlciB9IGZyb20gJ0BjaGFrcmEtdWkvcmVhY3QnXG5cbmltcG9ydCB0aGVtZSBmcm9tICcuLi90aGVtZSdcblxuZnVuY3Rpb24gTXlBcHAoeyBDb21wb25lbnQsIHBhZ2VQcm9wcyB9KSB7XG4gIHJldHVybiAoXG4gICAgPENoYWtyYVByb3ZpZGVyIHJlc2V0Q1NTIHRoZW1lPXt0aGVtZX0+XG4gICAgICA8Q29sb3JNb2RlUHJvdmlkZXJcbiAgICAgICAgb3B0aW9ucz17e1xuICAgICAgICAgIHVzZVN5c3RlbUNvbG9yTW9kZTogdHJ1ZSxcbiAgICAgICAgfX1cbiAgICAgID5cbiAgICAgICAgPENvbXBvbmVudCB7Li4ucGFnZVByb3BzfSAvPlxuICAgICAgPC9Db2xvck1vZGVQcm92aWRlcj5cbiAgICA8L0NoYWtyYVByb3ZpZGVyPlxuICApXG59XG5cbmV4cG9ydCBkZWZhdWx0IE15QXBwXG4iXSwibmFtZXMiOlsiQ2hha3JhUHJvdmlkZXIiLCJDb2xvck1vZGVQcm92aWRlciIsInRoZW1lIiwiTXlBcHAiLCJDb21wb25lbnQiLCJwYWdlUHJvcHMiLCJyZXNldENTUyIsIm9wdGlvbnMiLCJ1c2VTeXN0ZW1Db2xvck1vZGUiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/pages/_app.js\n");
 
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "default": () => (/* binding */ _app)
-});
+/***/ }),
 
-// EXTERNAL MODULE: external "react/jsx-runtime"
-var jsx_runtime_ = __webpack_require__(997);
-// EXTERNAL MODULE: external "@chakra-ui/react"
-var react_ = __webpack_require__(930);
-;// CONCATENATED MODULE: external "@chakra-ui/theme-tools"
-const theme_tools_namespaceObject = require("@chakra-ui/theme-tools");
-;// CONCATENATED MODULE: ./src/theme.js
+/***/ "./src/theme.js":
+/*!**********************!*\
+  !*** ./src/theme.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"react/jsx-dev-runtime\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @chakra-ui/react */ \"@chakra-ui/react\");\n/* harmony import */ var _chakra_ui_react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _chakra_ui_theme_tools__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @chakra-ui/theme-tools */ \"@chakra-ui/theme-tools\");\n/* harmony import */ var _chakra_ui_theme_tools__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_chakra_ui_theme_tools__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\nconst fonts = {\n    body: `source-code-pro, monospace`,\n    heading: \"source-code-pro, monospace\"\n};\nconst breakpoints = (0,_chakra_ui_theme_tools__WEBPACK_IMPORTED_MODULE_2__.createBreakpoints)({\n    sm: \"40em\",\n    md: \"52em\",\n    lg: \"64em\",\n    xl: \"80em\"\n});\nconst theme = (0,_chakra_ui_react__WEBPACK_IMPORTED_MODULE_1__.extendTheme)({\n    sizes: {\n        max: \"max-content\",\n        min: \"min-content\",\n        full: \"100%\",\n        \"3xs\": \"14rem\",\n        \"2xs\": \"16rem\",\n        xs: \"20rem\",\n        sm: \"24rem\",\n        md: \"28rem\",\n        lg: \"32rem\",\n        xl: \"36rem\",\n        \"2xl\": \"42rem\",\n        \"3xl\": \"48rem\",\n        \"4xl\": \"56rem\",\n        \"5xl\": \"64rem\",\n        \"6xl\": \"72rem\",\n        \"7xl\": \"80rem\",\n        \"8xl\": \"90rem\",\n        container: {\n            sm: \"640px\",\n            md: \"768px\",\n            lg: \"1024px\",\n            xl: \"1280px\"\n        }\n    },\n    colors: {\n        \"red\": {\n            \"50\": \"#FFE5E5\",\n            \"100\": \"#FFB8B8\",\n            \"200\": \"#FF8A8A\",\n            \"300\": \"#FF5C5C\",\n            \"400\": \"#FF2E2E\",\n            \"500\": \"#FF0000\",\n            \"600\": \"#CC0000\",\n            \"700\": \"#990000\",\n            \"800\": \"#660000\",\n            \"900\": \"#330000\"\n        },\n        \"orange\": {\n            \"50\": \"#FFF1E5\",\n            \"100\": \"#FFD7B8\",\n            \"200\": \"#FFBD8A\",\n            \"300\": \"#FFA35C\",\n            \"400\": \"#FF892E\",\n            \"500\": \"#FF6F00\",\n            \"600\": \"#CC5900\",\n            \"700\": \"#994300\",\n            \"800\": \"#662C00\",\n            \"900\": \"#331600\"\n        },\n        \"gray\": {\n            \"50\": \"#F0F2F4\",\n            \"100\": \"#D6DBE0\",\n            \"200\": \"#BCC4CD\",\n            \"300\": \"#A2ADB9\",\n            \"400\": \"#8896A5\",\n            \"500\": \"#6D7F92\",\n            \"600\": \"#576675\",\n            \"700\": \"#424C57\",\n            \"800\": \"#2C333A\",\n            \"900\": \"#16191D\"\n        },\n        \"yellow\": {\n            \"50\": \"#FFFCE5\",\n            \"100\": \"#FFF5B8\",\n            \"200\": \"#FFEF8A\",\n            \"300\": \"#FFE95C\",\n            \"400\": \"#FFE32E\",\n            \"500\": \"#FFDD00\",\n            \"600\": \"#CCB100\",\n            \"700\": \"#998400\",\n            \"800\": \"#665800\",\n            \"900\": \"#332C00\"\n        },\n        \"green\": {\n            \"50\": \"#EAFAF2\",\n            \"100\": \"#C5F2DB\",\n            \"200\": \"#9FE9C3\",\n            \"300\": \"#7AE1AC\",\n            \"400\": \"#55D894\",\n            \"500\": \"#2FD07D\",\n            \"600\": \"#26A664\",\n            \"700\": \"#1C7D4B\",\n            \"800\": \"#135332\",\n            \"900\": \"#092A19\"\n        },\n        \"teal\": {\n            \"50\": \"#E8FCFC\",\n            \"100\": \"#BFF7F7\",\n            \"200\": \"#96F2F2\",\n            \"300\": \"#6EEDED\",\n            \"400\": \"#45E8E8\",\n            \"500\": \"#1CE3E3\",\n            \"600\": \"#16B6B6\",\n            \"700\": \"#118888\",\n            \"800\": \"#0B5B5B\",\n            \"900\": \"#062D2D\"\n        },\n        \"cyan\": {\n            \"50\": \"#E7F9FE\",\n            \"100\": \"#BCEDFB\",\n            \"200\": \"#90E2F9\",\n            \"300\": \"#65D6F6\",\n            \"400\": \"#39CBF3\",\n            \"500\": \"#0EBFF1\",\n            \"600\": \"#0B99C1\",\n            \"700\": \"#087391\",\n            \"800\": \"#064C60\",\n            \"900\": \"#032630\"\n        },\n        \"blue\": {\n            \"50\": \"#E6E6FE\",\n            \"100\": \"#BABAFC\",\n            \"200\": \"#8E8EFB\",\n            \"300\": \"#6262F9\",\n            \"400\": \"#3636F7\",\n            \"500\": \"#0A0AF5\",\n            \"600\": \"#0808C4\",\n            \"700\": \"#060693\",\n            \"800\": \"#040462\",\n            \"900\": \"#020231\"\n        },\n        \"purple\": {\n            \"50\": \"#F4E5FF\",\n            \"100\": \"#E1B8FF\",\n            \"200\": \"#CE8AFF\",\n            \"300\": \"#BB5CFF\",\n            \"400\": \"#A82EFF\",\n            \"500\": \"#9400FF\",\n            \"600\": \"#7700CC\",\n            \"700\": \"#590099\",\n            \"800\": \"#3B0066\",\n            \"900\": \"#1E0033\"\n        },\n        \"pink\": {\n            \"50\": \"#FCE9EC\",\n            \"100\": \"#F6C0CA\",\n            \"200\": \"#F198A7\",\n            \"300\": \"#EB7085\",\n            \"400\": \"#E54763\",\n            \"500\": \"#E01F40\",\n            \"600\": \"#B31933\",\n            \"700\": \"#861327\",\n            \"800\": \"#5A0C1A\",\n            \"900\": \"#2D060D\"\n        }\n    },\n    fonts,\n    breakpoints,\n    icons: {\n        logo: {\n            path: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"svg\", {\n                width: \"3000\",\n                height: \"3163\",\n                viewBox: \"0 0 3000 3163\",\n                fill: \"none\",\n                xmlns: \"http://www.w3.org/2000/svg\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"rect\", {\n                        width: \"3000\",\n                        height: \"3162.95\",\n                        fill: \"none\"\n                    }, void 0, false, {\n                        fileName: \"/Users/hera/programming/sites-personal/herasey.com/client/src/theme.js\",\n                        lineNumber: 181,\n                        columnNumber: 11\n                    }, undefined),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"path\", {\n                        d: \"M1470.89 1448.81L2170 2488.19H820V706.392H2170L1470.89 1448.81ZM1408.21 1515.37L909.196 2045.3V2393.46H1998.84L1408.21 1515.37Z\",\n                        fill: \"currentColor\"\n                    }, void 0, false, {\n                        fileName: \"/Users/hera/programming/sites-personal/herasey.com/client/src/theme.js\",\n                        lineNumber: 182,\n                        columnNumber: 11\n                    }, undefined)\n                ]\n            }, void 0, true, {\n                fileName: \"/Users/hera/programming/sites-personal/herasey.com/client/src/theme.js\",\n                lineNumber: 174,\n                columnNumber: 9\n            }, undefined),\n            viewBox: \"0 0 3000 3163\"\n        }\n    }\n});\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (theme);\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zcmMvdGhlbWUuanMuanMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUFBO0FBQThDO0FBQ1k7QUFFMUQsTUFBTUUsS0FBSyxHQUFHO0lBQ1pDLElBQUksRUFBRSxDQUFDLDBCQUEwQixDQUFDO0lBQ2xDQyxPQUFPLEVBQUUsNEJBQTRCO0NBQ3RDO0FBRUQsTUFBTUMsV0FBVyxHQUFHSix5RUFBaUIsQ0FBQztJQUNwQ0ssRUFBRSxFQUFFLE1BQU07SUFDVkMsRUFBRSxFQUFFLE1BQU07SUFDVkMsRUFBRSxFQUFFLE1BQU07SUFDVkMsRUFBRSxFQUFFLE1BQU07Q0FDWCxDQUFDO0FBRUYsTUFBTUMsS0FBSyxHQUFHViw2REFBVyxDQUFDO0lBQ3hCVyxLQUFLLEVBQUU7UUFFSEMsR0FBRyxFQUFFLGFBQWE7UUFDbEJDLEdBQUcsRUFBRSxhQUFhO1FBQ2xCQyxJQUFJLEVBQUUsTUFBTTtRQUNaLEtBQUssRUFBRSxPQUFPO1FBQ2QsS0FBSyxFQUFFLE9BQU87UUFDZEMsRUFBRSxFQUFFLE9BQU87UUFDWFQsRUFBRSxFQUFFLE9BQU87UUFDWEMsRUFBRSxFQUFFLE9BQU87UUFDWEMsRUFBRSxFQUFFLE9BQU87UUFDWEMsRUFBRSxFQUFFLE9BQU87UUFDWCxLQUFLLEVBQUUsT0FBTztRQUNkLEtBQUssRUFBRSxPQUFPO1FBQ2QsS0FBSyxFQUFFLE9BQU87UUFDZCxLQUFLLEVBQUUsT0FBTztRQUNkLEtBQUssRUFBRSxPQUFPO1FBQ2QsS0FBSyxFQUFFLE9BQU87UUFDZCxLQUFLLEVBQUUsT0FBTztRQUNkTyxTQUFTLEVBQUU7WUFDVFYsRUFBRSxFQUFFLE9BQU87WUFDWEMsRUFBRSxFQUFFLE9BQU87WUFDWEMsRUFBRSxFQUFFLFFBQVE7WUFDWkMsRUFBRSxFQUFFLFFBQVE7U0FDYjtLQUNGO0lBSURRLE1BQU0sRUFBRTtRQUNOLEtBQUssRUFBRTtZQUNMLElBQUksRUFBRSxTQUFTO1lBQ2YsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7U0FDakI7UUFDRCxRQUFRLEVBQUU7WUFDUixJQUFJLEVBQUUsU0FBUztZQUNmLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1NBQ2pCO1FBQ0QsTUFBTSxFQUFFO1lBQ04sSUFBSSxFQUFFLFNBQVM7WUFDZixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztTQUNqQjtRQUNELFFBQVEsRUFBRTtZQUNSLElBQUksRUFBRSxTQUFTO1lBQ2YsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7U0FDakI7UUFDRCxPQUFPLEVBQUU7WUFDUCxJQUFJLEVBQUUsU0FBUztZQUNmLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1NBQ2pCO1FBQ0QsTUFBTSxFQUFFO1lBQ04sSUFBSSxFQUFFLFNBQVM7WUFDZixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztTQUNqQjtRQUNELE1BQU0sRUFBRTtZQUNOLElBQUksRUFBRSxTQUFTO1lBQ2YsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7U0FDakI7UUFDRCxNQUFNLEVBQUU7WUFDTixJQUFJLEVBQUUsU0FBUztZQUNmLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1lBQ2hCLEtBQUssRUFBRSxTQUFTO1NBQ2pCO1FBQ0QsUUFBUSxFQUFFO1lBQ1IsSUFBSSxFQUFFLFNBQVM7WUFDZixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztZQUNoQixLQUFLLEVBQUUsU0FBUztTQUNqQjtRQUNELE1BQU0sRUFBRTtZQUNOLElBQUksRUFBRSxTQUFTO1lBQ2YsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7WUFDaEIsS0FBSyxFQUFFLFNBQVM7U0FDakI7S0FDRjtJQUVIZixLQUFLO0lBQ0xHLFdBQVc7SUFDWGEsS0FBSyxFQUFFO1FBQ0xDLElBQUksRUFBRTtZQUNKQyxJQUFJLGdCQUNGLDhEQUFDQyxLQUFHO2dCQUNGQyxLQUFLLEVBQUMsTUFBTTtnQkFDWkMsTUFBTSxFQUFDLE1BQU07Z0JBQ2JDLE9BQU8sRUFBQyxlQUFlO2dCQUN2QkMsSUFBSSxFQUFDLE1BQU07Z0JBQ1hDLEtBQUssRUFBQyw0QkFBNEI7O2tDQUVsQyw4REFBQ0MsTUFBSTt3QkFBQ0wsS0FBSyxFQUFDLE1BQU07d0JBQUNDLE1BQU0sRUFBQyxTQUFTO3dCQUFDRSxJQUFJLEVBQUMsTUFBTTs7Ozs7aUNBQUc7a0NBQ2xELDhEQUFDTCxNQUFJO3dCQUNIUSxDQUFDLEVBQUMsaUlBQWlJO3dCQUNuSUgsSUFBSSxFQUFDLGNBQWM7Ozs7O2lDQUNuQjs7Ozs7O3lCQUNFO1lBRVJELE9BQU8sRUFBRSxlQUFlO1NBQ3pCO0tBQ0Y7Q0FDRixDQUFDO0FBRUYsaUVBQWVkLEtBQUsiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9zcmMvdGhlbWUuanM/YWZhNCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBleHRlbmRUaGVtZSB9IGZyb20gJ0BjaGFrcmEtdWkvcmVhY3QnXG5pbXBvcnQgeyBjcmVhdGVCcmVha3BvaW50cyB9IGZyb20gJ0BjaGFrcmEtdWkvdGhlbWUtdG9vbHMnXG5cbmNvbnN0IGZvbnRzID0geyBcbiAgYm9keTogYHNvdXJjZS1jb2RlLXBybywgbW9ub3NwYWNlYCxcbiAgaGVhZGluZzogJ3NvdXJjZS1jb2RlLXBybywgbW9ub3NwYWNlJyxcbn1cblxuY29uc3QgYnJlYWtwb2ludHMgPSBjcmVhdGVCcmVha3BvaW50cyh7XG4gIHNtOiAnNDBlbScsXG4gIG1kOiAnNTJlbScsXG4gIGxnOiAnNjRlbScsXG4gIHhsOiAnODBlbScsXG59KVxuXG5jb25zdCB0aGVtZSA9IGV4dGVuZFRoZW1lKHtcbiAgc2l6ZXM6IHtcbiAgICAgIFxuICAgICAgbWF4OiAnbWF4LWNvbnRlbnQnLFxuICAgICAgbWluOiAnbWluLWNvbnRlbnQnLFxuICAgICAgZnVsbDogJzEwMCUnLFxuICAgICAgJzN4cyc6ICcxNHJlbScsXG4gICAgICAnMnhzJzogJzE2cmVtJyxcbiAgICAgIHhzOiAnMjByZW0nLFxuICAgICAgc206ICcyNHJlbScsXG4gICAgICBtZDogJzI4cmVtJyxcbiAgICAgIGxnOiAnMzJyZW0nLFxuICAgICAgeGw6ICczNnJlbScsXG4gICAgICAnMnhsJzogJzQycmVtJyxcbiAgICAgICczeGwnOiAnNDhyZW0nLFxuICAgICAgJzR4bCc6ICc1NnJlbScsXG4gICAgICAnNXhsJzogJzY0cmVtJyxcbiAgICAgICc2eGwnOiAnNzJyZW0nLFxuICAgICAgJzd4bCc6ICc4MHJlbScsXG4gICAgICAnOHhsJzogJzkwcmVtJyxcbiAgICAgIGNvbnRhaW5lcjoge1xuICAgICAgICBzbTogJzY0MHB4JyxcbiAgICAgICAgbWQ6ICc3NjhweCcsXG4gICAgICAgIGxnOiAnMTAyNHB4JyxcbiAgICAgICAgeGw6ICcxMjgwcHgnLFxuICAgICAgfSxcbiAgICB9LFxuICBcbiAgXG4gIFxuICAgIGNvbG9yczoge1xuICAgICAgXCJyZWRcIjoge1xuICAgICAgICBcIjUwXCI6IFwiI0ZGRTVFNVwiLFxuICAgICAgICBcIjEwMFwiOiBcIiNGRkI4QjhcIixcbiAgICAgICAgXCIyMDBcIjogXCIjRkY4QThBXCIsXG4gICAgICAgIFwiMzAwXCI6IFwiI0ZGNUM1Q1wiLFxuICAgICAgICBcIjQwMFwiOiBcIiNGRjJFMkVcIixcbiAgICAgICAgXCI1MDBcIjogXCIjRkYwMDAwXCIsXG4gICAgICAgIFwiNjAwXCI6IFwiI0NDMDAwMFwiLFxuICAgICAgICBcIjcwMFwiOiBcIiM5OTAwMDBcIixcbiAgICAgICAgXCI4MDBcIjogXCIjNjYwMDAwXCIsXG4gICAgICAgIFwiOTAwXCI6IFwiIzMzMDAwMFwiXG4gICAgICB9LFxuICAgICAgXCJvcmFuZ2VcIjoge1xuICAgICAgICBcIjUwXCI6IFwiI0ZGRjFFNVwiLFxuICAgICAgICBcIjEwMFwiOiBcIiNGRkQ3QjhcIixcbiAgICAgICAgXCIyMDBcIjogXCIjRkZCRDhBXCIsXG4gICAgICAgIFwiMzAwXCI6IFwiI0ZGQTM1Q1wiLFxuICAgICAgICBcIjQwMFwiOiBcIiNGRjg5MkVcIixcbiAgICAgICAgXCI1MDBcIjogXCIjRkY2RjAwXCIsXG4gICAgICAgIFwiNjAwXCI6IFwiI0NDNTkwMFwiLFxuICAgICAgICBcIjcwMFwiOiBcIiM5OTQzMDBcIixcbiAgICAgICAgXCI4MDBcIjogXCIjNjYyQzAwXCIsXG4gICAgICAgIFwiOTAwXCI6IFwiIzMzMTYwMFwiXG4gICAgICB9LFxuICAgICAgXCJncmF5XCI6IHtcbiAgICAgICAgXCI1MFwiOiBcIiNGMEYyRjRcIixcbiAgICAgICAgXCIxMDBcIjogXCIjRDZEQkUwXCIsXG4gICAgICAgIFwiMjAwXCI6IFwiI0JDQzRDRFwiLFxuICAgICAgICBcIjMwMFwiOiBcIiNBMkFEQjlcIixcbiAgICAgICAgXCI0MDBcIjogXCIjODg5NkE1XCIsXG4gICAgICAgIFwiNTAwXCI6IFwiIzZEN0Y5MlwiLFxuICAgICAgICBcIjYwMFwiOiBcIiM1NzY2NzVcIixcbiAgICAgICAgXCI3MDBcIjogXCIjNDI0QzU3XCIsXG4gICAgICAgIFwiODAwXCI6IFwiIzJDMzMzQVwiLFxuICAgICAgICBcIjkwMFwiOiBcIiMxNjE5MURcIlxuICAgICAgfSxcbiAgICAgIFwieWVsbG93XCI6IHtcbiAgICAgICAgXCI1MFwiOiBcIiNGRkZDRTVcIixcbiAgICAgICAgXCIxMDBcIjogXCIjRkZGNUI4XCIsXG4gICAgICAgIFwiMjAwXCI6IFwiI0ZGRUY4QVwiLFxuICAgICAgICBcIjMwMFwiOiBcIiNGRkU5NUNcIixcbiAgICAgICAgXCI0MDBcIjogXCIjRkZFMzJFXCIsXG4gICAgICAgIFwiNTAwXCI6IFwiI0ZGREQwMFwiLFxuICAgICAgICBcIjYwMFwiOiBcIiNDQ0IxMDBcIixcbiAgICAgICAgXCI3MDBcIjogXCIjOTk4NDAwXCIsXG4gICAgICAgIFwiODAwXCI6IFwiIzY2NTgwMFwiLFxuICAgICAgICBcIjkwMFwiOiBcIiMzMzJDMDBcIlxuICAgICAgfSxcbiAgICAgIFwiZ3JlZW5cIjoge1xuICAgICAgICBcIjUwXCI6IFwiI0VBRkFGMlwiLFxuICAgICAgICBcIjEwMFwiOiBcIiNDNUYyREJcIixcbiAgICAgICAgXCIyMDBcIjogXCIjOUZFOUMzXCIsXG4gICAgICAgIFwiMzAwXCI6IFwiIzdBRTFBQ1wiLFxuICAgICAgICBcIjQwMFwiOiBcIiM1NUQ4OTRcIixcbiAgICAgICAgXCI1MDBcIjogXCIjMkZEMDdEXCIsXG4gICAgICAgIFwiNjAwXCI6IFwiIzI2QTY2NFwiLFxuICAgICAgICBcIjcwMFwiOiBcIiMxQzdENEJcIixcbiAgICAgICAgXCI4MDBcIjogXCIjMTM1MzMyXCIsXG4gICAgICAgIFwiOTAwXCI6IFwiIzA5MkExOVwiXG4gICAgICB9LFxuICAgICAgXCJ0ZWFsXCI6IHtcbiAgICAgICAgXCI1MFwiOiBcIiNFOEZDRkNcIixcbiAgICAgICAgXCIxMDBcIjogXCIjQkZGN0Y3XCIsXG4gICAgICAgIFwiMjAwXCI6IFwiIzk2RjJGMlwiLFxuICAgICAgICBcIjMwMFwiOiBcIiM2RUVERURcIixcbiAgICAgICAgXCI0MDBcIjogXCIjNDVFOEU4XCIsXG4gICAgICAgIFwiNTAwXCI6IFwiIzFDRTNFM1wiLFxuICAgICAgICBcIjYwMFwiOiBcIiMxNkI2QjZcIixcbiAgICAgICAgXCI3MDBcIjogXCIjMTE4ODg4XCIsXG4gICAgICAgIFwiODAwXCI6IFwiIzBCNUI1QlwiLFxuICAgICAgICBcIjkwMFwiOiBcIiMwNjJEMkRcIlxuICAgICAgfSxcbiAgICAgIFwiY3lhblwiOiB7XG4gICAgICAgIFwiNTBcIjogXCIjRTdGOUZFXCIsXG4gICAgICAgIFwiMTAwXCI6IFwiI0JDRURGQlwiLFxuICAgICAgICBcIjIwMFwiOiBcIiM5MEUyRjlcIixcbiAgICAgICAgXCIzMDBcIjogXCIjNjVENkY2XCIsXG4gICAgICAgIFwiNDAwXCI6IFwiIzM5Q0JGM1wiLFxuICAgICAgICBcIjUwMFwiOiBcIiMwRUJGRjFcIixcbiAgICAgICAgXCI2MDBcIjogXCIjMEI5OUMxXCIsXG4gICAgICAgIFwiNzAwXCI6IFwiIzA4NzM5MVwiLFxuICAgICAgICBcIjgwMFwiOiBcIiMwNjRDNjBcIixcbiAgICAgICAgXCI5MDBcIjogXCIjMDMyNjMwXCJcbiAgICAgIH0sXG4gICAgICBcImJsdWVcIjoge1xuICAgICAgICBcIjUwXCI6IFwiI0U2RTZGRVwiLFxuICAgICAgICBcIjEwMFwiOiBcIiNCQUJBRkNcIixcbiAgICAgICAgXCIyMDBcIjogXCIjOEU4RUZCXCIsXG4gICAgICAgIFwiMzAwXCI6IFwiIzYyNjJGOVwiLFxuICAgICAgICBcIjQwMFwiOiBcIiMzNjM2RjdcIixcbiAgICAgICAgXCI1MDBcIjogXCIjMEEwQUY1XCIsXG4gICAgICAgIFwiNjAwXCI6IFwiIzA4MDhDNFwiLFxuICAgICAgICBcIjcwMFwiOiBcIiMwNjA2OTNcIixcbiAgICAgICAgXCI4MDBcIjogXCIjMDQwNDYyXCIsXG4gICAgICAgIFwiOTAwXCI6IFwiIzAyMDIzMVwiXG4gICAgICB9LFxuICAgICAgXCJwdXJwbGVcIjoge1xuICAgICAgICBcIjUwXCI6IFwiI0Y0RTVGRlwiLFxuICAgICAgICBcIjEwMFwiOiBcIiNFMUI4RkZcIixcbiAgICAgICAgXCIyMDBcIjogXCIjQ0U4QUZGXCIsXG4gICAgICAgIFwiMzAwXCI6IFwiI0JCNUNGRlwiLFxuICAgICAgICBcIjQwMFwiOiBcIiNBODJFRkZcIixcbiAgICAgICAgXCI1MDBcIjogXCIjOTQwMEZGXCIsXG4gICAgICAgIFwiNjAwXCI6IFwiIzc3MDBDQ1wiLFxuICAgICAgICBcIjcwMFwiOiBcIiM1OTAwOTlcIixcbiAgICAgICAgXCI4MDBcIjogXCIjM0IwMDY2XCIsXG4gICAgICAgIFwiOTAwXCI6IFwiIzFFMDAzM1wiXG4gICAgICB9LFxuICAgICAgXCJwaW5rXCI6IHtcbiAgICAgICAgXCI1MFwiOiBcIiNGQ0U5RUNcIixcbiAgICAgICAgXCIxMDBcIjogXCIjRjZDMENBXCIsXG4gICAgICAgIFwiMjAwXCI6IFwiI0YxOThBN1wiLFxuICAgICAgICBcIjMwMFwiOiBcIiNFQjcwODVcIixcbiAgICAgICAgXCI0MDBcIjogXCIjRTU0NzYzXCIsXG4gICAgICAgIFwiNTAwXCI6IFwiI0UwMUY0MFwiLFxuICAgICAgICBcIjYwMFwiOiBcIiNCMzE5MzNcIixcbiAgICAgICAgXCI3MDBcIjogXCIjODYxMzI3XCIsXG4gICAgICAgIFwiODAwXCI6IFwiIzVBMEMxQVwiLFxuICAgICAgICBcIjkwMFwiOiBcIiMyRDA2MERcIlxuICAgICAgfVxuICAgIH0sXG4gIFxuICBmb250cyxcbiAgYnJlYWtwb2ludHMsXG4gIGljb25zOiB7XG4gICAgbG9nbzoge1xuICAgICAgcGF0aDogKFxuICAgICAgICA8c3ZnXG4gICAgICAgICAgd2lkdGg9XCIzMDAwXCJcbiAgICAgICAgICBoZWlnaHQ9XCIzMTYzXCJcbiAgICAgICAgICB2aWV3Qm94PVwiMCAwIDMwMDAgMzE2M1wiXG4gICAgICAgICAgZmlsbD1cIm5vbmVcIlxuICAgICAgICAgIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIlxuICAgICAgICA+XG4gICAgICAgICAgPHJlY3Qgd2lkdGg9XCIzMDAwXCIgaGVpZ2h0PVwiMzE2Mi45NVwiIGZpbGw9XCJub25lXCIgLz5cbiAgICAgICAgICA8cGF0aFxuICAgICAgICAgICAgZD1cIk0xNDcwLjg5IDE0NDguODFMMjE3MCAyNDg4LjE5SDgyMFY3MDYuMzkySDIxNzBMMTQ3MC44OSAxNDQ4LjgxWk0xNDA4LjIxIDE1MTUuMzdMOTA5LjE5NiAyMDQ1LjNWMjM5My40NkgxOTk4Ljg0TDE0MDguMjEgMTUxNS4zN1pcIlxuICAgICAgICAgICAgZmlsbD1cImN1cnJlbnRDb2xvclwiXG4gICAgICAgICAgLz5cbiAgICAgICAgPC9zdmc+XG4gICAgICApLFxuICAgICAgdmlld0JveDogJzAgMCAzMDAwIDMxNjMnLFxuICAgIH0sXG4gIH0sXG59KVxuXG5leHBvcnQgZGVmYXVsdCB0aGVtZVxuIl0sIm5hbWVzIjpbImV4dGVuZFRoZW1lIiwiY3JlYXRlQnJlYWtwb2ludHMiLCJmb250cyIsImJvZHkiLCJoZWFkaW5nIiwiYnJlYWtwb2ludHMiLCJzbSIsIm1kIiwibGciLCJ4bCIsInRoZW1lIiwic2l6ZXMiLCJtYXgiLCJtaW4iLCJmdWxsIiwieHMiLCJjb250YWluZXIiLCJjb2xvcnMiLCJpY29ucyIsImxvZ28iLCJwYXRoIiwic3ZnIiwid2lkdGgiLCJoZWlnaHQiLCJ2aWV3Qm94IiwiZmlsbCIsInhtbG5zIiwicmVjdCIsImQiXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./src/theme.js\n");
 
+/***/ }),
 
-const fonts = {
-    mono: `'Menlo', monospace`
-};
-const breakpoints = (0,theme_tools_namespaceObject.createBreakpoints)({
-    sm: "40em",
-    md: "52em",
-    lg: "64em",
-    xl: "80em"
-});
-const theme = (0,react_.extendTheme)({
-    sizes: {
-        max: "max-content",
-        min: "min-content",
-        full: "100%",
-        "3xs": "14rem",
-        "2xs": "16rem",
-        xs: "20rem",
-        sm: "24rem",
-        md: "28rem",
-        lg: "32rem",
-        xl: "36rem",
-        "2xl": "42rem",
-        "3xl": "48rem",
-        "4xl": "56rem",
-        "5xl": "64rem",
-        "6xl": "72rem",
-        "7xl": "80rem",
-        "8xl": "90rem",
-        container: {
-            sm: "640px",
-            md: "768px",
-            lg: "1024px",
-            xl: "1280px"
-        }
-    },
-    colors: {
-        "red": {
-            "50": "#FFE5E5",
-            "100": "#FFB8B8",
-            "200": "#FF8A8A",
-            "300": "#FF5C5C",
-            "400": "#FF2E2E",
-            "500": "#FF0000",
-            "600": "#CC0000",
-            "700": "#990000",
-            "800": "#660000",
-            "900": "#330000"
-        },
-        "orange": {
-            "50": "#FFF1E5",
-            "100": "#FFD7B8",
-            "200": "#FFBD8A",
-            "300": "#FFA35C",
-            "400": "#FF892E",
-            "500": "#FF6F00",
-            "600": "#CC5900",
-            "700": "#994300",
-            "800": "#662C00",
-            "900": "#331600"
-        },
-        "gray": {
-            "50": "#F0F2F4",
-            "100": "#D6DBE0",
-            "200": "#BCC4CD",
-            "300": "#A2ADB9",
-            "400": "#8896A5",
-            "500": "#6D7F92",
-            "600": "#576675",
-            "700": "#424C57",
-            "800": "#2C333A",
-            "900": "#16191D"
-        },
-        "yellow": {
-            "50": "#FFFCE5",
-            "100": "#FFF5B8",
-            "200": "#FFEF8A",
-            "300": "#FFE95C",
-            "400": "#FFE32E",
-            "500": "#FFDD00",
-            "600": "#CCB100",
-            "700": "#998400",
-            "800": "#665800",
-            "900": "#332C00"
-        },
-        "green": {
-            "50": "#EAFAF2",
-            "100": "#C5F2DB",
-            "200": "#9FE9C3",
-            "300": "#7AE1AC",
-            "400": "#55D894",
-            "500": "#2FD07D",
-            "600": "#26A664",
-            "700": "#1C7D4B",
-            "800": "#135332",
-            "900": "#092A19"
-        },
-        "teal": {
-            "50": "#E8FCFC",
-            "100": "#BFF7F7",
-            "200": "#96F2F2",
-            "300": "#6EEDED",
-            "400": "#45E8E8",
-            "500": "#1CE3E3",
-            "600": "#16B6B6",
-            "700": "#118888",
-            "800": "#0B5B5B",
-            "900": "#062D2D"
-        },
-        "cyan": {
-            "50": "#E7F9FE",
-            "100": "#BCEDFB",
-            "200": "#90E2F9",
-            "300": "#65D6F6",
-            "400": "#39CBF3",
-            "500": "#0EBFF1",
-            "600": "#0B99C1",
-            "700": "#087391",
-            "800": "#064C60",
-            "900": "#032630"
-        },
-        "blue": {
-            "50": "#E6E6FE",
-            "100": "#BABAFC",
-            "200": "#8E8EFB",
-            "300": "#6262F9",
-            "400": "#3636F7",
-            "500": "#0A0AF5",
-            "600": "#0808C4",
-            "700": "#060693",
-            "800": "#040462",
-            "900": "#020231"
-        },
-        "purple": {
-            "50": "#F4E5FF",
-            "100": "#E1B8FF",
-            "200": "#CE8AFF",
-            "300": "#BB5CFF",
-            "400": "#A82EFF",
-            "500": "#9400FF",
-            "600": "#7700CC",
-            "700": "#590099",
-            "800": "#3B0066",
-            "900": "#1E0033"
-        },
-        "pink": {
-            "50": "#FCE9EC",
-            "100": "#F6C0CA",
-            "200": "#F198A7",
-            "300": "#EB7085",
-            "400": "#E54763",
-            "500": "#E01F40",
-            "600": "#B31933",
-            "700": "#861327",
-            "800": "#5A0C1A",
-            "900": "#2D060D"
-        }
-    },
-    fonts,
-    breakpoints,
-    icons: {
-        logo: {
-            path: /*#__PURE__*/ (0,jsx_runtime_.jsxs)("svg", {
-                width: "3000",
-                height: "3163",
-                viewBox: "0 0 3000 3163",
-                fill: "none",
-                xmlns: "http://www.w3.org/2000/svg",
-                children: [
-                    /*#__PURE__*/ jsx_runtime_.jsx("rect", {
-                        width: "3000",
-                        height: "3162.95",
-                        fill: "none"
-                    }),
-                    /*#__PURE__*/ jsx_runtime_.jsx("path", {
-                        d: "M1470.89 1448.81L2170 2488.19H820V706.392H2170L1470.89 1448.81ZM1408.21 1515.37L909.196 2045.3V2393.46H1998.84L1408.21 1515.37Z",
-                        fill: "currentColor"
-                    })
-                ]
-            }),
-            viewBox: "0 0 3000 3163"
-        }
-    }
-});
-/* harmony default export */ const src_theme = (theme);
+/***/ "./node_modules/@fontsource/source-code-pro/index.css":
+/*!************************************************************!*\
+  !*** ./node_modules/@fontsource/source-code-pro/index.css ***!
+  \************************************************************/
+/***/ (() => {
 
-;// CONCATENATED MODULE: ./src/pages/_app.js
-
-
-
-function MyApp({ Component , pageProps  }) {
-    return /*#__PURE__*/ jsx_runtime_.jsx(react_.ChakraProvider, {
-        resetCSS: true,
-        theme: src_theme,
-        children: /*#__PURE__*/ jsx_runtime_.jsx(react_.ColorModeProvider, {
-            options: {
-                useSystemColorMode: true
-            },
-            children: /*#__PURE__*/ jsx_runtime_.jsx(Component, {
-                ...pageProps
-            })
-        })
-    });
-}
-/* harmony default export */ const _app = (MyApp);
 
 
 /***/ }),
 
-/***/ 930:
+/***/ "@chakra-ui/react":
+/*!***********************************!*\
+  !*** external "@chakra-ui/react" ***!
+  \***********************************/
 /***/ ((module) => {
 
+"use strict";
 module.exports = require("@chakra-ui/react");
 
 /***/ }),
 
-/***/ 997:
+/***/ "@chakra-ui/theme-tools":
+/*!*****************************************!*\
+  !*** external "@chakra-ui/theme-tools" ***!
+  \*****************************************/
 /***/ ((module) => {
 
-module.exports = require("react/jsx-runtime");
+"use strict";
+module.exports = require("@chakra-ui/theme-tools");
+
+/***/ }),
+
+/***/ "react/jsx-dev-runtime":
+/*!****************************************!*\
+  !*** external "react/jsx-dev-runtime" ***!
+  \****************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react/jsx-dev-runtime");
 
 /***/ })
 
@@ -255,7 +84,7 @@ module.exports = require("react/jsx-runtime");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-var __webpack_exports__ = (__webpack_exec__(606));
+var __webpack_exports__ = (__webpack_exec__("./src/pages/_app.js"));
 module.exports = __webpack_exports__;
 
 })();
