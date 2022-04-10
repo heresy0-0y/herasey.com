@@ -14,7 +14,7 @@ export interface UseOutsideClickProps {
     handler?: (e: Event) => void;
 }
 /**
- * Example, used in components like Dialogs and Popovers so they can close
+ * Example, used in components like Dialogs and Popovers, so they can close
  * when a user clicks outside them.
  */
 export declare function useOutsideClick(props: UseOutsideClickProps): void;
