@@ -28,8 +28,8 @@ const Index = () => (
     </Main>
     <Nav />
     <Footer>
-
     </Footer>
+
   </Container>
   </>
 );

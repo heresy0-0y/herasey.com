@@ -16,7 +16,6 @@
     "@fontsource/pt-sans": "^4.5.5",
     "@fontsource/rubik-microbe": "^4.5.0",
     "@fontsource/source-code-pro": "^4.5.6",
-    "@pdftron/pdfjs-express-viewer": "^8.3.0",
     "framer-motion": "^4.0.3",
     "next": "latest",
     "nodemailer": "^6.7.3",

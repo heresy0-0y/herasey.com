@@ -52,7 +52,7 @@ export const Nav = (props) => {
                         <Link url='https://github.com/heresy0-0y'>
                             <IconButton aria-label="my github profile" w="2xs" variant="outline" icon={<Icon as={FiGithub} />} />
                         </Link>
-                        <Link url='/'>
+                        <Link url='/resume.pdf'>
                         <IconButton aria-label="my resume, pdf" w="2xs" variant="outline" icon={<Icon as={IoIosPaper} />} />                         
                         </Link>
                         <Link url='/#contact' external={false}>
