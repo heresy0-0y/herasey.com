@@ -20,7 +20,7 @@ const Index = () => (
   <link rel="manifest" href="/site.webmanifest" />
   <link rel="mask-icon" href="/safari-pinned-tab.svg"  />
   </Head>
-  <Container height="100vh">
+  <Container>
     <Hero />
     <Main>
       <About />
