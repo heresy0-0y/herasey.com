@@ -36,7 +36,9 @@ export const Nav = (props) => {
                 finalFocusRef={btnRef}
                 
                 >
-                <DrawerOverlay />
+                <DrawerOverlay 
+                bg='blackAlpha.400'
+                />
                 <DrawerContent>
                     <Container h="full">
                     <DrawerCloseButton variant="outline" />
