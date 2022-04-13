@@ -10,6 +10,7 @@ import { Main } from "../components/Main";
 import { CTA } from "../components/CTA";
 import { Footer } from "../components/Footer";
 import { Skills } from "../components/Skills";
+import {Page} from "../components/Page"
 
 const Index = () => (
   <>
@@ -21,14 +22,19 @@ const Index = () => (
   <link rel="mask-icon" href="/safari-pinned-tab.svg"  />
   </Head>
   <Container>
+    <Page>
     <Hero />
+    </Page>
+    <Page id="about">
     <Main>
       <About />
       <Skills />
     </Main>
+      </Page>
     <Nav />
-    <Footer>
-    </Footer>
+    <Page id="contact">
+    <Footer/>
+  </Page>
 
   </Container>
   </>
