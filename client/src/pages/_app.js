@@ -9,25 +9,15 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider resetCSS theme={theme}>
       <ColorModeProvider options={{}}>
         <Head>
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="/favicon-32x32.png"
+    <title>Hera Sey</title>
+        <meta
+            name="viewport"
+            content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1"
           />
-          <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="/favicon-16x16.png"
+          <meta
+            name="description"
+            content="Portfolio Site for Hera Sey, Software Developer"
           />
-          <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="/apple-touch-icon.png"
-          />
-          <link rel="manifest" href="/site.webmanifest" />
-          <link rel="mask-icon" href="/safari-pinned-tab.svg" />
         </Head>
         <Component {...pageProps} />
       </ColorModeProvider>
