@@ -6,7 +6,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
     compress: true,
     swcMinify: true,
     compiler: {
-      removeConsole: true,
+    //   removeConsole: true,
     },
     images: {
       formats: ["image/avif", "image/webp"],

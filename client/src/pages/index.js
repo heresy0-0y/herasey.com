@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { About } from "../components/About";
 import { Nav } from "../components/Nav";
 import { Hero } from "../components/Hero";
@@ -24,7 +24,6 @@ const Index = () => (
       <Page>
         <Projects />
       </Page>
-
       <Nav />
       <Page id="contact">
         <Footer />

@@ -9,8 +9,8 @@ function MyApp({ Component, pageProps }) {
     <ChakraProvider resetCSS theme={theme}>
       <ColorModeProvider options={{}}>
         <Head>
-    <title>Hera Sey</title>
-        <meta
+          <title>Hera Sey</title>
+          <meta
             name="viewport"
             content="viewport-fit=cover, width=device-width, height=device-height, initial-scale=1"
           />

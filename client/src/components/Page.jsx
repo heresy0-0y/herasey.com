@@ -2,7 +2,7 @@ import { Flex, Box } from "@chakra-ui/react";
 
 export const Page = (props) => {
   return (
-    <Box h="100vh" pos="relative">
+    <Box minH="100vh" w="100vw" pos="relative">
       <Flex
         boxSize="full"
         direction="column"
