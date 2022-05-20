@@ -9,8 +9,9 @@ export const Container = (props) => {
   return (
     <Flex
       direction="column"
+      justify="space-around"
       alignItems="center"
-      justifyContent="flex-start"
+
       bgGradient={bgColor[colorMode]}
       color={color[colorMode]}
       font='fonts.mono'

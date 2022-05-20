@@ -14,7 +14,7 @@ import {
 
 export const Contact = (props) => {
   return (
-    <Center>
+    <>
       <form onSubmit={props.sendMessage}>
         <VStack spacing="1.5rem">
           <Text>get in touch</Text>
@@ -39,6 +39,6 @@ export const Contact = (props) => {
           </Button>
         </VStack>
       </form>
-    </Center>
+    </>
   );
 };

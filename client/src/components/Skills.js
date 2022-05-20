@@ -1,9 +1,9 @@
-import {List, HStack, ListItem} from '@chakra-ui/react'
+import {List, HStack, ListItem, Box} from '@chakra-ui/react'
 import {Container} from './Container'
 
 export const Skills = () => {
     return (
-        <Container>
+        <Box boxSize="full">
         <HStack spacing="2rem">
             <List>
                 <ListItem>
@@ -33,7 +33,8 @@ export const Skills = () => {
                     MongoDB
                 </ListItem>
             </List>
-        </HStack>
-        </Container>
+            </HStack>
+            </Box>
+
     )
 }
