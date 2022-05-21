@@ -1,4 +1,7 @@
 import React from "react";
+import Projects from "../screens/Projects/Projects";
+import ReactFullpage from "@fullpage/react-fullpage";
+
 import { About } from "../components/About";
 import { Nav } from "../components/Nav";
 import { Hero } from "../components/Hero";
@@ -7,7 +10,6 @@ import { Main } from "../components/Main";
 import { Footer } from "../components/Footer";
 import { Skills } from "../components/Skills";
 import { Page } from "../components/Page";
-import Projects from "../screens/Projects/Projects";
 
 const Index = () => (
   <>

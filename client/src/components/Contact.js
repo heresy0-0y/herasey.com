@@ -32,6 +32,7 @@ export const Contact = (props) => {
             <Textarea placeholder="your message goes here" name="message" />
           </Skeleton>
           <Button
+            bg="transparent"
             isLoading={props.sending}
             loadingText="sending..."
             type="submit">
