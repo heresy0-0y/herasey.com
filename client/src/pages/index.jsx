@@ -14,13 +14,13 @@ import { Skills } from "../components/Skills";
 import { Page } from "../components/Page";
 
 const pages = [
-  <Hero />,
-  <Main>
+  <Hero key={0} />,
+  <Main key={1}>
     <About />
     <Skills />
   </Main>,
-  <Projects />,
-  <Contact />,
+  <Projects key={2}/>,
+  <Contact key={3} />,
 ];
 
 const Index = () => {
@@ -54,7 +54,7 @@ const Index = () => {
       <Container embla={viewportRef} className="embla__viewport">
         <Box className="embla__container" h="100vh" w="100vw">
           {pages.map((page, index) => (
-            <Page className="embla__slide" key={index}>
+            <Page  key={`${index}`} className="embla__slide">
               {page}
             </Page>
           ))}

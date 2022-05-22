@@ -12,6 +12,7 @@ import {
   DrawerCloseButton,
   IconButton,
   Icon,
+  useColorMode,
   Stack,
   Spacer,
 } from "@chakra-ui/react";
@@ -26,14 +27,20 @@ import { Link } from "./Link";
 export const Nav = ({scrollNext}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
+  const { colorMode } = useColorMode();
+
+  const bgColor = {
+    light: "linear(to-tr, blue.100, green.100)",
+    dark: "linear(to-tr, teal.800, green.800)",
+  };
+
+  const color = { light: "green.800", dark: "green.200" };
 
   return (
     <>
-      <Button
-        onClick={scrollNext}
-      top="1rem" zIndex={4} pos="fixed">Next</Button>
       <IconButton
         ref={btnRef}
+        color={color[colorMode]}
         onClick={onOpen}
         aria-label="open navigation menu"
         icon={<Icon as={BsCaretLeft} />}
@@ -42,7 +49,7 @@ export const Nav = ({scrollNext}) => {
         zIndex={4}
         position="fixed"
         variant="outline"></IconButton>
-      <Container>
+      <Container bgGradient={bgColor[colorMode]}>
         <Drawer
           isOpen={isOpen}
           placement="right"
@@ -50,7 +57,7 @@ export const Nav = ({scrollNext}) => {
           finalFocusRef={btnRef}>
           <DrawerOverlay bg="blackAlpha.400" />
           <DrawerContent>
-            <Container h="full">
+            <Container h="full" bgGradient={bgColor[colorMode]} color={color[colorMode]}>
               <DrawerCloseButton variant="outline" />
               <DrawerHeader>navigation menu</DrawerHeader>
               <DrawerBody>

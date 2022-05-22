@@ -38,7 +38,7 @@ export const Carousel = ({ slides }) => {
     h: height,
     pos: "absolute",
     // flex: "none",
-    shadow: "dark-lg",
+    shadow: "xl",
   };
   const carouselStyle = {
     transition: "all .5s",
