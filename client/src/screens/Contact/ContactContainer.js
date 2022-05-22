@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import emailjs from '@emailjs/browser'
-import {Contact} from './Contact'
+import {Contact} from '../../components'
 
 export const ContactContainer = (props) => {
     const userId = "user_noSGymCb0Ve25uMCUhnJZ";

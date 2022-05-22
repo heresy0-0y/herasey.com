@@ -7,12 +7,16 @@ import {
   FormLabel,
   FormHelperText,
   FormErrorMessage,
+  useColorMode,
   VStack,
   Text,
   Skeleton,
 } from "@chakra-ui/react";
 
-export const Contact = (props) => {
+const Contact = (props) => {
+  const { colorMode } = useColorMode()
+  const hover={dark: "blue.900", light: "green.100"}
+  const bg={dark: "blackAlpha", light: "whiteAlpha"}
   return (
     <Center>
       <form onSubmit={props.sendMessage}>
@@ -32,7 +36,8 @@ export const Contact = (props) => {
             <Textarea placeholder="your message goes here" name="message" />
           </Skeleton>
           <Button
-            bg="transparent"
+            bg={bg[colorMode]}
+            _hover={{bg: hover[colorMode]}}
             isLoading={props.sending}
             loadingText="sending..."
             type="submit">
@@ -43,3 +48,4 @@ export const Contact = (props) => {
     </Center>
   );
 };
+export default Contact

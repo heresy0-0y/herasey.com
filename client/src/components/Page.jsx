@@ -1,16 +1,9 @@
-import { Flex, Box } from "@chakra-ui/react";
+import { Center, Box } from "@chakra-ui/react";
 
 export const Page = (props) => {
   return (
-    <Box minH="100vh" w="100vw" pos="relative">
-      <Flex
-        boxSize="full"
-        direction="column"
-        align="center"
-        justify="space-around"
-        as="section"
-        {...props}
-      />
+    <Box h="100vh" w="100vw" flex="0 0 100%" pos="relative" className="emla__slide" >
+      <Center as="section" w="100vw" h="100vh" {...props} />
     </Box>
   );
 };

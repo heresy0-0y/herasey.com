@@ -6,6 +6,8 @@ import {
   DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
+  Button,
+  Container,
   DrawerContent,
   DrawerCloseButton,
   IconButton,
@@ -19,14 +21,17 @@ import { IoIosPaper } from "react-icons/io";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { DarkModeSwitch } from "./DarkModeSwitch";
 import { Link } from "./Link";
-import { Container } from "./Container";
 
-export const Nav = (props) => {
+
+export const Nav = ({scrollNext}) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
   return (
     <>
+      <Button
+        onClick={scrollNext}
+      top="1rem" zIndex={4} pos="fixed">Next</Button>
       <IconButton
         ref={btnRef}
         onClick={onOpen}
@@ -34,6 +39,7 @@ export const Nav = (props) => {
         icon={<Icon as={BsCaretLeft} />}
         top="1rem"
         right="1rem"
+        zIndex={4}
         position="fixed"
         variant="outline"></IconButton>
       <Container>

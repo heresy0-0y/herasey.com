@@ -3,6 +3,7 @@ import NextImage from "next/image";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import {
   Flex,
+  Center,
   Box,
   IconButton,
   Icon,
@@ -12,7 +13,7 @@ import {
 } from "@chakra-ui/react";
 
 export const Carousel = ({ slides }) => {
-  const [currentSlide, SetCurrentSlide] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
   const slideCount = slides.length;
   const slideWidth = useBreakpointValue({ base: 95, md: 90 });
   const { colorMode } = useColorMode();
@@ -33,45 +34,46 @@ export const Carousel = ({ slides }) => {
     },
   };
   const boxStyle = {
-    w: "100%",
+    w: width,
     h: height,
-    pos: "static",
-    flex: "none",
-    shadow: "xl",
+    pos: "absolute",
+    // flex: "none",
+    shadow: "dark-lg",
   };
   const carouselStyle = {
     transition: "all .5s",
-    ml: `-${currentSlide * 100}%`,
+    ml: `-${(currentSlide) * 100}%`,
   };
   const previousSlide = () => {
-    SetCurrentSlide((prev) => (prev === 0 ? slideCount - 1 : prev - 1));
+    setCurrentSlide((prev) => (prev === 0 ? slideCount -1  : prev - 1));
   };
   const nextSlide = () => {
-    SetCurrentSlide((prev) => (prev === slideCount - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) => (prev === slideCount -1 ? 0 : prev + 1));
   };
   return (
-    <Flex w="100vw" h="100%" overflow="hidden" p={10}>
-      <Flex w="100%" pos="relative">
-        <Flex {...carouselStyle} w="100%" h="100%">
+    <Center boxSize="full" overflow="hidden" p={10}>
+
+      <Center w="100%" h="100%" {...carouselStyle}>
+
           {slides.map((slide, index) => (
-            <Box
-              zIndex={currentSlide === index ? 1 : -2}
+            <Center
+              zIndex={currentSlide === index ? 1 : -5}
               key={`slide-${index}`}
               {...boxStyle}>
               <Image
                 as={NextImage}
-                sx={{ objectFit: "contain", maxHeight: "80%", height: "80%" }}
+                objectFit="contain"
                 src={slide.src}
                 alt={slide.alt}
                 onLoad={({ target }) => {
                   const { width, naturalHeight, naturalWidth, height } = target;
                   setHeight(naturalHeight * (width / naturalWidth));
+                  setWidth(width)
                 }}
               />
-            </Box>
+            </Center>
           ))}
-        </Flex>
-      </Flex>
+</Center>
       <IconButton
         {...arrowStyle}
         aria-label="previous slide"
@@ -88,6 +90,6 @@ export const Carousel = ({ slides }) => {
         onClick={nextSlide}
         icon={<Icon as={BsArrowRightCircle} />}
       />
-    </Flex>
+    </Center>
   );
 };

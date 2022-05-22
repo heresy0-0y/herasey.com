@@ -1,3 +1,4 @@
+import React from "react";
 import { Flex, useColorMode } from "@chakra-ui/react";
 
 export const Container = (props) => {
@@ -11,12 +12,15 @@ export const Container = (props) => {
   const color = { light: "green.800", dark: "green.200" };
   return (
     <Flex
-      direction="column"
-      justify="space-around"
-      alignItems="center"
+      ref={props.embla}
+      className="embla__viewport"
+      h="100%"
+      w="100%"
+      overflow="hidden"
       bgGradient={bgColor[colorMode]}
       color={color[colorMode]}
       font="fonts.mono"
+      sx={{ draggable: true, userSelect: "none" }}
       {...props}
     />
   );
