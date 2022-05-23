@@ -1,8 +1,8 @@
-import React, { useState , useEffect, useCallback} from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import NextImage from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { WheelGesturesPlugin as WheelGestures } from "embla-carousel-wheel-gestures";
-import Autoplay from 'embla-carousel-autoplay'
+import Autoplay from "embla-carousel-autoplay";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import {
   Flex,
@@ -16,18 +16,19 @@ import {
 } from "@chakra-ui/react";
 
 export const Carousel = ({ slides }) => {
-  const slideWidth = useBreakpointValue({ base: 95, md: 90 });
+  const autoplay = useRef(
+    Autoplay(
+    {delay: 6000, stopOnInteraction: true}, (emblaRoot) => emblaRoot.parentElement
+  )
+)
   const { colorMode } = useColorMode();
-  const [height, setHeight] = useState("100%");
-  const [width, setWidth] = useState("100%");
   const bg = { light: "whiteAlpha.200", dark: "blackAlpha.200" };
   const [viewportRef, emblaApi] = useEmblaCarousel(
     {
-      speed: 5,
+      speed: 4,
       loop: true,
-
     },
-    [WheelGestures()]
+    [WheelGestures(), autoplay.current]
   );
 
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
@@ -36,12 +37,13 @@ export const Carousel = ({ slides }) => {
   const scrollNext = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollNext();
-
+    autoplay.current.reset()
   }, [emblaApi]);
 
   const scrollPrev = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollPrev();
+    autoplay.current.reset()
   }, [emblaApi]);
 
   const onSelect = useCallback(() => {
@@ -74,23 +76,17 @@ export const Carousel = ({ slides }) => {
     pos: "relative",
     maxH: "98vh",
     maxW: "98vw",
-    px: "1%"
+    px: "1%",
   };
 
   const containerStyle = {
     display: "flex",
     userSelect: "none",
-
-  }
+  };
 
   return (
-<Box>
-      <Flex
-        w="98vw"
-      h="98vh"
-
-        overflow="hidden"
-        ref={viewportRef}>
+    <Box>
+      <Flex w="98vw" h="98vh" overflow="hidden" ref={viewportRef}>
         <Box className="embla__container" {...containerStyle} display="flex">
           {slides.map((slide, index) => (
             <Box key={`${index}`} {...boxStyle} className="embla__slide">
@@ -120,6 +116,6 @@ export const Carousel = ({ slides }) => {
         onClick={scrollNext}
         icon={<Icon as={BsArrowRightCircle} />}
       />
-</Box>
+    </Box>
   );
 };
