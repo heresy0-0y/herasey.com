@@ -27,8 +27,10 @@ const Index = () => {
   const [viewportRef, embla] = useEmblaCarousel(
     {
       axis: "y",
-      skipSnaps: true,
-      loop: true,
+      skipSnaps: false,
+      dragFree: false,
+      align: "end",
+      speed: 3
     },
     [WheelGestures()]
   );
