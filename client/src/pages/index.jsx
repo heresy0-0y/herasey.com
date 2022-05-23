@@ -1,17 +1,17 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/router";
-import { Box } from "@chakra-ui/react";
 import useEmblaCarousel from "embla-carousel-react";
-import { Container } from "../components/Container.jsx";
-import Projects from "../screens/Projects/Projects";
+import {motion } from "framer-motion"
 import { WheelGesturesPlugin as WheelGestures } from "embla-carousel-wheel-gestures";
-import { About } from "../components/About";
-import { Nav } from "../components/Nav";
-import { Hero } from "../components/Hero";
-import { Main } from "../components/Main";
+
+import { Box } from "@chakra-ui/react";
+import Projects from "../screens/Projects/Projects";
 import Contact from "../screens/Contact/Contact";
-import { Skills } from "../components/Skills";
-import { Page } from "../components/Page";
+import { About, Container, Nav, Hero, Skills, Main, Page } from "../components";
+
+
+
+
 
 const pages = [
   <Hero key={0} />,
@@ -19,7 +19,7 @@ const pages = [
     <About />
     <Skills />
   </Main>,
-  <Projects key={2}/>,
+  <Projects key={2} />,
   <Contact key={3} />,
 ];
 
@@ -30,7 +30,7 @@ const Index = () => {
       skipSnaps: false,
       dragFree: false,
       align: "end",
-      speed: 3
+      speed: 6,
     },
     [WheelGestures()]
   );
@@ -38,7 +38,7 @@ const Index = () => {
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
 
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
-  const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
+  const scrollTo = useCallback((i) => embla && embla.scrollTo(i), [embla]);
   const onSelect = useCallback(() => {
     if (!embla) return;
     setPrevBtnEnabled(embla.canScrollPrev());
@@ -53,10 +53,10 @@ const Index = () => {
 
   return (
     <>
-      <Container embla={{embla: viewportRef}} className="embla__viewport">
+      <Container embla={{ embla: viewportRef }} className="embla__viewport">
         <Box className="embla__container" h="100vh" w="100vw">
           {pages.map((page, index) => (
-            <Page  key={`${index}`} className="embla__slide">
+            <Page key={`${index}`} className="embla__slide">
               {page}
             </Page>
           ))}
@@ -64,7 +64,7 @@ const Index = () => {
       </Container>
       <Nav
         btnsEnabled={{ prev: prevBtnEnabled, next: nextBtnEnabled }}
-        scrollNext={scrollNext}
+        scrollTo={scrollTo}
       />
     </>
   );

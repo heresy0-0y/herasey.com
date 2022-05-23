@@ -3,6 +3,7 @@ import NextImage from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { WheelGesturesPlugin as WheelGestures } from "embla-carousel-wheel-gestures";
 import Autoplay from "embla-carousel-autoplay";
+import {motion} from "framer-motion"
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import {
   Flex,
@@ -18,12 +19,13 @@ import {
 export const Carousel = ({ slides }) => {
   const autoplay = useRef(
     Autoplay(
-    {delay: 6000, stopOnInteraction: true}, (emblaRoot) => emblaRoot.parentElement
-  )
-)
+      { delay: 6000, stopOnInteraction: true },
+      (emblaRoot) => emblaRoot.parentElement
+    )
+  );
   const { colorMode } = useColorMode();
   const bg = { light: "whiteAlpha.200", dark: "blackAlpha.200" };
-  const [viewportRef, emblaApi] = useEmblaCarousel(
+  const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       speed: 4,
       loop: true,
@@ -31,25 +33,20 @@ export const Carousel = ({ slides }) => {
     [WheelGestures(), autoplay.current]
   );
 
-  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
-  const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
-
   const scrollNext = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollNext();
-    autoplay.current.reset()
+    autoplay.current.reset();
   }, [emblaApi]);
 
   const scrollPrev = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollPrev();
-    autoplay.current.reset()
+    autoplay.current.reset();
   }, [emblaApi]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
-    setPrevBtnEnabled(emblaApi.canScrollPrev());
-    setNextBtnEnabled(emblaApi.canScrollNext());
   }, [emblaApi]);
 
   useEffect(() => {
@@ -76,7 +73,7 @@ export const Carousel = ({ slides }) => {
     pos: "relative",
     maxH: "98vh",
     maxW: "98vw",
-    px: "1%",
+    px: "1vw",
   };
 
   const containerStyle = {
@@ -86,10 +83,15 @@ export const Carousel = ({ slides }) => {
 
   return (
     <Box>
-      <Flex w="98vw" h="98vh" overflow="hidden" ref={viewportRef} align="center">
-        <Box className="embla__container" {...containerStyle} display="flex" >
+      <Flex
+        w="98vw"
+        h="98vh"
+        overflow="hidden"
+        ref={emblaRef}
+        align="center">
+        <Box className="embla__container" {...containerStyle} display="flex">
           {slides.map((slide, index) => (
-            <Box key={`${index}`} {...boxStyle} className="embla__slide">
+            <Box key={`${index}`} {...boxStyle} className="embla__slide" as={motion.div}>
               <Image
                 as={NextImage}
                 objectFit="contain"

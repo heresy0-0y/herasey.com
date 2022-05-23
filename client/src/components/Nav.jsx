@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import {useRouter} from 'next/router'
 import {
   useDisclosure,
   Drawer,
@@ -23,8 +24,7 @@ import { MdOutlineMailOutline } from "react-icons/md";
 import { DarkModeSwitch } from "./DarkModeSwitch";
 import { Link } from "./Link";
 
-
-export const Nav = ({scrollNext}) => {
+const Nav = ({ scrollTo }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const { colorMode } = useColorMode();
@@ -34,8 +34,19 @@ export const Nav = ({scrollNext}) => {
     dark: "linear(to-tr, teal.800, green.800)",
   };
 
+  const pages = {contact: 3,}
+
   const color = { light: "green.800", dark: "green.200" };
 
+  const router = useRouter()
+  useEffect(() => {
+  
+    if (router.asPath.includes("#")) {
+      const currentPage = router.asPath.slice(2)
+      scrollTo(pages[currentPage])
+    }
+    
+  },[router])
   return (
     <>
       <IconButton
@@ -57,7 +68,10 @@ export const Nav = ({scrollNext}) => {
           finalFocusRef={btnRef}>
           <DrawerOverlay bg="blackAlpha.400" />
           <DrawerContent>
-            <Container h="full" bgGradient={bgColor[colorMode]} color={color[colorMode]}>
+            <Container
+              h="full"
+              bgGradient={bgColor[colorMode]}
+              color={color[colorMode]}>
               <DrawerCloseButton variant="outline" />
               <DrawerHeader>navigation menu</DrawerHeader>
               <DrawerBody>
@@ -104,3 +118,5 @@ export const Nav = ({scrollNext}) => {
     </>
   );
 };
+
+export default Nav;

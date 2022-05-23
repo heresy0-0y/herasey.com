@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, useColorMode } from "@chakra-ui/react";
 
-export const Container = (props) => {
+const Container = (props) => {
   const { colorMode } = useColorMode();
 
   const bgColor = {
@@ -25,3 +25,5 @@ export const Container = (props) => {
     />
   );
 };
+
+export default Container;

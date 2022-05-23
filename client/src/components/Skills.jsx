@@ -1,9 +1,9 @@
 import { List, HStack, ListItem, Box } from "@chakra-ui/react";
 import { Container } from "./Container";
 
-export const Skills = () => {
+const Skills = () => {
   return (
-    <Box boxSize="full">
+    <Box h="50vh">
       <HStack spacing="2rem" justify="center">
         <List>
           <ListItem>React</ListItem>
@@ -21,3 +21,4 @@ export const Skills = () => {
     </Box>
   );
 };
+export default Skills;

@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import Head from "next/head";
-import "@fontsource/fascinate-inline"
-import "@fontsource/montserrat-alternates"
+import "@fontsource/fascinate-inline";
+import "@fontsource/montserrat-alternates";
 import "@fontsource/source-code-pro";
 import { ChakraProvider, ColorModeProvider } from "@chakra-ui/react";
 
