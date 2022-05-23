@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, {  useCallback, useEffect } from "react";
 import { useRouter } from "next/router";
 import useEmblaCarousel from "embla-carousel-react";
 import {motion } from "framer-motion"
@@ -11,7 +11,7 @@ import { About, Container, Nav, Hero, Skills, Main, Page } from "../components";
 
 
 
-
+const pageIndices = {contact: 3,}
 
 const pages = [
   <Hero key={0} />,
@@ -20,10 +20,13 @@ const pages = [
     <Skills />
   </Main>,
   <Projects key={2} />,
-  <Contact key={3} />,
+  <Contact id="contact" key={3} />,
 ];
 
 const Index = () => {
+  const router = useRouter()
+  const path = router.asPath.slice(2)
+ 
   const [viewportRef, embla] = useEmblaCarousel(
     {
       axis: "y",
@@ -34,21 +37,20 @@ const Index = () => {
     },
     [WheelGestures()]
   );
-  const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
-  const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
 
   const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
   const scrollTo = useCallback((i) => embla && embla.scrollTo(i), [embla]);
   const onSelect = useCallback(() => {
     if (!embla) return;
-    setPrevBtnEnabled(embla.canScrollPrev());
-    setNextBtnEnabled(embla.canScrollNext());
+
+
   }, [embla]);
 
   useEffect(() => {
     if (!embla) return;
     embla.on("select", onSelect);
     onSelect();
+    scrollTo(pageIndices[path])
   }, [embla, onSelect]);
 
   return (
@@ -63,7 +65,7 @@ const Index = () => {
         </Box>
       </Container>
       <Nav
-        btnsEnabled={{ prev: prevBtnEnabled, next: nextBtnEnabled }}
+
         scrollTo={scrollTo}
       />
     </>

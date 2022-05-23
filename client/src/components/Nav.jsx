@@ -34,19 +34,10 @@ const Nav = ({ scrollTo }) => {
     dark: "linear(to-tr, teal.800, green.800)",
   };
 
-  const pages = {contact: 3,}
+
 
   const color = { light: "green.800", dark: "green.200" };
 
-  const router = useRouter()
-  useEffect(() => {
-  
-    if (router.asPath.includes("#")) {
-      const currentPage = router.asPath.slice(2)
-      scrollTo(pages[currentPage])
-    }
-    
-  },[router])
   return (
     <>
       <IconButton
