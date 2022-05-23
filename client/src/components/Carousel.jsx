@@ -86,8 +86,8 @@ export const Carousel = ({ slides }) => {
 
   return (
     <Box>
-      <Flex w="98vw" h="98vh" overflow="hidden" ref={viewportRef}>
-        <Box className="embla__container" {...containerStyle} display="flex">
+      <Flex w="98vw" h="98vh" overflow="hidden" ref={viewportRef} align="center">
+        <Box className="embla__container" {...containerStyle} display="flex" >
           {slides.map((slide, index) => (
             <Box key={`${index}`} {...boxStyle} className="embla__slide">
               <Image

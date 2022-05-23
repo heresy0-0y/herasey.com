@@ -53,7 +53,7 @@ const Index = () => {
 
   return (
     <>
-      <Container embla={viewportRef} className="embla__viewport">
+      <Container embla={{embla: viewportRef}} className="embla__viewport">
         <Box className="embla__container" h="100vh" w="100vw">
           {pages.map((page, index) => (
             <Page  key={`${index}`} className="embla__slide">

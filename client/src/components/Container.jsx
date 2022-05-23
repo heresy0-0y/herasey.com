@@ -12,7 +12,7 @@ export const Container = (props) => {
   const color = { light: "green.800", dark: "green.200" };
   return (
     <Flex
-      ref={props.embla}
+      ref={props.embla.embla}
       className="embla__viewport"
       h="100%"
       w="100%"

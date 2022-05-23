@@ -8,29 +8,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.0.2",
+    "@chakra-ui/react": "^2.1.0",
     "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "@fontsource/inconsolata": "^4.5.4",
-    "@fontsource/montserrat": "^4.5.7",
-    "@fontsource/pt-sans": "^4.5.5",
-    "@fontsource/rubik-microbe": "^4.5.0",
-    "@fontsource/source-code-pro": "^4.5.6",
-    "@fullpage/react-fullpage": "^0.1.25",
+    "@fontsource/fascinate-inline": "^4.5.8",
+    "@fontsource/montserrat-alternates": "^4.5.8",
+    "@fontsource/source-code-pro": "^4.5.9",
     "@next/bundle-analyzer": "^12.1.6",
     "embla-carousel-autoplay": "^6.2.0",
     "embla-carousel-react": "^6.2.0",
     "embla-carousel-wheel-gestures": "^2.2.0",
     "framer-motion": "^6.3.3",
-    "next": "latest",
-    "nodemailer": "^6.7.3",
+    "next": "^12.1.6",
+    "nodemailer": "^6.7.5",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
-    "eslint": "8.15.0",
-    "eslint-config-next": "12.1.6"
+    "eslint": "^8.16.0",
+    "eslint-config-next": "^12.1.6"
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import ReactFullpage from '@fullpage/react-fullpage';
 import Head from "next/head";
+import "@fontsource/fascinate-inline"
+import "@fontsource/montserrat-alternates"
 import "@fontsource/source-code-pro";
 import { ChakraProvider, ColorModeProvider } from "@chakra-ui/react";
 
