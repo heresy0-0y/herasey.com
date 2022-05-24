@@ -34,15 +34,6 @@ const Index = () => {
     { el: <Projects key={2} />, ref: projects },
     { el: <Contact id="contact" key={3} />, ref: contact },
   ];
-
-  const scrollTo = useCallback((i) => {
-    embla && embla.scrollTo(i), [embla];
-  }, [embla]);
-  
-    const onSelect = useCallback(() => {
-      if (!embla) return;
-    }, [embla]);
-
   const [viewportRef, embla] = useEmblaCarousel(
     {
       axis: "y",
@@ -53,6 +44,15 @@ const Index = () => {
     },
     [WheelGestures()]
   );
+
+  const scrollTo = useCallback((i) => {
+    embla && embla.scrollTo(i), [embla];
+  }, [embla]);
+  
+    const onSelect = useCallback(() => {
+      if (!embla) return;
+    }, [embla]);
+
 
   useEffect(() => {
     if (!embla) return;
