@@ -11,13 +11,14 @@ import { About, Container, Nav, Hero, Skills, Main, Page } from "../components";
 
 const pageIndices = { contact: 3 };
 
-
-
 const Index = () => {
   const ref = useRef(null);
   const about = useRef(null);
   const projects = useRef(null);
   const contact = useRef(null);
+  
+  const router = useRouter();
+  const path = router.asPath.slice(2);
 
   const pages = [
     { el: <Hero key={0} />, ref: ref },
@@ -33,11 +34,15 @@ const Index = () => {
     { el: <Projects key={2} />, ref: projects },
     { el: <Contact id="contact" key={3} />, ref: contact },
   ];
-  const router = useRouter();
-  const path = router.asPath.slice(2);
-  useEffect(() => {
-    scrollTo(pageIndices[path]);
-  }, [router]);
+
+  const scrollTo = useCallback((i) => {
+    embla && embla.scrollTo(i), [embla];
+  }, [embla]);
+  
+    const onSelect = useCallback(() => {
+      if (!embla) return;
+    }, [embla]);
+
   const [viewportRef, embla] = useEmblaCarousel(
     {
       axis: "y",
@@ -49,30 +54,22 @@ const Index = () => {
     [WheelGestures()]
   );
 
-  const scrollTo = useCallback((i) => {
-    embla && embla.scrollTo(i), [embla];
-    pages[i].ref.current.click()
-
-  });
-
-  
-  const onSelect = useCallback(() => {
-    if (!embla) return;
-  }, [embla]);
-
   useEffect(() => {
     if (!embla) return;
     embla.on("select", onSelect);
     onSelect();
     scrollTo(pageIndices[path]);
-  }, [embla, onSelect]);
+  }, [embla, onSelect, router, scrollTo, path]);
 
   return (
     <>
       <Container embla={{ embla: viewportRef }} className="embla__viewport">
         <Box className="embla__container" h="100vh" w="100vw">
           {pages.map((page, index) => (
-            <Page page={{ref: pages[index].ref}} key={`${index}`}  className="embla__slide">
+            <Page
+              page={{ ref: pages[index].ref }}
+              key={`${index}`}
+              className="embla__slide">
               {page.el}
             </Page>
           ))}

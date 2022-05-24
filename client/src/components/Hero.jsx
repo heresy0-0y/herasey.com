@@ -32,7 +32,7 @@ const Hero = () => {
             align="right">
             hi there!
             <br />
-            i'm
+            i&apos;m
           </Text>
           <Text
             align="center"

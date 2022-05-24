@@ -39,7 +39,7 @@ const Nav = ({ scrollTo }) => {
   };
   const color = { light: "green.800", dark: "green.200" };
   const buttons = [
-    <Link url="https://linkedin.com/in/herasey">
+    <Link url="https://linkedin.com/in/herasey" key="linkedin">
       <IconButton
         aria-label="my linkedin profile"
         w="full"
@@ -51,7 +51,7 @@ const Nav = ({ scrollTo }) => {
         icon={<Icon w="sm" focusable={false} as={FiLinkedin} />}
       />
     </Link>,
-    <Link url="https://github.com/heresy0-0y">
+    <Link url="https://github.com/heresy0-0y" key="github">
       <IconButton
         color={color[colorMode]}
         w="full"
@@ -63,7 +63,7 @@ const Nav = ({ scrollTo }) => {
         icon={<Icon focusable={false} as={FiGithub} />}
       />
     </Link>,
-    <Link url="/resume.pdf">
+    <Link url="/resume.pdf" key="resume">
       <IconButton
         color={color[colorMode]}
         aria-label="my resume, pdf"
@@ -78,7 +78,7 @@ const Nav = ({ scrollTo }) => {
         }
       />
     </Link>,
-    <Link url="/#contact" external={false}>
+    <Link url="/#contact" external={false} key="contact form">
       <IconButton
         color={color[colorMode]}
         aria-label="contact me"
@@ -102,7 +102,7 @@ const Nav = ({ scrollTo }) => {
         right="1%"
         shouldWrapChildren
         w="7%"
-        h="100%"
+        h="full"
 >
         {buttons.map((button, index) => (
           <Box color={color[colorMode]} key={index} w="3vw" pos="relative">
