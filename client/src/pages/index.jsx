@@ -1,49 +1,51 @@
 import React, { useCallback, useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
-import useEmblaCarousel from "embla-carousel-react";
-import { motion } from "framer-motion";
-import { WheelGesturesPlugin as WheelGestures } from "embla-carousel-wheel-gestures";
 
+import useEmblaCarousel from "embla-carousel-react";
+import { WheelGesturesPlugin as WheelGestures } from "embla-carousel-wheel-gestures";
+import { motion } from "framer-motion";
 import { Box } from "@chakra-ui/react";
+
 import Projects from "../screens/Projects/Projects";
 import Contact from "../screens/Contact/Contact";
-import { About, Container, Nav, Hero, Skills, Main, Page } from "../components";
+import { Container, Nav, Hero, Main, Page } from "../components";
 
 const pageIndices = { title: 0, about: 1, projects: 2, contact: 3 };
 
 const Index = () => {
+  const [currentPage, setPage] = useState(0);
+  const [scrollProgress, setProgress] = useState(0);
+  const router = useRouter();
+  const path = router.asPath.slice(2);
+
+  const contact = useRef(null);
   const ref = useRef(null);
   const about = useRef(null);
   const projects = useRef(null);
-  const contact = useRef(null);
-  const [currentPage, setPage] = useState(0);
-  const router = useRouter();
-  const path = router.asPath.slice(2);
+
+  const [viewportRef, embla] = useEmblaCarousel(
+    {
+      axis: "y",
+      containScroll: "trimSnaps",
+      align: "end",
+    },
+    [WheelGestures()]
+  );
 
   const pages = [
     { el: <Hero key={0} />, ref: ref },
     {
-      el: (
-        <Main key={1}>
-          <About />
-          <Skills />
-        </Main>
-      ),
+      el: <Main key={1} />,
       ref: about,
     },
     { el: <Projects key={2} />, ref: projects },
     { el: <Contact id="contact" key={3} />, ref: contact },
   ];
-  const [viewportRef, embla] = useEmblaCarousel(
-    {
-      axis: "y",
-      skipSnaps: false,
-      dragFree: false,
-      align: "end",
-      speed: 6,
-    },
-    [WheelGestures()]
-  );
+
+  const onSelect = useCallback(() => {
+    if (!embla) return;
+    setPage(embla.selectedScrollSnap());
+  }, [embla, setPage]);
 
   const scrollTo = useCallback(
     (i) => {
@@ -52,10 +54,17 @@ const Index = () => {
     [embla]
   );
 
-  const onSelect = useCallback(() => {
+  const onScroll = useCallback(() => {
     if (!embla) return;
-    setPage(embla.selectedScrollSnap());
-  }, [embla, setPage]);
+    const progress = Math.max(0, Math.min(1, embla.scrollProgress()));
+    setProgress(progress * 100);
+  }, [embla, setProgress]);
+
+  const smoothProgress = useCallback(() => {
+    if (!embla) return;
+    const progress = Math.max(0, Math.min(1, embla.scrollProgress()));
+    setProgress(progress * 100);
+  }, [embla, setProgress]);
 
   const handleKeyDown = (e) => {
     const key = e.key;
@@ -70,30 +79,37 @@ const Index = () => {
 
   useEffect(() => {
     if (!embla) return;
-    embla.on("select", onSelect);
-    const container = embla.containerNode().focus();
     onSelect();
+    onScroll();
     scrollTo(currentPage);
-  }, [embla, onSelect, scrollTo, currentPage]);
+    embla.on("select", onSelect);
+    embla.on("scroll", onScroll);
+    embla.on("settle", smoothProgress);
+    const container = embla.containerNode();
+    container.focus();
+  }, [embla, onSelect, scrollTo, currentPage, onScroll]);
 
   return (
     <div>
       <Container
+        as={motion.flex}
         embla={{ embla: viewportRef }}
         className="embla__viewport"
         tabIndex={0}>
         <Box className="embla__container" h="100vh" w="100vw" as={motion.div}>
           {pages.map((page, index) => (
-            <Page
-              page={{ ref: pages[index].ref }}
-              key={`${index}`}
-              className="embla__slide">
+            <Page page={{ ref: pages[index].ref }} key={`${index}`}>
               {page.el}
             </Page>
           ))}
         </Box>
       </Container>
-      <Nav scrollTo={scrollTo} />
+      <Nav
+        scrollTo={scrollTo}
+        currentPage={currentPage}
+        setPage={setPage}
+        scrollProgress={scrollProgress}
+      />
     </div>
   );
 };
