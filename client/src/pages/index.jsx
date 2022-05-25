@@ -74,7 +74,7 @@ const Index = () => {
     const container = embla.containerNode().focus();
     onSelect();
     scrollTo(currentPage);
-  }, [embla, onSelect, router, scrollTo, path, currentPage]);
+  }, [embla, onSelect, scrollTo, currentPage]);
 
   return (
     <div>
