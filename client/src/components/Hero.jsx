@@ -24,15 +24,10 @@ const Hero = () => {
           fontFamily="montserrat alternates"
           text-fill-color="transparent"
           pos="relative">
-          <Text
-            fontSize="25px"
-            mr="60%"
-            mb="-1%"
-            orientation="vertical"
-            align="right">
+          <Text fontSize="25px" ml="20%" orientation="vertical" align="left">
             hi there!
             <br />
-            i&apos;m
+            my name is
           </Text>
           <Text
             align="center"
@@ -44,6 +39,9 @@ const Hero = () => {
             _before={shadows}
             _after={{ ...shadows, zIndex: -2, left: 0, right: 0 }}>
             hera sey
+          </Text>
+          <Text fontSize="25px" ml="20%" orientation="vertical" align="left">
+            and i&apos;m a
           </Text>
           <Text
             bgClip="text"

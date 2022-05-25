@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import {
   useDisclosure,
   Drawer,
-  Wrap,
+  Flex,
   Center,
   DrawerBody,
   DrawerFooter,
@@ -85,15 +85,16 @@ const Nav = ({ scrollTo }) => {
 
   return (
     <>
-      <Wrap
+      <Flex
         direction="column"
         align="center"
         pos="fixed"
+        justify="space-between"
         top="1%"
         right="1%"
         shouldWrapChildren
         w="7%"
-        h="full">
+        h="180px">
         {buttons.map((button, index) => (
           <Box
             color={color[colorMode]}
@@ -104,7 +105,7 @@ const Nav = ({ scrollTo }) => {
             {button}
           </Box>
         ))}
-      </Wrap>
+      </Flex>
       <IconButton
         ref={btnRef}
         display={{ base: "flex", md: "none" }}

@@ -82,7 +82,7 @@ const Index = () => {
         embla={{ embla: viewportRef }}
         className="embla__viewport"
         tabIndex={0}>
-        <Box className="embla__container" h="100vh" w="100vw">
+        <Box className="embla__container" h="100vh" w="100vw" as={motion.div}>
           {pages.map((page, index) => (
             <Page
               page={{ ref: pages[index].ref }}
