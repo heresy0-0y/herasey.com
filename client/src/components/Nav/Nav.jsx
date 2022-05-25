@@ -38,41 +38,40 @@ const Nav = ({ scrollTo }) => {
     dark: "linear(to-tr, teal.800, green.800)",
   };
   const color = { light: "green.800", dark: "green.200" };
+
+  const buttonStyle = {
+    variant: "ghost",
+    color: `${color[colorMode]}`,
+    borderRadius: "full",
+    w: "full",
+    _focus: {
+      boxShadow:
+        "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
+    },
+  };
   const buttons = [
     <Link url="https://linkedin.com/in/herasey" key="linkedin">
       <IconButton
         aria-label="my linkedin profile"
-        w="full"
-        color={color[colorMode]}
-        _focus={{
-          boxShadow:
-            "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
-        }}
+        {...buttonStyle}
         icon={<Icon w="sm" focusable={false} as={FiLinkedin} />}
       />
     </Link>,
     <Link url="https://github.com/heresy0-0y" key="github">
       <IconButton
-        color={color[colorMode]}
-        w="full"
+ {...buttonStyle}
         aria-label="my github profile"
-        _focus={{
-          boxShadow:
-            "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
-        }}
+
         icon={<Icon focusable={false} as={FiGithub} />}
       />
     </Link>,
     <Link url="/resume.pdf" key="resume">
       <IconButton
-        color={color[colorMode]}
+
         aria-label="my resume, pdf"
-        w="full"
+        {...buttonStyle}
         id="resume button"
-        _focus={{
-          boxShadow:
-            "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
-        }}
+
         icon={
           <Icon focusable={false} htmlFor="resume button" as={IoIosPaper} />
         }
@@ -80,13 +79,9 @@ const Nav = ({ scrollTo }) => {
     </Link>,
     <Link url="/#contact" external={false} key="contact form">
       <IconButton
-        color={color[colorMode]}
+      {...buttonStyle}
         aria-label="contact me"
-        w="full"
-        _focus={{
-          boxShadow:
-            "0 0 1px 2px rgba(88, 144, 255, .75), 0 1px 1px rgba(0, 0, 0, .15)",
-        }}
+
         icon={<Icon focusable="false" as={MdOutlineMailOutline} />}
       />
     </Link>,
@@ -102,10 +97,14 @@ const Nav = ({ scrollTo }) => {
         right="1%"
         shouldWrapChildren
         w="7%"
-        h="full"
->
+        h="full">
         {buttons.map((button, index) => (
-          <Box color={color[colorMode]} key={index} w="3vw" pos="relative">
+          <Box
+            color={color[colorMode]}
+            key={index}
+            w="3vw"
+            pos="relative"
+            variant="ghost">
             {button}
           </Box>
         ))}

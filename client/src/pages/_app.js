@@ -7,7 +7,14 @@ import { ChakraProvider, ColorModeProvider } from "@chakra-ui/react";
 
 import theme from "../theme";
 
+
 function MyApp({ Component, pageProps }) {
+
+  const handleKeyDown = (e) => {
+    const key = e.key
+    console.log(key)
+  }
+
   return (
     <ChakraProvider resetCSS theme={theme}>
       <ColorModeProvider options={{}}>
@@ -22,7 +29,7 @@ function MyApp({ Component, pageProps }) {
             content="Portfolio Site for Hera Sey, Software Developer"
           />
         </Head>
-        <Component {...pageProps} />
+        <Component {...pageProps} onKeyDown={handleKeyDown}/>
       </ColorModeProvider>
     </ChakraProvider>
   );
