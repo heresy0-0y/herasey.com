@@ -59,19 +59,16 @@ const Nav = ({ scrollTo }) => {
     </Link>,
     <Link url="https://github.com/heresy0-0y" key="github">
       <IconButton
- {...buttonStyle}
+        {...buttonStyle}
         aria-label="my github profile"
-
         icon={<Icon focusable={false} as={FiGithub} />}
       />
     </Link>,
     <Link url="/resume.pdf" key="resume">
       <IconButton
-
         aria-label="my resume, pdf"
         {...buttonStyle}
         id="resume button"
-
         icon={
           <Icon focusable={false} htmlFor="resume button" as={IoIosPaper} />
         }
@@ -79,9 +76,8 @@ const Nav = ({ scrollTo }) => {
     </Link>,
     <Link url="/#contact" external={false} key="contact form">
       <IconButton
-      {...buttonStyle}
+        {...buttonStyle}
         aria-label="contact me"
-
         icon={<Icon focusable="false" as={MdOutlineMailOutline} />}
       />
     </Link>,

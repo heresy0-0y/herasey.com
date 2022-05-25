@@ -17,7 +17,6 @@ const Container = (props) => {
       className="embla__viewport"
       h="100%"
       w="100%"
-
       overflow="hidden"
       bgGradient={bgColor[colorMode]}
       color={color[colorMode]}

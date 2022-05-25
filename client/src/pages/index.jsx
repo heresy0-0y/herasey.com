@@ -16,10 +16,10 @@ const Index = () => {
   const about = useRef(null);
   const projects = useRef(null);
   const contact = useRef(null);
-  const [currentPage, setPage] = useState(0)
+  const [currentPage, setPage] = useState(0);
   const router = useRouter();
   const path = router.asPath.slice(2);
-  
+
   const pages = [
     { el: <Hero key={0} />, ref: ref },
     {
@@ -43,45 +43,46 @@ const Index = () => {
       speed: 6,
     },
     [WheelGestures()]
-    );
-    
-    const scrollTo = useCallback((i) => {
+  );
+
+  const scrollTo = useCallback(
+    (i) => {
       embla && embla.scrollTo(i), [embla];
-    }, [embla]);
-    
-    const onSelect = useCallback(() => {
-      if (!embla) return;
-      setPage(embla.selectedScrollSnap())
-    }, [embla, setPage]);
-    
-    const clickAllowed = useCallback(() => {
-      embla.clickAllowed()
-    })
-    const handleKeyDown = (e) => {
-      const key = e.key
-      if (key === "ArrowDown") setPage(prev => prev < 3 ? prev + 1 : prev)
-      if (key === "ArrowUp") setPage(prev => prev > 0 ? prev - 1 : prev)
-    }
-    
-    useEffect(() => {
-    document.body.addEventListener("keydown", handleKeyDown)
-    setPage(pageIndices[path])
-  },[path, router])
+    },
+    [embla]
+  );
+
+  const onSelect = useCallback(() => {
+    if (!embla) return;
+    setPage(embla.selectedScrollSnap());
+  }, [embla, setPage]);
+
+  const handleKeyDown = (e) => {
+    const key = e.key;
+    if (key === "ArrowDown") setPage((prev) => (prev < 3 ? prev + 1 : prev));
+    if (key === "ArrowUp") setPage((prev) => (prev > 0 ? prev - 1 : prev));
+  };
+
+  useEffect(() => {
+    document.body.addEventListener("keydown", handleKeyDown);
+    setPage(pageIndices[path]);
+  }, [path, router]);
 
   useEffect(() => {
     if (!embla) return;
     embla.on("select", onSelect);
-    const container = embla.containerNode().focus()
+    const container = embla.containerNode().focus();
     onSelect();
     scrollTo(currentPage);
   }, [embla, onSelect, router, scrollTo, path, currentPage]);
 
-
-
-
   return (
-    <div >
-      <Container embla={{ embla: viewportRef }} className="embla__viewport" tabIndex={0} onKeyDown={handleKeyDown}>
+    <div>
+      <Container
+        embla={{ embla: viewportRef }}
+        className="embla__viewport"
+        tabIndex={0}
+        onKeyDown={handleKeyDown}>
         <Box className="embla__container" h="100vh" w="100vw">
           {pages.map((page, index) => (
             <Page
