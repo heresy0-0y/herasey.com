@@ -12,7 +12,6 @@ const Container = (props) => {
   const color = { light: "green.800", dark: "green.200" };
   return (
     <Flex
-      onKeyDown={props.onKeyDown}
       ref={props.embla.embla}
       className="embla__viewport"
       h="100%"

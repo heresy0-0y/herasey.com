@@ -64,7 +64,7 @@ const Index = () => {
   };
 
   useEffect(() => {
-    document.body.addEventListener("keydown", handleKeyDown);
+    document.documentElement.addEventListener("keydown", handleKeyDown);
     setPage(pageIndices[path]);
   }, [path, router]);
 
@@ -81,8 +81,7 @@ const Index = () => {
       <Container
         embla={{ embla: viewportRef }}
         className="embla__viewport"
-        tabIndex={0}
-        onKeyDown={handleKeyDown}>
+        tabIndex={0}>
         <Box className="embla__container" h="100vh" w="100vw">
           {pages.map((page, index) => (
             <Page
