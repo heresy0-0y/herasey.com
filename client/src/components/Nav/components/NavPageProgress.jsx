@@ -1,16 +1,28 @@
-import React, {useEffect} from 'react'
-import { Box, CircularProgress, IconButton } from "@chakra-ui/react"
+import React, { useEffect } from "react";
+import { Box, IconButton, Center, useBreakpointValue } from "@chakra-ui/react";
 
 const PageProgress = ({ scrollProgress }) => {
-  
-    return (
-        <Box pos="absolute" bottom=".5rem" left="0.5rem" >
-            <CircularProgress color="teal.600" trackColor="whiteAlpha.200" value={scrollProgress} capIsRound />
-            <Box pos="absolute" bottom=".5rem" left="0.5rem"  zIndex={3}>
-                
-            </Box>
-        </Box>
-    )
-}
+  return (
+    <Center h="100vh" top="0" left="0" bottom="0" pos="absolute">
+      <Center h="98vh" w="5px">
+        <Box
+          h="100%"
+          bgColor="whiteAlpha.200"
+          pos="absolute"
+          zIndex={3}
+          w="100%"
+          borderRadius="lg"
+        />
+        <Box
+          h={`${scrollProgress}%`}
+          bgColor="teal"
+          pos="absolute"
+          w="100%"
+          borderRadius="lg"
+        />
+      </Center>
+    </Center>
+  );
+};
 
-export default PageProgress
+export default PageProgress;
