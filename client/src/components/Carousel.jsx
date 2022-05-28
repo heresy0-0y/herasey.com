@@ -3,7 +3,7 @@ import NextImage from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { WheelGesturesPlugin as WheelGestures } from "embla-carousel-wheel-gestures";
 import Autoplay from "embla-carousel-autoplay";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import {
   Flex,
@@ -83,15 +83,15 @@ export const Carousel = ({ slides }) => {
 
   return (
     <Box>
-      <Flex
-        w="98vw"
-        h="98vh"
-        overflow="hidden"
-        ref={emblaRef}
-        align="center">
+      <Flex w="98vw" h="98vh" overflow="hidden" ref={emblaRef} align="center">
         <Box className="embla__container" {...containerStyle} display="flex">
           {slides.map((slide, index) => (
-            <Box key={`${index}`} {...boxStyle} className="embla__slide" as={motion.div}>
+            <Box
+              key={`${index}`}
+              {...boxStyle}
+              className="embla__slide"
+              as={motion.div}
+            >
               <Image
                 as={NextImage}
                 objectFit="contain"

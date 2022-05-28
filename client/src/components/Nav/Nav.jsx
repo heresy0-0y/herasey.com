@@ -21,7 +21,7 @@ import { DarkModeSwitch } from "../DarkModeSwitch";
 
 import { Buttons, PageProgress, PageProgression } from "./components";
 
-const Nav = ({ scrollTo, scrollProgress }) => {
+const Nav = ({ setPage, currentPage, scrollTo, scrollProgress }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const { colorMode } = useColorMode();
@@ -34,16 +34,21 @@ const Nav = ({ scrollTo, scrollProgress }) => {
 
   return (
     <>
-      <PageProgress scrollProgress={scrollProgress}/>
+      <PageProgress
+        scrollProgress={scrollProgress}
+        currentPage={currentPage}
+        setPage={setPage}
+      />
       <Flex
         direction="column"
         align="center"
         pos="fixed"
         justify="space-between"
         top="1%"
-        right="1%"
-        w="7%"
-        h="180px">
+        right="5px"
+        w="60px"
+        h="180px"
+      >
         <Buttons />
       </Flex>
       <IconButton
@@ -57,19 +62,22 @@ const Nav = ({ scrollTo, scrollProgress }) => {
         right="1rem"
         zIndex={4}
         position={{ base: "fixed", md: "relative" }}
-        variant="outline"></IconButton>
+        variant="outline"
+      ></IconButton>
       <Container bgGradient={bgColor[colorMode]}>
         <Drawer
           isOpen={isOpen}
           placement="right"
           onClose={onClose}
-          finalFocusRef={btnRef}>
+          finalFocusRef={btnRef}
+        >
           <DrawerOverlay bg="blackAlpha.400" />
           <DrawerContent>
             <Container
               h="full"
               bgGradient={bgColor[colorMode]}
-              color={color[colorMode]}>
+              color={color[colorMode]}
+            >
               <DrawerCloseButton variant="outline" />
               <DrawerHeader fontFamily="montserrat alternates">
                 navigation menu
@@ -80,7 +88,8 @@ const Nav = ({ scrollTo, scrollProgress }) => {
                   direction="column"
                   spacing="2rem"
                   justify="space-around"
-                  h="30%">
+                  h="30%"
+                >
                   <Buttons isOpen={isOpen} />
                   <DarkModeSwitch />
                 </Flex>

@@ -14,9 +14,9 @@ import {
 } from "@chakra-ui/react";
 
 const Contact = (props) => {
-  const { colorMode } = useColorMode()
-  const hover={dark: "blue.900", light: "green.100"}
-  const bg={dark: "blackAlpha", light: "whiteAlpha"}
+  const { colorMode } = useColorMode();
+  const hover = { dark: "blue.900", light: "green.100" };
+  const bg = { dark: "blackAlpha", light: "whiteAlpha" };
   return (
     <Center>
       <form onSubmit={props.sendMessage}>
@@ -37,10 +37,11 @@ const Contact = (props) => {
           </Skeleton>
           <Button
             bg={bg[colorMode]}
-            _hover={{bg: hover[colorMode]}}
+            _hover={{ bg: hover[colorMode] }}
             isLoading={props.sending}
             loadingText="sending..."
-            type="submit">
+            type="submit"
+          >
             send
           </Button>
         </VStack>
@@ -48,4 +49,4 @@ const Contact = (props) => {
     </Center>
   );
 };
-export default Contact
+export default Contact;

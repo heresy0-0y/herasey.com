@@ -2,8 +2,9 @@ import {
   Box,
   useColorMode,
   IconButton,
-    useBreakpointValue,
-  Icon
+  Center,
+  useBreakpointValue,
+  Icon,
 } from "@chakra-ui/react";
 import { FiLinkedin, FiGithub } from "react-icons/fi";
 import { IoIosPaper } from "react-icons/io";
@@ -28,7 +29,11 @@ const Buttons = (props) => {
       <IconButton
         aria-label="my linkedin profile"
         {...buttonStyle}
-        icon={<Icon w="sm" focusable={false} as={FiLinkedin} />}
+        icon={
+          <Center h="100%">
+            <Icon w="sm" focusable={false} as={FiLinkedin} />
+          </Center>
+        }
       />
     </Link>,
     <Link url="https://github.com/heresy0-0y" key="github">
@@ -59,13 +64,14 @@ const Buttons = (props) => {
 
   const navButtons = useBreakpointValue({
     md: buttons.map((button, index) => (
-        <Box
-        display={{base: "none", md: "block"}}
+      <Box
+        display={{ base: "none", md: "block" }}
         color={color[colorMode]}
         key={index}
-        w="3vw"
+        w="2vw"
         pos="relative"
-        variant="ghost">
+        variant="ghost"
+      >
         {button}
       </Box>
     )),
@@ -79,4 +85,4 @@ const Buttons = (props) => {
   return <>{navButtons}</>;
 };
 
-export default Buttons
+export default Buttons;

@@ -3,8 +3,8 @@ import { ContactContainer as Contact } from "./ContactContainer";
 
 export const Footer = () => (
   <Flex minH="100vh" as="footer">
-    <Spacer/>
+    <Spacer />
     <Contact />
-    <Spacer/>
+    <Spacer />
   </Flex>
 );

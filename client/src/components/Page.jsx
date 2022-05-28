@@ -8,8 +8,15 @@ const Page = (props) => {
       flex="0 0 100%"
       pos="relative"
       className="emla__slide"
-      ref={props.page.ref}>
-      <Center sx={{focusable: true}} as="section" w="100vw" h="100vh" {...props} />
+      ref={props.page.ref}
+    >
+      <Center
+        sx={{ focusable: true }}
+        as="section"
+        w="100vw"
+        h="100vh"
+        {...props}
+      />
     </Box>
   );
 };
