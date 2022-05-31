@@ -10,7 +10,7 @@ import Projects from "../screens/Projects/Projects";
 import Contact from "../screens/Contact/Contact";
 import { Container, Nav, Hero, Main, Page } from "../components";
 
-const pageIndices = { title: 0, about: 1, projects: 2, contact: 3 };
+const pageIndices = { "": 0, about: 1, projects: 2, contact: 3 };
 
 const Index = () => {
   const router = useRouter();
@@ -69,6 +69,7 @@ const Index = () => {
   useEffect(() => {
     document.documentElement.addEventListener("keydown", handleKeyDown);
     setPage(pageIndices[path]);
+    console.log(path)
   }, [path]);
 
   useEffect(() => {

@@ -1,21 +1,30 @@
 import React, { useEffect } from "react";
-import { Box, IconButton, Center, useBreakpointValue } from "@chakra-ui/react";
-import { MdArrowUpward } from "react-icons/md";
+import { Box, IconButton, Center, useBreakpointValue, Slide } from "@chakra-ui/react";
+import { BsChevronBarUp, BsChevronUp, BsChevronDown } from "react-icons/bs";
 
 const PageProgress = ({ scrollProgress, currentPage, setPage }) => {
-  const isTitlePage = currentPage === 0;
+  const isTitlePage = Number(currentPage) === 0;
+  const [show, setShow] = React.useState('translateX(-100%)');
+  useEffect(() => {
+    if (isTitlePage) {
+      setShow('translateY(-100%)');
+    } else { setShow('translateY(0)'); }
+  })
   return (
     <Center h="100vh" top="0" left="0" bottom="0" pos="absolute">
       <Center h="100vh" w="5px">
         <IconButton
-          icon={<MdArrowUpward />}
+          icon={<BsChevronBarUp />}
           variant="ghost"
           pos="absolute"
           top="0"
           left="2"
-          display={isTitlePage ? "none" : "flex"}
           onClick={() => setPage(0)}
           borderRadius="full"
+          sx={{
+            transform: show,
+            transition: "all 0.6s ease 0s"
+          }}
         />
         <Box
           h="100%"
