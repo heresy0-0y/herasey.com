@@ -13,10 +13,10 @@ import { Container, Nav, Hero, Main, Page } from "../components";
 const pageIndices = { title: 0, about: 1, projects: 2, contact: 3 };
 
 const Index = () => {
-  const [currentPage, setPage] = useState(0);
-  const [scrollProgress, setProgress] = useState(0);
   const router = useRouter();
   const path = router.asPath.slice(2);
+  const [currentPage, setPage] = useState(pageIndices[path]);
+  const [scrollProgress, setProgress] = useState(0);
 
   const contact = useRef(null);
   const ref = useRef(null);
@@ -60,12 +60,6 @@ const Index = () => {
     setProgress(progress * 100);
   }, [embla, setProgress]);
 
-  const smoothProgress = useCallback(() => {
-    if (!embla) return;
-    const progress = Math.max(0, Math.min(1, embla.scrollProgress()));
-    setProgress(progress * 100);
-  }, [embla, setProgress]);
-
   const handleKeyDown = (e) => {
     const key = e.key;
     if (key === "ArrowDown") setPage((prev) => (prev < 3 ? prev + 1 : prev));
@@ -75,18 +69,15 @@ const Index = () => {
   useEffect(() => {
     document.documentElement.addEventListener("keydown", handleKeyDown);
     setPage(pageIndices[path]);
-  }, [path, router]);
+  }, [path]);
 
   useEffect(() => {
     if (!embla) return;
+    embla.on("select", onSelect);
+    embla.on("scroll", onScroll);
     onSelect();
     onScroll();
     scrollTo(currentPage);
-    embla.on("select", onSelect);
-    embla.on("scroll", onScroll);
-    embla.on("settle", smoothProgress);
-    const container = embla.containerNode();
-    container.focus();
   }, [embla, onSelect, scrollTo, currentPage, onScroll]);
 
   return (
