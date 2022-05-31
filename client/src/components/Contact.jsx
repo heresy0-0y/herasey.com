@@ -15,30 +15,38 @@ import {
 
 const Contact = (props) => {
   const { colorMode } = useColorMode();
+  const { setFormData, sendMessage, formData, sending } = props;
   const hover = { dark: "blue.900", light: "green.100" };
   const bg = { dark: "blackAlpha", light: "whiteAlpha" };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  }
   return (
     <Center>
-      <form onSubmit={props.sendMessage}>
+      <form onSubmit={sendMessage} >
         <VStack spacing="1.5rem">
           <Text>get in touch</Text>
-          <Skeleton isLoaded={!props.sending}>
-            <Input placeholder="your name" name="from_name" />
+          <Skeleton isLoaded={!sending}>
+            <Input placeholder="your name" name="name" value={formData.name} onChange={handleChange} />
           </Skeleton>
-          <Skeleton isLoaded={!props.sending}>
+          <Skeleton isLoaded={!sending}>
             <Input
               placeholder="your email address"
               type="email"
-              name="reply_to"
+              value={formData.email}
+              name="email"
+              onChange={handleChange}
             />
           </Skeleton>
-          <Skeleton isLoaded={!props.sending}>
-            <Textarea placeholder="your message goes here" name="message" />
+          <Skeleton isLoaded={!sending}>
+            <Textarea placeholder="your message goes here" name="message" value={formData.message} onChange={handleChange} />
           </Skeleton>
           <Button
             bg={bg[colorMode]}
             _hover={{ bg: hover[colorMode] }}
-            isLoading={props.sending}
+            isLoading={sending}
             loadingText="sending..."
             type="submit"
           >

@@ -8,29 +8,39 @@ const ContactContainer = (props) => {
   const serviceId = "service_xso3s3r";
   const [messageSent, setMessageSent] = useState(false);
   const [messageSending, setMessageSending] = useState(false);
+  const [formData, setFormData] = useState({ message: "", name: "", email: "" });
+
   useEffect(() => {
-    const sentSuccessfully = () => {};
+    const sentSuccessfully = () => { };
   });
 
   const sendMessage = (e) => {
     e.preventDefault();
     setMessageSending((prevState) => (prevState = true));
-    emailjs.sendForm(serviceId, templateId, e.target, userId).then(
-      (result) => {
-        setMessageSent((prevState) => (prevState = true));
-        setMessageSending((prevState) => (prevState = false));
+    console.log(formData)
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
       },
-      (error) => {
-        console.log(error);
+      body: JSON.stringify(formData)
+    }).then((res) => {
+      if (res.status === 200) {
+        setMessageSent(true);
+        setMessageSending(false)
+        setFormData({ message: "", name: "", email: "" });
       }
-    );
-  };
+    })
+  }
   return (
     <>
       <Contact
         sending={messageSending}
         sendMessage={sendMessage}
         messageSent={messageSent}
+        formData={formData}
+        setFormData={setFormData}
         onSubmit={sendMessage}
       />
     </>
