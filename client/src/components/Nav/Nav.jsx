@@ -50,7 +50,7 @@ const Nav = ({ setPage, currentPage, scrollTo, scrollProgress }) => {
         w="60px"
         h="180px"
       >
-        <Buttons />
+        <Buttons /><DarkModeSwitch color={color[colorMode]} bg={bgColor[colorMode]} />
       </Flex>
       <IconButton
         ref={btnRef}
@@ -59,8 +59,8 @@ const Nav = ({ setPage, currentPage, scrollTo, scrollProgress }) => {
         onClick={onOpen}
         aria-label="open navigation menu"
         icon={<Icon as={BsCaretLeft} />}
-        top="1rem"
-        right="1rem"
+        top="1%"
+        right="5px"
         zIndex={4}
         position={{ base: "fixed", md: "relative" }}
         variant="outline"
@@ -92,7 +92,6 @@ const Nav = ({ setPage, currentPage, scrollTo, scrollProgress }) => {
                   h="30%"
                 >
                   <Buttons isOpen={isOpen} />
-                  <DarkModeSwitch />
                 </Flex>
               </DrawerBody>
             </Container>
