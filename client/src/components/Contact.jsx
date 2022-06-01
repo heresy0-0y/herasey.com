@@ -1,14 +1,10 @@
 import {
-  Center,
   Input,
+  Flex,
   Button,
   Textarea,
-  FormControl,
   FormLabel,
-  FormHelperText,
-  FormErrorMessage,
   useColorMode,
-  VStack,
   Text,
   Skeleton,
 } from "@chakra-ui/react";
@@ -24,37 +20,40 @@ const Contact = (props) => {
     setFormData({ ...formData, [name]: value });
   }
   return (
-    <Center>
-      <form onSubmit={sendMessage} >
-        <VStack spacing="1.5rem">
-          <Text>get in touch</Text>
+    <form onSubmit={sendMessage}  >
+      <Flex direction='column' align="center" justify="space-between" h="50vh">
+        < Text > get in touch</Text >
+        <FormLabel htmlFor="name">name
           <Skeleton isLoaded={!sending}>
-            <Input placeholder="your name" name="name" value={formData.name} onChange={handleChange} />
-          </Skeleton>
+            <Input placeholder="your name" id="name" w="xs" name="name" value={formData.name} onChange={handleChange} />
+          </Skeleton></FormLabel>
+        <FormLabel htmlFor="email">email
           <Skeleton isLoaded={!sending}>
             <Input
               placeholder="your email address"
               type="email"
               value={formData.email}
+              id="email"
+              w="xs"
               name="email"
               onChange={handleChange}
             />
-          </Skeleton>
+          </Skeleton></FormLabel>
+        <FormLabel htmlFor="message">message
           <Skeleton isLoaded={!sending}>
-            <Textarea placeholder="your message goes here" name="message" value={formData.message} onChange={handleChange} />
-          </Skeleton>
-          <Button
-            bg={bg[colorMode]}
-            _hover={{ bg: hover[colorMode] }}
-            isLoading={sending}
-            loadingText="sending..."
-            type="submit"
-          >
-            send
-          </Button>
-        </VStack>
-      </form>
-    </Center>
+            <Textarea id="message" placeholder="your message goes here" name="message" h="20vh" w="xs" value={formData.message} onChange={handleChange} resize="none" />
+          </Skeleton></FormLabel>
+        <Button
+          bg={bg[colorMode]}
+          _hover={{ bg: hover[colorMode] }}
+          isLoading={sending}
+          loadingText="sending..."
+          type="submit"
+        >
+          send
+        </Button>
+      </Flex >
+    </form >
   );
 };
 export default Contact;
