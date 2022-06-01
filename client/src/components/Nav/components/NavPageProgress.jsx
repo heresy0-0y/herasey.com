@@ -4,10 +4,10 @@ import { BsChevronBarUp, BsChevronUp, BsChevronDown } from "react-icons/bs";
 
 const PageProgress = ({ scrollProgress, currentPage, setPage }) => {
   const isTitlePage = Number(currentPage) === 0;
-  const [show, setShow] = React.useState('translateX(-100%)');
+  const [show, setShow] = React.useState('translateX(-150%)');
   useEffect(() => {
     if (isTitlePage) {
-      setShow('translateY(-100%)');
+      setShow('translateY(-150%)');
     } else { setShow('translateY(0)'); }
   })
   return (
@@ -17,9 +17,12 @@ const PageProgress = ({ scrollProgress, currentPage, setPage }) => {
           icon={<BsChevronBarUp />}
           variant="ghost"
           pos="absolute"
-          top="0"
-          left="2"
-          onClick={() => setPage(0)}
+          top="3"
+          left="3"
+          onClick={(e) => {
+            e.target.blur()
+            setPage(0)
+          }}
           borderRadius="full"
           sx={{
             transform: show,

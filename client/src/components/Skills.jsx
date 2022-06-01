@@ -1,4 +1,5 @@
-import { List, HStack, ListItem, Box } from "@chakra-ui/react";
+import { ListIcon, List, HStack, ListItem, Box } from "@chakra-ui/react";
+import { SiHeroku, SiRubyonrails, SiPostgresql, SiReact, SiNextdotjs, SiExpress, SiRedux, SiMongodb } from 'react-icons/si'
 import { Container } from "./Container";
 
 const Skills = () => {
@@ -6,16 +7,16 @@ const Skills = () => {
     <Box h="50vh">
       <HStack spacing="2rem" justify="center">
         <List>
-          <ListItem>React</ListItem>
-          <ListItem>Next.js</ListItem>
-          <ListItem>Express.js</ListItem>
-          <ListItem>HTML + CSS</ListItem>
-          <ListItem></ListItem>
+          <ListItem><ListIcon as={SiReact} />React</ListItem>
+          <ListItem><ListIcon as={SiNextdotjs} />Next.js</ListItem>
+          <ListItem><ListIcon as={SiExpress} />Express.js</ListItem>
+          <ListItem><ListIcon as={SiRedux} />Redux</ListItem>
         </List>
         <List>
-          <ListItem>Ruby on Rails</ListItem>
-          <ListItem>postgresql</ListItem>
-          <ListItem>MongoDB</ListItem>
+          <ListItem><ListIcon as={SiRubyonrails} />Ruby on Rails</ListItem>
+          <ListItem><ListIcon as={SiPostgresql} />postgresql</ListItem>
+          <ListItem><ListIcon as={SiMongodb} />MongoDB</ListItem>
+          <ListItem><ListIcon as={SiHeroku} />heroku</ListItem>
         </List>
       </HStack>
     </Box>
