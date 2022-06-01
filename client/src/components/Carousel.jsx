@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useEffect, useCallback, useRef } from "react";
 import NextImage from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { WheelGesturesPlugin as WheelGestures } from "embla-carousel-wheel-gestures";
@@ -7,13 +7,12 @@ import { motion } from "framer-motion";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import {
   Flex,
-  Center,
+
   Box,
   IconButton,
   Icon,
   Image,
   useColorMode,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 
 export const Carousel = ({ slides }) => {
