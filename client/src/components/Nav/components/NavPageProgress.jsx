@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Box, IconButton, Center, useBreakpointValue, Slide } from "@chakra-ui/react";
 import { BsChevronBarUp, BsChevronUp, BsChevronDown } from "react-icons/bs";
 
-const PageProgress = ({ scrollProgress, currentPage, setPage }) => {
+const PageProgress = ({ color, scrollProgress, currentPage, setPage }) => {
   const isTitlePage = Number(currentPage) === 0;
   const [show, setShow] = React.useState('translateX(-150%)');
   useEffect(() => {
@@ -19,6 +19,7 @@ const PageProgress = ({ scrollProgress, currentPage, setPage }) => {
           pos="absolute"
           top="3"
           left="3"
+          color={color}
           onClick={(e) => {
             e.target.blur()
             setPage(0)

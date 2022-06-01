@@ -25,6 +25,7 @@ export const Carousel = ({ slides }) => {
   );
   const { colorMode } = useColorMode();
   const bg = { light: "whiteAlpha.200", dark: "blackAlpha.200" };
+  const color = { light: "green.800", dark: "green.200" };
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       speed: 4,
@@ -73,7 +74,7 @@ export const Carousel = ({ slides }) => {
     pos: "relative",
     maxH: "98vh",
     maxW: "98vw",
-    px: "1vw",
+    px: "10vw",
   };
 
   const containerStyle = {
@@ -94,6 +95,7 @@ export const Carousel = ({ slides }) => {
             >
               <Image
                 as={NextImage}
+                loading="eager"
                 objectFit="contain"
                 src={slide.src}
                 alt={slide.alt}
@@ -107,11 +109,13 @@ export const Carousel = ({ slides }) => {
         aria-label="previous slide"
         ml="3%"
         left="0"
+        color={color[colorMode]}
         onClick={scrollPrev}
         icon={<Icon as={BsArrowLeftCircle} />}
       />
       <IconButton
         right="0"
+        color={color[colorMode]}
         mr="3%"
         aria-label="next slide"
         {...arrowStyle}

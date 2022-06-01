@@ -38,6 +38,7 @@ const Nav = ({ setPage, currentPage, scrollTo, scrollProgress }) => {
         scrollProgress={scrollProgress}
         currentPage={currentPage}
         setPage={setPage}
+        color={color[colorMode]}
       />
       <Flex
         direction="column"
