@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Box, IconButton, Center, useBreakpointValue, Slide } from "@chakra-ui/react";
+import { Box, IconButton, Center } from "@chakra-ui/react";
 import { BsChevronBarUp, BsChevronUp, BsChevronDown } from "react-icons/bs";
 
 const PageProgress = ({ color, scrollProgress, currentPage, setPage }) => {

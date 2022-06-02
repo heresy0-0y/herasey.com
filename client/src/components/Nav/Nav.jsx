@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 import {
   useDisclosure,
   Drawer,
   Flex,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   Container,
@@ -17,11 +15,10 @@ import {
 } from "@chakra-ui/react";
 import { BsCaretLeft } from "react-icons/bs";
 
-import { DarkModeSwitch } from "../DarkModeSwitch";
 
-import { Buttons, PageProgress, PageProgression } from "./components";
+import { Buttons, PageProgress } from "./components";
 
-const Nav = ({ setPage, currentPage, scrollTo, scrollProgress }) => {
+const Nav = ({ setPage, currentPage, scrollProgress }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const { colorMode } = useColorMode();
