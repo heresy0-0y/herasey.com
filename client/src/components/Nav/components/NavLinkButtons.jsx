@@ -1,6 +1,5 @@
 import {
   Box,
-  useColorMode,
   IconButton,
   Center,
   useBreakpointValue,
@@ -10,13 +9,12 @@ import { FiLinkedin, FiGithub } from "react-icons/fi";
 import { IoIosPaper } from "react-icons/io";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { Link } from "../../Link";
+import { DarkModeSwitch } from '../../DarkModeSwitch'
 
-const Buttons = (props) => {
-  const { colorMode } = useColorMode();
-  const color = { light: "green.800", dark: "green.200" };
+const Buttons = ({ color, isOpen, bg }) => {
   const buttonStyle = {
     variant: "ghost",
-    color: `${color[colorMode]}`,
+    color: color,
     borderRadius: "full",
     w: "full",
     _focus: {
@@ -60,13 +58,13 @@ const Buttons = (props) => {
         icon={<Icon focusable="false" as={MdOutlineMailOutline} />}
       />
     </Link>,
+    <DarkModeSwitch key="darkmodeswitch" color={color} bg={bg} />
   ];
 
   const navButtons = useBreakpointValue({
     md: buttons.map((button, index) => (
       <Box
         display={{ base: "none", md: "block" }}
-        color={color[colorMode]}
         key={index}
         w="2vw"
         pos="relative"
@@ -76,7 +74,7 @@ const Buttons = (props) => {
       </Box>
     )),
     base: buttons.map((button, index) => (
-      <Box w="2xs" key={index} display={props.isOpen ? "block" : "none"}>
+      <Box w="2xs" key={index} display={isOpen ? "block" : "none"}>
         {button}
       </Box>
     )),

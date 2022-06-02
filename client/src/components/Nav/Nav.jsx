@@ -50,7 +50,7 @@ const Nav = ({ setPage, currentPage, scrollTo, scrollProgress }) => {
         w="60px"
         h="180px"
       >
-        <Buttons /><DarkModeSwitch color={color[colorMode]} bg={bgColor[colorMode]} />
+        <Buttons bg={bgColor[colorMode]} color={color[colorMode]} />
       </Flex>
       <IconButton
         ref={btnRef}
