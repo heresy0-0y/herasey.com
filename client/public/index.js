@@ -1,4 +1,12 @@
-export { default as desktopLanding } from "./desktop-landing.png";
-export { default as desktopSearch } from "./desktop-search.png";
-export { default as mobileLanding } from "./mobile-portrait-landing.png";
-export { default as mobileSearch } from "./mobile-portrait-search.png";
+export { default as desktopLandingDark } from "./desktopLandingDark.webp";
+export { default as desktopLandingLight } from "./desktopLandingLight.webp";
+export { default as desktopSearchDark } from "./desktopSearchDark.webp";
+export { default as desktopSearchLight } from "./desktopSearchLight.webp";
+export { default as desktopFocusDark } from "./desktopFocusDark.webp";
+export { default as desktopFocusLight } from "./desktopFocusLight.webp";
+export { default as mobileLandingDark } from "./mobileLandingDark.webp";
+export { default as mobileLandingLight } from "./mobileLandingLight.webp";
+export { default as mobileSearchDark } from "./mobileSearchDark.webp";
+export { default as mobileSearchLight } from "./mobileSearchLight.webp";
+export { default as mobileFocusDark } from "./mobileFocusDark.webp";
+export { default as mobileFocusLight } from "./mobileFocusLight.webp";
