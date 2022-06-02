@@ -15,7 +15,6 @@ import {
 } from "@chakra-ui/react";
 import { BsCaretLeft } from "react-icons/bs";
 
-
 import { Buttons, PageProgress } from "./components";
 
 const Nav = ({ setPage, currentPage, scrollProgress }) => {

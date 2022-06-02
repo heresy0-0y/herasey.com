@@ -9,7 +9,7 @@ import { FiLinkedin, FiGithub } from "react-icons/fi";
 import { IoIosPaper } from "react-icons/io";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { Link } from "../../Link";
-import { DarkModeSwitch } from '../../DarkModeSwitch'
+import { DarkModeSwitch } from "../../DarkModeSwitch";
 
 const Buttons = ({ color, isOpen, bg }) => {
   const buttonStyle = {
@@ -58,7 +58,7 @@ const Buttons = ({ color, isOpen, bg }) => {
         icon={<Icon focusable="false" as={MdOutlineMailOutline} />}
       />
     </Link>,
-    <DarkModeSwitch key="darkmodeswitch" color={color} bg={bg} />
+    <DarkModeSwitch key="darkmodeswitch" color={color} bg={bg} />,
   ];
 
   const navButtons = useBreakpointValue({

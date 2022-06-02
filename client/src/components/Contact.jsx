@@ -18,16 +18,26 @@ const Contact = (props) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-  }
+  };
   return (
-    <form onSubmit={sendMessage}  >
-      <Flex direction='column' align="center" justify="space-between" h="50vh">
-        < Text > get in touch</Text >
-        <FormLabel htmlFor="name">name
+    <form onSubmit={sendMessage}>
+      <Flex direction="column" align="center" justify="space-between" h="50vh">
+        <Text> get in touch</Text>
+        <FormLabel htmlFor="name">
+          name
           <Skeleton isLoaded={!sending}>
-            <Input placeholder="your name" id="name" w="xs" name="name" value={formData.name} onChange={handleChange} />
-          </Skeleton></FormLabel>
-        <FormLabel htmlFor="email">email
+            <Input
+              placeholder="your name"
+              id="name"
+              w="xs"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </Skeleton>
+        </FormLabel>
+        <FormLabel htmlFor="email">
+          email
           <Skeleton isLoaded={!sending}>
             <Input
               placeholder="your email address"
@@ -38,11 +48,23 @@ const Contact = (props) => {
               name="email"
               onChange={handleChange}
             />
-          </Skeleton></FormLabel>
-        <FormLabel htmlFor="message">message
+          </Skeleton>
+        </FormLabel>
+        <FormLabel htmlFor="message">
+          message
           <Skeleton isLoaded={!sending}>
-            <Textarea id="message" placeholder="your message goes here" name="message" h="20vh" w="xs" value={formData.message} onChange={handleChange} resize="none" />
-          </Skeleton></FormLabel>
+            <Textarea
+              id="message"
+              placeholder="your message goes here"
+              name="message"
+              h="20vh"
+              w="xs"
+              value={formData.message}
+              onChange={handleChange}
+              resize="none"
+            />
+          </Skeleton>
+        </FormLabel>
         <Button
           bg={bg[colorMode]}
           _hover={{ bg: hover[colorMode] }}
@@ -52,8 +74,8 @@ const Contact = (props) => {
         >
           send
         </Button>
-      </Flex >
-    </form >
+      </Flex>
+    </form>
   );
 };
 export default Contact;

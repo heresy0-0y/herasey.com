@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import {
   Flex,
-
   Box,
   IconButton,
   Icon,

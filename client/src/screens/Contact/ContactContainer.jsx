@@ -8,31 +8,35 @@ const ContactContainer = (props) => {
   const serviceId = "service_xso3s3r";
   const [messageSent, setMessageSent] = useState(false);
   const [messageSending, setMessageSending] = useState(false);
-  const [formData, setFormData] = useState({ message: "", name: "", email: "" });
+  const [formData, setFormData] = useState({
+    message: "",
+    name: "",
+    email: "",
+  });
 
   useEffect(() => {
-    const sentSuccessfully = () => { };
+    const sentSuccessfully = () => {};
   });
 
   const sendMessage = (e) => {
     e.preventDefault();
     setMessageSending((prevState) => (prevState = true));
-    console.log(formData)
-    fetch('/api/contact', {
-      method: 'POST',
+    console.log(formData);
+    fetch("/api/contact", {
+      method: "POST",
       headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     }).then((res) => {
       if (res.status === 200) {
         setMessageSent(true);
-        setMessageSending(false)
+        setMessageSending(false);
         setFormData({ message: "", name: "", email: "" });
       }
-    })
-  }
+    });
+  };
   return (
     <>
       <Contact

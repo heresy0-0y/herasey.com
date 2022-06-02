@@ -69,7 +69,7 @@ const Index = () => {
   useEffect(() => {
     document.documentElement.addEventListener("keydown", handleKeyDown);
     setPage(pageIndices[path]);
-    console.log(path)
+    console.log(path);
   }, [path]);
 
   useEffect(() => {
