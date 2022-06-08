@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import emailjs from "@emailjs/browser";
-import { Contact } from "../../components/";
+import { Flex, Button, useColorMode, useToast } from "@chakra-ui/react";
+import { MdAlternateEmail } from "react-icons/md";
+import { Contact, Link } from "../../components/";
 
 const ContactContainer = (props) => {
   const userId = "user_noSGymCb0Ve25uMCUhnJZ";
@@ -13,15 +14,17 @@ const ContactContainer = (props) => {
     name: "",
     email: "",
   });
-
+  const toast = useToast();
+  const { colorMode } = useColorMode();
+  const hover = { dark: "blue.900", light: "green.100" };
+  const bg = { dark: "blackAlpha", light: "whiteAlpha" };
   useEffect(() => {
-    const sentSuccessfully = () => {};
+    const sentSuccessfully = () => { };
   });
 
   const sendMessage = (e) => {
     e.preventDefault();
     setMessageSending((prevState) => (prevState = true));
-    console.log(formData);
     fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -34,11 +37,19 @@ const ContactContainer = (props) => {
         setMessageSent(true);
         setMessageSending(false);
         setFormData({ message: "", name: "", email: "" });
+        toast({
+          status: "success",
+          title: "message sent ~ i'll get back to you soon ! :)",
+        });
       }
     });
   };
+
+  const sendEmail = () => {
+    window.open("mailto:info@herasey.me")
+  }
   return (
-    <>
+    <Flex direction="column" align="center" justify="space-evenly" h="60%">
       <Contact
         sending={messageSending}
         sendMessage={sendMessage}
@@ -46,8 +57,21 @@ const ContactContainer = (props) => {
         formData={formData}
         setFormData={setFormData}
         onSubmit={sendMessage}
+        bg={bg[colorMode]}
+        hover={hover[colorMode]}
       />
-    </>
+      <Button
+        color={bg[colorMode]}
+        _hover={{ bg: hover[colorMode] }}
+        variant="link"
+        size="sm"
+        w="50%"
+        onClick={sendEmail}
+        rightIcon={<MdAlternateEmail />}
+      >
+        or email me
+      </Button>
+    </Flex>
   );
 };
 export default ContactContainer;

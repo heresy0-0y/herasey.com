@@ -1,6 +1,6 @@
 const PASSWORD = process.env.ZOHO_PASS;
 
-export default function(req, res) {
+export default function (req, res) {
   let nodemailer = require("nodemailer");
   const transporter = nodemailer.createTransport({
     host: "smtppro.zoho.com",
@@ -20,7 +20,7 @@ export default function(req, res) {
     html: `<div>${req.body.message}<p>Sent from: ${req.body.email}, ${req.body.name}</p></div>`,
   };
 
-  transporter.sendMail(mailData, function(error, info) {
+  transporter.sendMail(mailData, function (error, info) {
     if (error) console.log(error);
     else console.log(info);
   });

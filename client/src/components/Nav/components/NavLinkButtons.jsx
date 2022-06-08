@@ -8,7 +8,7 @@ import {
 import { FiLinkedin, FiGithub } from "react-icons/fi";
 import { IoIosPaper } from "react-icons/io";
 import { MdOutlineMailOutline } from "react-icons/md";
-import { Link } from "../../Link";
+import { Link } from "../../../components";
 import { DarkModeSwitch } from "../../DarkModeSwitch";
 
 const Buttons = ({ color, isOpen, bg }) => {

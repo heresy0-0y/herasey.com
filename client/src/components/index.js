@@ -1,5 +1,6 @@
 export { default as Contact } from "./Contact";
 export { default as Container } from "./Container";
+export { default as Link } from "./Link";
 export { default as About } from "./About";
 export { default as Nav } from "./Nav/Nav";
 export { default as Hero } from "./Hero";

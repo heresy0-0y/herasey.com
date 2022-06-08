@@ -4,16 +4,12 @@ import {
   Button,
   Textarea,
   FormLabel,
-  useColorMode,
   Text,
   Skeleton,
 } from "@chakra-ui/react";
 
 const Contact = (props) => {
-  const { colorMode } = useColorMode();
-  const { setFormData, sendMessage, formData, sending } = props;
-  const hover = { dark: "blue.900", light: "green.100" };
-  const bg = { dark: "blackAlpha", light: "whiteAlpha" };
+  const { hover, bg, setFormData, sendMessage, formData, sending } = props;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -66,10 +62,12 @@ const Contact = (props) => {
           </Skeleton>
         </FormLabel>
         <Button
-          bg={bg[colorMode]}
-          _hover={{ bg: hover[colorMode] }}
+          color="inherit"
+          bg={bg}
+          _hover={{ bg: hover }}
           isLoading={sending}
           loadingText="sending..."
+          variant="outline"
           type="submit"
         >
           send
