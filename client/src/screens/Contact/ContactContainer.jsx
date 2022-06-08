@@ -19,7 +19,7 @@ const ContactContainer = (props) => {
   const hover = { dark: "blue.900", light: "green.100" };
   const bg = { dark: "blackAlpha", light: "whiteAlpha" };
   useEffect(() => {
-    const sentSuccessfully = () => { };
+    const sentSuccessfully = () => {};
   });
 
   const sendMessage = (e) => {
@@ -46,8 +46,8 @@ const ContactContainer = (props) => {
   };
 
   const sendEmail = () => {
-    window.open("mailto:info@herasey.me")
-  }
+    window.open("mailto:info@herasey.me");
+  };
   return (
     <Flex direction="column" align="center" justify="space-evenly" h="60%">
       <Contact

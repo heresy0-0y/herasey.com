@@ -13,4 +13,4 @@ LinkCombo.defaultProps = {
   external: true,
 };
 
-export default LinkCombo
+export default LinkCombo;

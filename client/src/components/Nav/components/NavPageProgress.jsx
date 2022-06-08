@@ -4,14 +4,14 @@ import { BsChevronBarUp, BsChevronUp, BsChevronDown } from "react-icons/bs";
 
 const PageProgress = ({ color, scrollProgress, currentPage, setPage }) => {
   const isTitlePage = Number(currentPage) === 0;
-  const [show, setShow] = React.useState("translateX(-150%)");
+  const [show, setShow] = React.useState("translateY(-150%)");
   useEffect(() => {
     if (isTitlePage) {
       setShow("translateY(-150%)");
     } else {
       setShow("translateY(0)");
     }
-  });
+  }, [isTitlePage]);
   return (
     <Center h="100vh" top="0" left="0" bottom="0" pos="absolute">
       <Center h="100vh" w="5px">
