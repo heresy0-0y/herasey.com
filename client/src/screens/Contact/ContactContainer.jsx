@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Flex, Button, useColorMode, useToast } from "@chakra-ui/react";
-import { MdAlternateEmail } from "react-icons/md";
+import { MdAlternateEmail, MdOutlineArrowForward } from "react-icons/md";
 import { Contact, Link } from "../../components/";
 
 const ContactContainer = (props) => {
@@ -65,11 +65,12 @@ const ContactContainer = (props) => {
         _hover={{ bg: hover[colorMode] }}
         variant="link"
         size="sm"
-        w="50%"
         onClick={sendEmail}
-        rightIcon={<MdAlternateEmail />}
+        rightIcon={<MdOutlineArrowForward />}
+        leftIcon={<MdAlternateEmail />}
+        aria-label="open email client to send me an email"
       >
-        or email me
+        email me with your favorite client
       </Button>
     </Flex>
   );
