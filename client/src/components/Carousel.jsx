@@ -60,7 +60,7 @@ export const Carousel = ({ slides }) => {
     maxW: "2%",
     variant: "ghost",
     bg: bg[colorMode],
-    top: "50%",
+    top: "50vh",
     borderRadius: "full",
     zIndex: 3,
     _hover: {

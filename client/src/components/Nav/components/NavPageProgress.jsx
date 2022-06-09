@@ -8,7 +8,7 @@ const PageProgress = ({ color, scrollProgress, currentPage, pages, setPage }) =>
   const [show, setShow] = React.useState("translateY(-150%)");
   const buttonStyle = {
     pos: "absolute",
-    left: "2",
+    left: "1",
     variant: "ghost",
     color: `${color}`,
     borderRadius: "full",
