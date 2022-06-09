@@ -57,6 +57,7 @@ export default function NavPageNav({
           top={`${pages[page] * 4 + 45}%`}
           aria-label={`to ${page} section`}
           size="xs"
+          key={page}
           {...buttonStyle}
           left="0"
           onClick={() => setPage(pages[page])}
