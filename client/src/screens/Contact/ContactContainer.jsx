@@ -19,7 +19,7 @@ const ContactContainer = (props) => {
   const hover = { dark: "blue.900", light: "green.100" };
   const bg = { dark: "blackAlpha", light: "whiteAlpha" };
   useEffect(() => {
-    const sentSuccessfully = () => { };
+    const sentSuccessfully = () => {};
   });
 
   const sendMessage = (e) => {

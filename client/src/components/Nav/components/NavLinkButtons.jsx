@@ -57,7 +57,13 @@ const Buttons = ({ display, top, left, color, isOpen, bg }) => {
         icon={<Icon focusable="false" as={MdOutlineMailOutline} />}
       />
     </Link>,
-    <DarkModeSwitch key="darkmodeswitch" display={display} left={left} top={top} buttonStyle={buttonStyle} />,
+    <DarkModeSwitch
+      key="darkmodeswitch"
+      display={display}
+      left={left}
+      top={top}
+      buttonStyle={buttonStyle}
+    />,
   ];
 
   const navButtons = useBreakpointValue({

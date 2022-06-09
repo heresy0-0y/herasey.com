@@ -14,7 +14,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { BsCaretLeft } from "react-icons/bs";
-import { DarkModeSwitch } from '../'
+import { DarkModeSwitch } from "../";
 import { Buttons, PageProgress } from "./components";
 
 const Nav = ({ setPage, pages, currentPage, scrollProgress }) => {
@@ -64,8 +64,13 @@ const Nav = ({ setPage, pages, currentPage, scrollProgress }) => {
         position={{ base: "fixed", md: "relative" }}
         variant="outline"
       ></IconButton>
-      <DarkModeSwitch bg={bg[colorMode]}
-        color={color[colorMode]} top="6%" right="5px" display={{ base: "flex", md: "none" }} />
+      <DarkModeSwitch
+        bg={bg[colorMode]}
+        color={color[colorMode]}
+        top="6%"
+        right="5px"
+        display={{ base: "flex", md: "none" }}
+      />
       <Container bgGradient={bgColor[colorMode]}>
         <Drawer
           isOpen={isOpen}
@@ -80,7 +85,11 @@ const Nav = ({ setPage, pages, currentPage, scrollProgress }) => {
               bgGradient={bgColor[colorMode]}
               color={color[colorMode]}
             >
-              <DrawerCloseButton variant="outline" w="2rem" borderRadius="full" />
+              <DrawerCloseButton
+                variant="outline"
+                w="2rem"
+                borderRadius="full"
+              />
               <DrawerHeader fontFamily="montserrat alternates">
                 navigation menu
               </DrawerHeader>
@@ -92,7 +101,13 @@ const Nav = ({ setPage, pages, currentPage, scrollProgress }) => {
                   justify="space-around"
                   h="30%"
                 >
-                  <Buttons color={color[colorMode]} top="4%" display="none" isOpen={isOpen} left="0.5rem" />
+                  <Buttons
+                    color={color[colorMode]}
+                    top="4%"
+                    display="none"
+                    isOpen={isOpen}
+                    left="0.5rem"
+                  />
                 </Flex>
               </DrawerBody>
             </Container>

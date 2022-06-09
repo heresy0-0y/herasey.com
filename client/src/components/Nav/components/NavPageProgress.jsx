@@ -1,9 +1,15 @@
 import React, { useEffect } from "react";
 import { Box, IconButton, Center } from "@chakra-ui/react";
 import { BsChevronBarUp } from "react-icons/bs";
-import { PageNav } from './'
+import { PageNav } from "./";
 
-const PageProgress = ({ color, scrollProgress, currentPage, pages, setPage }) => {
+const PageProgress = ({
+  color,
+  scrollProgress,
+  currentPage,
+  pages,
+  setPage,
+}) => {
   const isTitlePage = Number(currentPage) === 0;
   const [show, setShow] = React.useState("translateY(-150%)");
   const buttonStyle = {
@@ -36,7 +42,12 @@ const PageProgress = ({ color, scrollProgress, currentPage, pages, setPage }) =>
           }}
           {...buttonStyle}
         />
-        <PageNav buttonStyle={buttonStyle} pages={pages} setPage={setPage} currentPage={currentPage} />
+        <PageNav
+          buttonStyle={buttonStyle}
+          pages={pages}
+          setPage={setPage}
+          currentPage={currentPage}
+        />
         <Box
           h="100%"
           bgColor="whiteAlpha.200"

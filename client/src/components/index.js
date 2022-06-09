@@ -7,4 +7,4 @@ export { default as Hero } from "./Hero";
 export { default as Skills } from "./Skills";
 export { default as Page } from "./Page";
 export { default as Main } from "./Main";
-export { default as DarkModeSwitch } from './DarkModeSwitch';
+export { default as DarkModeSwitch } from "./DarkModeSwitch";

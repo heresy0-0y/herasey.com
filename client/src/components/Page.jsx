@@ -10,13 +10,9 @@ const Page = (props) => {
       className="emla__slide"
       ref={props.page.ref}
     >
-      <Center
-        sx={{ focusable: true }}
-        as="section"
-        w="100vw"
-        h="100vh"
-      ><Center
-          {...props} w="90vw" /></Center>
+      <Center sx={{ focusable: true }} as="section" w="100vw" h="100vh">
+        <Center {...props} w="90vw" />
+      </Center>
     </Box>
   );
 };
