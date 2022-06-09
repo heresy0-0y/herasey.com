@@ -1,10 +1,18 @@
 import React, { useEffect } from "react";
 import { Box, IconButton, Center } from "@chakra-ui/react";
-import { BsChevronBarUp, BsChevronUp, BsChevronDown } from "react-icons/bs";
+import { BsChevronBarUp } from "react-icons/bs";
+import { PageNav } from './'
 
-const PageProgress = ({ color, scrollProgress, currentPage, setPage }) => {
+const PageProgress = ({ color, scrollProgress, currentPage, pages, setPage }) => {
   const isTitlePage = Number(currentPage) === 0;
   const [show, setShow] = React.useState("translateY(-150%)");
+  const buttonStyle = {
+    pos: "absolute",
+    left: "2",
+    variant: "ghost",
+    color: `${color}`,
+    borderRadius: "full",
+  };
   useEffect(() => {
     if (isTitlePage) {
       setShow("translateY(-150%)");
@@ -13,25 +21,22 @@ const PageProgress = ({ color, scrollProgress, currentPage, setPage }) => {
     }
   }, [isTitlePage]);
   return (
-    <Center h="100vh" top="0" left="0" bottom="0" pos="absolute">
-      <Center h="100vh" w="5px">
+    <Center h="100vh" top="0" left="-1px" bottom="0" pos="absolute">
+      <Center h="100vh" w="5px" color={color}>
         <IconButton
           icon={<BsChevronBarUp />}
-          variant="ghost"
-          pos="absolute"
-          top="3"
-          left="3"
-          color={color}
+          top="2"
           onClick={(e) => {
             e.target.blur();
             setPage(0);
           }}
-          borderRadius="full"
           sx={{
             transform: show,
             transition: "all 0.6s ease 0s",
           }}
+          {...buttonStyle}
         />
+        <PageNav buttonStyle={buttonStyle} pages={pages} setPage={setPage} currentPage={currentPage} />
         <Box
           h="100%"
           bgColor="whiteAlpha.200"

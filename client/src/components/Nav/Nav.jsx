@@ -14,14 +14,15 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { BsCaretLeft } from "react-icons/bs";
-
+import { DarkModeSwitch } from '../'
 import { Buttons, PageProgress } from "./components";
 
-const Nav = ({ setPage, currentPage, scrollProgress }) => {
+const Nav = ({ setPage, pages, currentPage, scrollProgress }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const { colorMode } = useColorMode();
 
+  const bg = { light: "whiteAlpha.200", dark: "blackAlpha.200" };
   const bgColor = {
     light: "linear(to-tr, blue.100, green.100)",
     dark: "linear(to-tr, teal.800, green.800)",
@@ -35,6 +36,7 @@ const Nav = ({ setPage, currentPage, scrollProgress }) => {
         currentPage={currentPage}
         setPage={setPage}
         color={color[colorMode]}
+        pages={pages}
       />
       <Flex
         direction="column"
@@ -49,6 +51,7 @@ const Nav = ({ setPage, currentPage, scrollProgress }) => {
         <Buttons bg={bgColor[colorMode]} color={color[colorMode]} />
       </Flex>
       <IconButton
+        _hover={{ bg: bg[colorMode] }}
         ref={btnRef}
         display={{ base: "flex", md: "none" }}
         color={color[colorMode]}
@@ -61,6 +64,8 @@ const Nav = ({ setPage, currentPage, scrollProgress }) => {
         position={{ base: "fixed", md: "relative" }}
         variant="outline"
       ></IconButton>
+      <DarkModeSwitch bg={bg[colorMode]}
+        color={color[colorMode]} top="6%" right="5px" display={{ base: "flex", md: "none" }} />
       <Container bgGradient={bgColor[colorMode]}>
         <Drawer
           isOpen={isOpen}
@@ -75,7 +80,7 @@ const Nav = ({ setPage, currentPage, scrollProgress }) => {
               bgGradient={bgColor[colorMode]}
               color={color[colorMode]}
             >
-              <DrawerCloseButton variant="outline" />
+              <DrawerCloseButton variant="outline" w="2rem" borderRadius="full" />
               <DrawerHeader fontFamily="montserrat alternates">
                 navigation menu
               </DrawerHeader>
@@ -87,7 +92,7 @@ const Nav = ({ setPage, currentPage, scrollProgress }) => {
                   justify="space-around"
                   h="30%"
                 >
-                  <Buttons isOpen={isOpen} />
+                  <Buttons color={color[colorMode]} top="4%" display="none" isOpen={isOpen} left="0.5rem" />
                 </Flex>
               </DrawerBody>
             </Container>

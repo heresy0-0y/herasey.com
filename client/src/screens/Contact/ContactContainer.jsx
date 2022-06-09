@@ -19,7 +19,7 @@ const ContactContainer = (props) => {
   const hover = { dark: "blue.900", light: "green.100" };
   const bg = { dark: "blackAlpha", light: "whiteAlpha" };
   useEffect(() => {
-    const sentSuccessfully = () => {};
+    const sentSuccessfully = () => { };
   });
 
   const sendMessage = (e) => {
@@ -62,15 +62,15 @@ const ContactContainer = (props) => {
       />
       <Button
         color={bg[colorMode]}
-        _hover={{ bg: hover[colorMode] }}
         variant="link"
+        mt={8}
         size="sm"
         onClick={sendEmail}
         rightIcon={<MdOutlineArrowForward />}
         leftIcon={<MdAlternateEmail />}
         aria-label="open email client to send me an email"
       >
-        email me with your favorite client
+        or email me with your favorite client
       </Button>
     </Flex>
   );

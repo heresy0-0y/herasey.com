@@ -15,8 +15,8 @@ const Page = (props) => {
         as="section"
         w="100vw"
         h="100vh"
-        {...props}
-      />
+      ><Center
+          {...props} w="90vw" /></Center>
     </Box>
   );
 };

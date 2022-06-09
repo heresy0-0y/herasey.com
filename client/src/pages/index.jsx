@@ -10,7 +10,7 @@ import Projects from "../screens/Projects/Projects";
 import Contact from "../screens/Contact/Contact";
 import { Container, Nav, Hero, Main, Page } from "../components";
 
-const pageIndices = { "": 0, about: 1, projects: 2, contact: 3 };
+const pageIndices = { intro: 0, about: 1, projects: 2, contact: 3 };
 
 const Index = () => {
   const router = useRouter();
@@ -102,6 +102,7 @@ const Index = () => {
         currentPage={currentPage}
         setPage={setPage}
         scrollProgress={scrollProgress}
+        pages={pageIndices}
       />
     </div>
   );
