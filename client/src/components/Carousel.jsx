@@ -12,6 +12,7 @@ import {
   Image,
   useColorMode,
 } from "@chakra-ui/react";
+import { Modal } from './'
 
 export const Carousel = ({ slides }) => {
   const { colorMode } = useColorMode();

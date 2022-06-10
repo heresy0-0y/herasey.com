@@ -15,10 +15,10 @@ export default function NavPageNav({
   const [canPageDown, setPageDown] = useState("scale(1,1)");
   const [canPageUp, setPageUp] = useState("scale(1,1)");
   const [currentSection, setCurrentSection] = useState({
-    0: { opacity: 0, scale: 0 },
-    1: { opacity: 0, scale: 0 },
-    2: { opacity: 0, scale: 0 },
-    3: { opacity: 0, scale: 0 },
+    0: { opacity: 0 },
+    1: { opacity: 0 },
+    2: { opacity: 0 },
+    3: { opacity: 0 },
   });
 
   const sectionButtonStyle = {
@@ -53,12 +53,12 @@ export default function NavPageNav({
       if (pages[section] !== currentPage) {
         setCurrentSection((prev) => ({
           ...prev,
-          [pages[section]]: { opacity: 0, scale: 0, y: 10, x: -5 },
+          [pages[section]]: { opacity: 0 },
         }));
       } else {
         setCurrentSection((prev) => ({
           ...prev,
-          [pages[section]]: { opacity: 1, scale: 1 },
+          [pages[section]]: { opacity: 1 },
         }));
       }
     });
