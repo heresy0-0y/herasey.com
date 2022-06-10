@@ -10,7 +10,7 @@ import Projects from "../screens/Projects/Projects";
 import Contact from "../screens/Contact/Contact";
 import { Container, Nav, Hero, Main, Page } from "../components";
 
-const pageIndices = { intro: 0, about: 1, projects: 2, contact: 3 };
+const pageIndices = { "": 0, about: 1, projects: 2, contact: 3 };
 
 const Index = () => {
   const router = useRouter();
@@ -20,6 +20,7 @@ const Index = () => {
 
   const contact = useRef(null);
   const ref = useRef(null);
+  const focusRef = useRef(null);
   const about = useRef(null);
   const projects = useRef(null);
 
@@ -53,7 +54,12 @@ const Index = () => {
     },
     [embla]
   );
-
+  const initialFocus = () => {
+    focusRef.current = embla.slideNodes()[0]
+    console.log(focusRef.current)
+    focusRef.current.focus();
+    scrollTo(0)
+  }
   const onScroll = useCallback(() => {
     if (!embla) return;
     const progress = Math.max(0, Math.min(1, embla.scrollProgress()));
@@ -69,17 +75,18 @@ const Index = () => {
   useEffect(() => {
     document.documentElement.addEventListener("keydown", handleKeyDown);
     setPage(pageIndices[path]);
-    console.log(path);
   }, [path]);
 
   useEffect(() => {
     if (!embla) return;
     embla.on("select", onSelect);
     embla.on("scroll", onScroll);
+    initialFocus();
     onSelect();
     onScroll();
     scrollTo(currentPage);
   }, [embla, onSelect, scrollTo, currentPage, onScroll]);
+
 
   return (
     <div>

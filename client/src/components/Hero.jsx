@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { useColorMode, Flex, Heading, Center, Text } from "@chakra-ui/react";
 
 const Hero = () => {
@@ -32,15 +31,15 @@ const Hero = () => {
           text-fill-color="transparent"
           pos="relative"
         >
-          <Text fontSize="25px" ml="20%" orientation="vertical" align="left">
+          <Text fontSize="20px" ml="25%" mb="2%" orientation="vertical" align="left">
             hi there!
             <br />
             my name is
           </Text>
           <Text
-            align="center"
             bgClip="text"
             pos="relative"
+            ml="15%"
             data-text="hera sey"
             sx={{ textFillColor: "transparent" }}
             bgGradient={bgColor[colorMode]}
@@ -49,23 +48,23 @@ const Hero = () => {
           >
             hera sey
           </Text>
-          <Text fontSize="25px" ml="20%" orientation="vertical" align="left">
+          <Text fontSize="20px" my="2%" ml="35%" orientation="vertical" align="left">
             and i&apos;m a
           </Text>
           <Text
             bgClip="text"
             bgGradient="linear(to-l, teal.100, teal.400)"
             data-text="software developer"
-            ml="5%"
+            ml="35%"
             sx={{ textFillColor: "transparent" }}
             _before={shadows}
             _after={{
               ...shadows,
               zIndex: -2,
               left: 0,
+              ml: "35%",
               right: 0,
               bottom: 0,
-              ml: "5%",
             }}
           >
             software developer

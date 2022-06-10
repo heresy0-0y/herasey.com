@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Flex, Center, IconButton } from "@chakra-ui/react";
+import { Flex, Box, Center, IconButton, Button } from "@chakra-ui/react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { VscCircleFilled, VscCircleOutline } from "react-icons/vsc";
 import { IoIosArrowRoundDown, IoIosArrowRoundUp } from "react-icons/io";
@@ -14,6 +14,12 @@ export default function NavPageNav({
   const lastPage = currentPage === 3;
   const [canPageDown, setPageDown] = useState("scale(1,1)");
   const [canPageUp, setPageUp] = useState("scale(1,1)");
+  const [currentSection, setCurrentSection] = useState({
+    0: <VscCircleOutline />,
+    1: <VscCircleOutline />,
+    2: <VscCircleOutline />,
+    3: <VscCircleOutline />,
+  });
 
   const pageUp = () => {
     setPage(currentPage - 1);
@@ -23,16 +29,32 @@ export default function NavPageNav({
   };
 
   useEffect(() => {
-    if (currentPage === 0) {
+    if (firstPage) {
       setPageUp("scale(0,0)");
     } else {
       setPageUp("scale(1,1)");
     }
-    if (currentPage === 3) {
+    if (lastPage) {
       setPageDown("scale(0,0)");
     } else {
       setPageDown("scale(1,1)");
     }
+    const sections = Object.keys(currentSection);
+    sections.forEach((section) => {
+      if (parseInt(section) !== currentPage) {
+        setCurrentSection(prev => ({
+          ...prev, [section]: <VscCircleOutline />
+        }));
+        console.log(section)
+
+      } else {
+        setCurrentSection(prev => ({
+          ...prev, [section]: <VscCircleFilled />,
+        }));
+        console.log(currentPage, section);
+      }
+    })
+
   }, [currentPage]);
   return (
     <Center h="100vh" pos="absolute" left="0" top="0" bottom="0">
@@ -53,22 +75,16 @@ export default function NavPageNav({
       {Object.keys(pages).map((page) => (
         <IconButton
           pos="absolute"
-          variant="ghost"
           top={`${pages[page] * 4 + 45}%`}
-          aria-label={`to ${page} section`}
-          size="xs"
+          aria-label={`to ${page === "" ? "intro" : page} section`}
           key={page}
-          {...buttonStyle}
-          left="0"
+          isRound={true}
+          icon={currentSection[pages[page]]}
+          variant="unstyled"
+          size="xs"
+          left="1.5"
           onClick={() => setPage(pages[page])}
-          mb="2"
-          icon={
-            currentPage === pages[page] ? (
-              <VscCircleFilled />
-            ) : (
-              <VscCircleOutline />
-            )
-          }
+          sx={{ transition: "all 0.6s ease 0s" }}
         />
       ))}
       <IconButton
