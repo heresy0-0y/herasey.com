@@ -31,7 +31,13 @@ const Hero = () => {
           text-fill-color="transparent"
           pos="relative"
         >
-          <Text fontSize="20px" ml="25%" mb="2%" orientation="vertical" align="left">
+          <Text
+            fontSize="20px"
+            ml="25%"
+            mb="2%"
+            orientation="vertical"
+            align="left"
+          >
             hi there!
             <br />
             my name is
@@ -48,7 +54,13 @@ const Hero = () => {
           >
             hera sey
           </Text>
-          <Text fontSize="20px" my="2%" ml="35%" orientation="vertical" align="left">
+          <Text
+            fontSize="20px"
+            my="2%"
+            ml="35%"
+            orientation="vertical"
+            align="left"
+          >
             and i&apos;m a
           </Text>
           <Text

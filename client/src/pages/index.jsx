@@ -20,7 +20,6 @@ const Index = () => {
 
   const contact = useRef(null);
   const ref = useRef(null);
-  const focusRef = useRef(null);
   const about = useRef(null);
   const projects = useRef(null);
 
@@ -54,12 +53,6 @@ const Index = () => {
     },
     [embla]
   );
-  const initialFocus = () => {
-    focusRef.current = embla.slideNodes()[0]
-    console.log(focusRef.current)
-    focusRef.current.focus();
-    scrollTo(0)
-  }
   const onScroll = useCallback(() => {
     if (!embla) return;
     const progress = Math.max(0, Math.min(1, embla.scrollProgress()));
@@ -81,12 +74,10 @@ const Index = () => {
     if (!embla) return;
     embla.on("select", onSelect);
     embla.on("scroll", onScroll);
-    initialFocus();
     onSelect();
     onScroll();
     scrollTo(currentPage);
   }, [embla, onSelect, scrollTo, currentPage, onScroll]);
-
 
   return (
     <div>

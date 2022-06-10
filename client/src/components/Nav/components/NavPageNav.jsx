@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Flex, Box, Center, IconButton, Button } from "@chakra-ui/react";
+import { Center, IconButton } from "@chakra-ui/react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { VscCircleFilled, VscCircleOutline } from "react-icons/vsc";
-import { IoIosArrowRoundDown, IoIosArrowRoundUp } from "react-icons/io";
 
 export default function NavPageNav({
   pages,
@@ -39,23 +38,21 @@ export default function NavPageNav({
     } else {
       setPageDown("scale(1,1)");
     }
-    const sections = Object.keys(currentSection);
+    const sections = Object.keys(pages);
     sections.forEach((section) => {
-      if (parseInt(section) !== currentPage) {
-        setCurrentSection(prev => ({
-          ...prev, [section]: <VscCircleOutline />
+      if (pages[section] !== currentPage) {
+        setCurrentSection((prev) => ({
+          ...prev,
+          [pages[section]]: <VscCircleOutline />,
         }));
-        console.log(section)
-
       } else {
-        setCurrentSection(prev => ({
-          ...prev, [section]: <VscCircleFilled />,
+        setCurrentSection((prev) => ({
+          ...prev,
+          [pages[section]]: <VscCircleFilled />,
         }));
-        console.log(currentPage, section);
       }
-    })
-
-  }, [currentPage]);
+    });
+  }, [pages, currentPage, firstPage, lastPage]);
   return (
     <Center h="100vh" pos="absolute" left="0" top="0" bottom="0">
       <IconButton
