@@ -43,6 +43,7 @@ const Hero = () => {
             my name is
           </Text>
           <Text
+            fontSize="50px"
             bgClip="text"
             pos="relative"
             ml="15%"

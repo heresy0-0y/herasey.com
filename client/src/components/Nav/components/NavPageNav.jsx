@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import { Center, IconButton } from "@chakra-ui/react";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { VscCircleFilled, VscCircleOutline } from "react-icons/vsc";
@@ -14,17 +15,26 @@ export default function NavPageNav({
   const [canPageDown, setPageDown] = useState("scale(1,1)");
   const [canPageUp, setPageUp] = useState("scale(1,1)");
   const [currentSection, setCurrentSection] = useState({
-    0: <VscCircleOutline />,
-    1: <VscCircleOutline />,
-    2: <VscCircleOutline />,
-    3: <VscCircleOutline />,
+    0: { opacity: 0, scale: 0 },
+    1: { opacity: 0, scale: 0 },
+    2: { opacity: 0, scale: 0 },
+    3: { opacity: 0, scale: 0 },
   });
 
-  const pageUp = () => {
-    setPage(currentPage - 1);
+  const sectionButtonStyle = {
+    pos: "absolute",
+    left: "1.5",
+    variant: "unstyled",
+    size: "xs",
+    isRound: true,
   };
-  const pageDown = () => {
+  const pageUp = (e) => {
+    setPage(currentPage - 1);
+    e.target.blur();
+  };
+  const pageDown = (e) => {
     setPage(currentPage + 1);
+    e.target.blur();
   };
 
   useEffect(() => {
@@ -43,12 +53,12 @@ export default function NavPageNav({
       if (pages[section] !== currentPage) {
         setCurrentSection((prev) => ({
           ...prev,
-          [pages[section]]: <VscCircleOutline />,
+          [pages[section]]: { opacity: 0, scale: 0, y: 10, x: -5 },
         }));
       } else {
         setCurrentSection((prev) => ({
           ...prev,
-          [pages[section]]: <VscCircleFilled />,
+          [pages[section]]: { opacity: 1, scale: 1 },
         }));
       }
     });
@@ -66,23 +76,29 @@ export default function NavPageNav({
         aria-label="previous section"
         sx={{
           transform: canPageUp,
-          transition: "all 0.6s ease 0s",
+          transition: "all 0.6s ease 0.6s",
         }}
       />
       {Object.keys(pages).map((page) => (
-        <IconButton
-          pos="absolute"
-          top={`${pages[page] * 4 + 45}%`}
-          aria-label={`to ${page === "" ? "intro" : page} section`}
-          key={page}
-          isRound={true}
-          icon={currentSection[pages[page]]}
-          variant="unstyled"
-          size="xs"
-          left="1.5"
-          onClick={() => setPage(pages[page])}
-          sx={{ transition: "all 0.6s ease 0s" }}
-        />
+        <>
+          <IconButton
+            icon={<VscCircleFilled />}
+            top={`${pages[page] * 4 + 46}%`}
+            as={motion.button}
+            animate={{ ...currentSection[pages[page]] }}
+            transition={{ duration: 0.6 }}
+            key={`${page}-here`}
+            {...sectionButtonStyle}
+          />
+          <IconButton
+            top={`${pages[page] * 4 + 46}%`}
+            aria-label={`to ${page === "" ? "intro" : page} section`}
+            key={page}
+            icon={<VscCircleOutline />}
+            onClick={() => setPage(pages[page])}
+            {...sectionButtonStyle}
+          />
+        </>
       ))}
       <IconButton
         icon={<BsChevronDown />}

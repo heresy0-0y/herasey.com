@@ -1,8 +1,7 @@
-import React, { useEffect, useCallback, useRef } from "react";
+import React, { useEffect, useCallback } from "react";
 import NextImage from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { WheelGesturesPlugin as WheelGestures } from "embla-carousel-wheel-gestures";
-import Autoplay from "embla-carousel-autoplay";
 import { motion } from "framer-motion";
 import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
 import {
@@ -15,12 +14,6 @@ import {
 } from "@chakra-ui/react";
 
 export const Carousel = ({ slides }) => {
-  const autoplay = useRef(
-    Autoplay(
-      { delay: 6000, stopOnInteraction: true },
-      (emblaRoot) => emblaRoot.parentElement
-    )
-  );
   const { colorMode } = useColorMode();
   const bg = { light: "whiteAlpha.200", dark: "blackAlpha.200" };
   const color = { light: "green.800", dark: "green.200" };
@@ -29,19 +22,17 @@ export const Carousel = ({ slides }) => {
       speed: 4,
       loop: true,
     },
-    [WheelGestures(), autoplay.current]
+    [WheelGestures()]
   );
 
   const scrollNext = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollNext();
-    autoplay.current.reset();
   }, [emblaApi]);
 
   const scrollPrev = useCallback(() => {
     if (!emblaApi) return;
     emblaApi.scrollPrev();
-    autoplay.current.reset();
   }, [emblaApi]);
 
   const onSelect = useCallback(() => {
