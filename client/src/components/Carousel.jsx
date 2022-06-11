@@ -3,7 +3,11 @@ import NextImage from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import { WheelGesturesPlugin as WheelGestures } from "embla-carousel-wheel-gestures";
 import { motion } from "framer-motion";
-import { BsInfoCircle, BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+import {
+  BsInfoCircle,
+  BsArrowLeftCircle,
+  BsArrowRightCircle,
+} from "react-icons/bs";
 import {
   Flex,
   Box,
@@ -13,7 +17,7 @@ import {
   useDisclosure,
   useColorMode,
 } from "@chakra-ui/react";
-import { Modal } from './'
+import { Modal } from "./";
 
 export const Carousel = ({ slides }) => {
   const { colorMode } = useColorMode();
@@ -100,8 +104,24 @@ export const Carousel = ({ slides }) => {
         </Box>
       </Flex>
       <Modal isOpen={isOpen} onClose={onClose} />
-      <IconButton onClick={onOpen} icon={<BsInfoCircle />} {...arrowStyle} top="95vh" right="3vw" />
-      <Text pos="absolute" right="-17px" top="88vh" fontSize="0.8rem" p="null" m="null" sx={{ transform: 'rotate(90deg)' }}>project details</Text>
+      <IconButton
+        onClick={onOpen}
+        icon={<BsInfoCircle />}
+        {...arrowStyle}
+        top="95vh"
+        right="3vw"
+      />
+      <Text
+        pos="absolute"
+        right="-17px"
+        top="88vh"
+        fontSize="0.8rem"
+        p="null"
+        m="null"
+        sx={{ transform: "rotate(90deg)" }}
+      >
+        project details
+      </Text>
       <IconButton
         {...arrowStyle}
         aria-label="previous slide"

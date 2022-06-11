@@ -169,10 +169,10 @@ const theme = extendTheme({
   semanticTokens: {
     colors: {
       text: {
-        default: 'green.800',
-        _dark: 'green.200'
-      }
-    }
+        default: "green.800",
+        _dark: "green.200",
+      },
+    },
   },
 
   fonts,
