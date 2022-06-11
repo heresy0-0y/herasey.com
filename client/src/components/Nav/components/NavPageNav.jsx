@@ -83,7 +83,7 @@ export default function NavPageNav({
         <>
           <IconButton
             icon={<VscCircleFilled />}
-            top={`${pages[page] * 4 + 46}%`}
+            top={`${pages[page] * 4 + 45}%`}
             as={motion.button}
             animate={{ ...currentSection[pages[page]] }}
             transition={{ duration: 0.6 }}
@@ -91,7 +91,7 @@ export default function NavPageNav({
             {...sectionButtonStyle}
           />
           <IconButton
-            top={`${pages[page] * 4 + 46}%`}
+            top={`${pages[page] * 4 + 45}%`}
             aria-label={`to ${page === "" ? "intro" : page} section`}
             key={page}
             icon={<VscCircleOutline />}

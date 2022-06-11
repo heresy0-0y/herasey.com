@@ -26,7 +26,7 @@ const Hero = () => {
         <Heading
           data-text="hera sey
           software developer"
-          fontSize="10vw"
+          fontSize="11vw"
           fontFamily="montserrat alternates"
           text-fill-color="transparent"
           pos="relative"

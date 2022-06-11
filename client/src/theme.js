@@ -161,6 +161,18 @@ const theme = extendTheme({
       800: "#5A0C1A",
       900: "#2D060D",
     },
+    brand: {
+      light: "linear(to top right, #BABAFC,#C5F2DB )",
+      dark: "linear(to top right, #0B5B5B, #135332 )",
+    },
+  },
+  semanticTokens: {
+    colors: {
+      text: {
+        default: 'green.800',
+        _dark: 'green.200'
+      }
+    }
   },
 
   fonts,
